@@ -1,0 +1,30 @@
+//- --------------------------------------------------------------------------
+//- Popups
+//- --------------------------------------------------------------------------
+
+
+div(style="display: none;").popup.popup--320#popup-signin
+
+	button.popup__close(data-fancybox-close)
+		+sprite('icon-close')
+
+	span.popup__heading Авторизация
+
+	.popup__form
+		form(action="#")
+
+			label.ui-field
+				input(type="email").ui-input
+				span.ui-placeholder Электронная почта*
+
+			label.ui-field
+				input(type="password").ui-input
+				span.ui-placeholder Ваш пароль*
+				a(href="#").ui-forgot Забыли?
+			
+			button.btn.btn--66.btn--turq.btn--block Войти
+
+	.popup__reg
+		p.popup__reg-caption Еще нет аккаунта на сайте Аюна?<br>Зарегистрируйтесь!
+		a(href="#").btn.btn--dark_empty.btn--block Регистрация
+

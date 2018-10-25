@@ -1,0 +1,135 @@
+// --------------------------------------------------------------------------
+// Catalog
+// --------------------------------------------------------------------------
+
+.catalog {
+	padding: 50rem 0 25rem;
+	@include breakpoint(lg) {
+		padding: 50rem 0;
+	}
+}
+
+
+.catalog__heading {
+	@extend .ui-heading;
+	@extend .ui-heading--center;
+}
+
+
+.catalog__slides {
+	margin: 0 -30rem;
+	.slick-list {
+		overflow: visible;
+	}
+
+	.slick-track {
+		display: flex;
+	}
+	.slick-slide {
+		height: auto;
+		& > * {
+			display: flex;
+		}
+	}
+
+	@include breakpoint(md) {
+		margin: 0 -15rem;
+	}
+
+	@include breakpoint(lg) {
+		margin: 0 -15rem -30rem;
+	}
+}
+
+.catalog__slides-item {
+	min-height: 100%;
+	vertical-align: top;
+	padding: 0 10rem;
+
+	@include breakpoint(md) {
+		padding: 0 15rem;
+	}
+
+	@include breakpoint(lg) {
+		padding: 0 15rem 30rem;
+	}
+}
+
+.catalog__item {
+	background: #fff;
+	display: block;
+	text-decoration: none;
+	text-align: center;
+	color: #000;
+	transition: 0.25s;
+	height: 100%;
+	&:hover {
+		text-decoration: none;
+		color: #E30613;
+		box-shadow: 0 5rem 25rem rgba(0,0,0,0.2);
+
+		.catalog__item-image img {
+			transform: scale(1.1);
+		}
+	}
+}
+
+.catalog__item-image {
+	margin: 0;
+	overflow: hidden;
+	position: relative;
+	min-height: 230rem;
+	max-height: 340rem;
+	&:before {
+		content: '';
+		float: left;
+		padding: 60% 0 0;
+	}
+	img {
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		transition: 0.75s;
+	}
+}
+
+.catalog__item-desc {
+	background: #fff;
+	padding: 20rem 20rem;
+	@include breakpoint(lg) {
+		padding: 20rem 15rem 26rem;
+	}
+}
+
+.catalog__item-title {
+	display: block;
+	font-size: 16rem;
+	line-height: 18rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	margin: 0 0 10rem;
+	color: inherit;
+
+	@include breakpoint(lg) {
+		font-size: 20rem;
+		line-height: 1;
+	}
+}
+
+.catalog__item-text {
+	display: block;
+	margin: 0;
+	font-size: 12rem;
+	line-height: 1;
+	font-weight: 600;
+	text-transform: uppercase;
+	color: #959595;
+
+	@include breakpoint(lg) {
+		font-size: 14rem;
+	}
+}

@@ -1,0 +1,24 @@
+// --------------------------------------------------------------------------
+// Headings
+// --------------------------------------------------------------------------
+
+.ui-heading {
+	font: 700 20rem/1 $fontBase;
+	display: block;
+	text-transform: uppercase;
+	margin: 0 0 15rem;
+	color: #000;
+
+	@include breakpoint(sm) {
+		margin: 0 0 25rem;
+	}
+
+	@include breakpoint(lg) {
+		font-size: 24rem;
+		margin: 0 0 45rem;
+	}
+}
+
+.ui-heading--center {
+	text-align: center;
+}

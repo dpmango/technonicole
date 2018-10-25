@@ -1,0 +1,310 @@
+---
+title: Collection - Technonicole
+bodyClass: page-collection
+---
+extends includes/_app
+
+block main
+
+	// Collection :: Start
+	.collection
+		.container-fluid
+			
+
+			.collection__sku
+				.row
+					.col-lg-6
+
+						.collection__images.js-slick-collection
+
+							.collection__images-item
+								img(src="images/img-collection-01.jpg", alt="")
+
+							.collection__images-item
+								img(src="images/img-collection-02.jpg", alt="")
+
+							.collection__images-item
+								img(src="images/img-collection-03.jpg", alt="")
+
+
+						.collection__cutting
+							.row
+								.col
+									| Форма нарезки
+								.col
+									img(src="images/img-cutting-01.jpg", alt="")
+								.col
+									| «соната»
+								
+
+
+					.col-lg-6
+
+
+						h1.collection__heading Коллекция САМБА
+
+						.collection__adv
+							.collection__adv-item
+								figure.collection__adv-image
+									img(src="images/img-adv-01.jpg" alt="")
+								p.collection__adv-title гарантия <br>производителя
+							.collection__adv-item
+								figure.collection__adv-image
+									img(src="images/img-adv-02.jpg" alt="")
+								p.collection__adv-title модифицированный <br>битум
+							.collection__adv-item
+								figure.collection__adv-image
+									img(src="images/img-adv-03.jpg" alt="")
+								p.collection__adv-title однослойная
+
+						h2.collection__subheading Выберите цвет:
+
+						.collection__colors
+							
+							.collection__colors-item
+								figure.collection__colors-image
+									img(src="images/img-color-01.jpg", alt="")
+									+sprite('icon-colors-check')
+								p.collection__colors-title Малахит
+
+							.collection__colors-item
+								figure.collection__colors-image
+									img(src="images/img-color-02.jpg", alt="")
+									+sprite('icon-colors-check')
+								p.collection__colors-title Рубин
+
+							.collection__colors-item
+								figure.collection__colors-image
+									img(src="images/img-color-03.jpg", alt="")
+									+sprite('icon-colors-check')
+								p.collection__colors-title Янтарь
+
+						.collection__control
+
+							.collection__area
+								p Площадь, м²
+								input(type="number" min="0" max="100").ui-number
+								small 1 упаковка = 3м²
+
+							p.collection__price
+								| 29 990 ₽
+								small 9м² = 3 упаковки
+
+							.collection__buttons
+								a(href="#").btn.btn--60.btn--red
+									| Добавить в корзину
+									+sprite('icon-add')
+								a(href="#").btn.btn--60.btn--link
+									+sprite('icon-location')
+									| Где купить
+
+
+			.collection__details
+
+				h2 описание
+
+				p Изящная кровля с эффектно проработанной тенью подчеркнёт неповторимый облик любого здания. Насыщенные цвета удивительных по красоте камней, издревле использовавшихся для создания ювелирных изделий, нашли свое отражение в черепице, которая станет настоящим украшением Вашего дома! 
+
+				h2 Характеристики и документация
+
+				.row
+					.col-lg-9
+
+						table.ui-table
+							tr
+								th Основа
+								td Сверхпрочный стеклохолст
+								th Размер пачки, мм
+								td 320 x 1003 x 73
+
+							tr
+								th Тип посыпки
+								td Крупнозернистая базальтовая посыпка
+								th Вес пачки, кг
+								td 26,4
+							tr
+								th Водонепроницаемость
+								td 100%
+								th Пачек в паллете, шт
+								td 36
+							tr
+								th Толщина гонта, мм
+								td 3,0 (±0,2)
+								th Размер паллета, см
+								td 105 x 105
+
+							tr
+								th Вес 1м² готового покрытия, кг
+								td 8,8
+								th Вес паллета, кг
+								td 975
+					.col-lg-3
+
+						.docs
+							ul.docs__menu
+								li
+									a(href="#").docs__link
+										figure.docs__link-icon
+											img(src="images/icon-pdf.png", alt="")
+										span.docs__link-text Технический лист
+								li
+									a(href="#").docs__link
+										figure.docs__link-icon
+											img(src="images/icon-pdf.png", alt="")
+										span.docs__link-text Гарантийный сертификат
+								li
+									a(href="#").docs__link
+										figure.docs__link-icon
+											img(src="images/icon-pdf.png", alt="")
+										span.docs__link-text Сертификат соответствия
+								li
+									a(href="#").docs__link
+										figure.docs__link-icon
+											img(src="images/icon-pdf.png", alt="")
+										span.docs__link-text Инструкция по монтажу
+								li
+									a(href="#").docs__link
+										figure.docs__link-icon
+											img(src="images/icon-pdf.png", alt="")
+										span.docs__link-text Брошюра
+
+
+
+	// Collection :: End
+
+
+
+	// Services :: Start
+	.services
+		.container-fluid
+			.services__slides.js-slick-services
+
+				a(href="#").services__item
+					figure.services__item-image
+						img(src="images/img-services-01.jpg", alt="")
+					span.services__item-title
+						+sprite('icon-services-01')
+						| Интерактивный подбор кровли
+
+				a(href="#").services__item
+					figure.services__item-image
+						img(src="images/img-services-02.jpg", alt="")
+					span.services__item-title
+						+sprite('icon-services-02')
+						| Кровельный калькулятор
+
+				a(href="#").services__item
+					figure.services__item-image
+						img(src="images/img-services-03.jpg", alt="")
+					span.services__item-title
+						+sprite('icon-services-03')
+						| Точки продаж
+
+				a(href="#").services__item
+					figure.services__item-image
+						img(src="images/img-services-04.jpg", alt="")
+					span.services__item-title
+						+sprite('icon-services-04')
+						| подобрать ендовый ковёр и коньково- карнизную черепицу
+
+	// Services :: End
+
+
+
+	// Gallery :: Start
+	.gallery
+		.container-fluid
+
+			.gallery__slides.js-slick-gallery
+
+				a(href="#" data-fancybox="gallery").gallery__item
+					img(src="images/img-gallery-01.jpg", alt="")
+					+sprite('icon-zoom')
+
+				a(href="#" data-fancybox="gallery").gallery__item
+					img(src="images/img-gallery-02.jpg", alt="")
+					+sprite('icon-zoom')
+
+				a(href="#" data-fancybox="gallery").gallery__item
+					img(src="images/img-gallery-03.jpg", alt="")
+					+sprite('icon-zoom')
+
+				a(href="#" data-fancybox="gallery").gallery__item
+					img(src="images/img-gallery-04.jpg", alt="")
+					+sprite('icon-zoom')
+
+				a(href="#" data-fancybox="gallery").gallery__item
+					img(src="images/img-gallery-05.jpg", alt="")
+					+sprite('icon-zoom')
+
+				a(href="#" data-fancybox="gallery").gallery__item
+					img(src="images/img-gallery-06.jpg", alt="")
+					+sprite('icon-zoom')
+
+				a(href="#" data-fancybox="gallery").gallery__item
+					img(src="images/img-gallery-07.jpg", alt="")
+					+sprite('icon-zoom')
+
+				a(href="#" data-fancybox="gallery").gallery__item
+					img(src="images/img-gallery-08.jpg", alt="")
+					+sprite('icon-zoom')
+
+	// Gallery :: End
+
+
+	// Reviews :: Start
+	.reviews
+		.container-fluid
+
+			h2.reviews__heading отзывы клиентов
+
+			.reviews__slides.js-slick-reviews
+
+				.reviews__item
+					.row
+						.col-lg-6
+							figure.reviews__item-image
+								img(src="images/img-reviews-01.jpg", alt="")
+								+sprite('icon-video')
+						.col-lg-6
+
+							blockquote.reviews__blockquote
+								p Раньше, наши дети просыпались от шума дождя. После замены крыши они спят спокойно.
+								cite Лейла Смирнова <small>домовладелец</small>
+
+	// Reviews :: End
+
+
+
+	// Video :: Start
+	.video
+		.container-fluid
+
+			h2.video__heading
+
+			.video__slides.js-slick-video
+
+				a(href="#").video__item
+					figure.video__item-image
+						img(src="images/img-video-01.jpg", alt="")
+						+sprite('icon-video')
+					.video__item-desc
+						h3.video__item-title Производство гибкой черепицы
+
+
+				a(href="#").video__item
+					figure.video__item-image
+						img(src="images/img-video-02.jpg", alt="")
+						+sprite('icon-video')
+					.video__item-desc
+						h3.video__item-title Производство гибкой черепицы
+
+				a(href="#").video__item
+					figure.video__item-image
+						img(src="images/img-video-03.jpg", alt="")
+						+sprite('icon-video')
+					.video__item-desc
+						h3.video__item-title Производство гибкой черепицы
+
+
+	// Video :: End

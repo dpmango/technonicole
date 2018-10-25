@@ -1,0 +1,87 @@
+//- --------------------------------------------------------------------------
+//- Buttons
+//- --------------------------------------------------------------------------
+
+
+.btn {
+	font: 600 11rem/22rem $fontBase;
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+	border: 1px solid transparent;
+	padding: 5rem 20rem;
+	text-decoration: none;
+	transition: .25s;
+	text-align: center;
+	cursor: pointer;
+	text-transform: uppercase;
+	backface-visibility: hidden;
+	&:hover {
+		text-decoration: none;
+	}
+	&:active {
+		transition: none;
+		transform: translate3d(0,2px,0);
+	}
+
+	&:hover {
+		
+	}
+
+}
+
+.btn--block {
+	width: 100%;
+}
+
+.btn--30 {
+	font-size: 13rem;
+	font-weight: 400;
+	text-transform: none;
+	padding: 3rem 20rem;
+	&.btn--rounded {
+		border-radius: 15rem;
+	}
+}
+
+.btn--62 {
+	font-size: 14rem;
+	padding: 19rem 64rem;
+
+	@include breakpointMax(lg) {
+		font-size: 13rem;
+		line-height: 16rem;
+		padding: 16rem 30rem;
+	}
+	
+}
+
+
+.btn--dark-empty {
+	border-color: #000;
+	color: #000;
+	&:hover {
+		background: #000;
+		color: #fff;
+	}
+}
+
+
+.btn--red-empty {
+	border-color: #e30613;
+	color: #e30613;
+	&:hover {
+		background: #e30613;
+		color: #fff;
+	}
+}
+
+
+.btn--red {
+	background: #E30613;
+	color: #fff;
+	&:hover {
+		background: #b7000b;
+		color: #fff;
+	}
+}

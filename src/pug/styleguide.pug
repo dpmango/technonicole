@@ -1,0 +1,401 @@
+include includes/_mixins
+doctype html
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+
+		meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+		meta(name="theme-color" content="#000")
+		meta(name="format-detection" content="telephone=no")
+		meta(http-equiv="X-UA-Compatible" content="IE=Edge")
+
+		title Styleguide - Technonicole
+
+		link(rel="shortcut icon" href="images/favicon.ico")
+
+		//- <!-- Critical CSS -->
+
+		include includes/_loadCss
+
+
+	body
+
+	.app
+
+		// Header :: Start
+		header.header
+			block header
+				include includes/_header
+		// Header :: End
+
+		// Main :: Start
+		main.main
+
+
+			// Styleguide :: Start
+			.container-fluid
+
+				.breadcrumbs
+					ul.breadcrumbs__menu
+						li
+							a(href="#").breadcrumbs__link Аюна
+							+sprite('icon-breadcrumbs')
+						li
+							a(href="#").breadcrumbs__link Каталог продукции
+							+sprite('icon-breadcrumbs')
+						li
+							a(href="#").breadcrumbs__link Все для мезотерапии
+							+sprite('icon-breadcrumbs')
+						li
+							a(href="#").breadcrumbs__link НАзвание категории товаров
+							+sprite('icon-breadcrumbs')
+
+				.main__content
+					.main__content-in
+
+						.ui-typography
+
+							h1 Fancybox
+
+							ol
+								li
+									a(href="#popup-signin" data-fancybox) Авторизация
+								li
+									a(href="#popup-call" data-fancybox) Заказать звонок
+								li
+									a(href="#popup-checkout" data-fancybox) Товар добавлен в корзину
+								li
+									a(href="#popup-checkout-success" data-fancybox) Товар успешно добавлен в корзину
+
+							
+							hr
+
+							form(action="#").js-validate
+
+								h2 Jquery Validation
+								
+								.row
+									.col-sm-6
+
+										label.ui-field
+											input(type="text" name="fullname").ui-input
+											span.ui-placeholder Имя*
+
+									.col-sm-6
+
+										label.ui-field
+											input(type="email" name="email").ui-input
+											span.ui-placeholder Электронная почта
+
+									.col-12
+										
+										label.ui-field
+											textarea(name="message").ui-textarea
+											span.ui-placeholder Текст отзыва
+
+
+								.ui-control
+									button.btn.btn--66.btn--turq Отправить
+
+									label.ui-check.ui-check--30
+										input(type="checkbox" name="accept" checked).ui-check__input
+										span.ui-check__checkbox
+											+sprite('icon-check')
+										span.ui-check__text Я принимаю <a href="#">условия передачи информации</a>
+
+							hr
+
+							h1 Заголовок страницы может быть написан в одну или несколько строк (h1)
+
+							p Электромиостимулятор МИОРИТМ 040-16 - одна из самых удачных разработок в отечественной восстановительной медицине. Аппараты данной серии спроектированы и введены в эксплуатацию около 30-ти лет назад. Многоканальный миостимулятор с физиологическим импульсом (нейроимпульс) разрабатывался специально для восстановления атрофированных мышц космонавтов (реабилитация после невесомости).
+
+							p Естественно, в этом аппарате физиологические и медицинские аспекты работы с мышцами были учтены как нельзя лучше. Аппарат выполняет множество лечебных процедур (реабилитация после травм, параличей, ДЦП, восстановление здоровой осанки.
+
+
+							h2 Заголовок второго уровня тоже может быть написан как в одну так и в несколько строк (h2)
+
+							figure
+								img(src="images/img-1.jpg", alt="")
+								figcaption Электромиостимулятор МИОРИТМ 040-16 - одна из самых удачных разработок в отечественной восстановительной медицине. Аппараты данной серии спроектированы и введены в эксплуатацию около 30-ти лет назад. 
+							
+							hr
+
+							h3 Заголовок третьего уровня пишется в одну строку (h3)
+
+							figure.pull-left
+								img(src="images/img-2.jpg", alt="")
+
+							p Естественно, в этом аппарате физиологические и медицинские аспекты работы с мышцами были учтены как нельзя лучше. Аппарат выполняет множество лечебных процедур (реабилитация после травм, параличей, ДЦП, восстановление здоровой осанки. Естественно, в этом аппарате физиологические и медицинские аспекты работы с мышцами были учтены как нельзя лучше. Аппарат выполняет множество лечебных процедур (реабилитация после травм, параличей, ДЦП, восстановление здоровой осанки. Естественно, в этом аппарате физиологические и медицинские аспекты работы с мышцами были учтены как нельзя лучше. Аппарат выполняет множество лечебных процедур (реабилитация после травм, параличей, ДЦП, восстановление здоровой осанки. Естественно, в этом аппарате физиологические и медицинские аспекты работы с мышцами были учтены как нельзя лучше. Аппарат выполняет множество лечебных процедур (реабилитация после травм, параличей, ДЦП, восстановление здоровой осанки. Естественно, в этом аппарате физиологические и медицинские аспекты работы с мышцами были учтены как нельзя лучше. Аппарат выполняет множество лечебных процедур (реабилитация после травм, параличей, ДЦП, восстановление здоровой осанки.
+							
+							br
+							
+							.ui-table-scroll
+								table
+									thead
+										tr
+											th Позиция (h6)
+											th Позиция (h6)
+											th Позиция (h6)
+									tbody
+										tr
+											td Число оборотов холостого хода
+											td 3 000 Ед
+											td 3 000 Ед
+										tr
+											td Диаметр пильного диска
+											td 3 000 Ед
+											td 3 000 Ед
+										tr
+											td Регулировка наклона
+											td 3 000 Ед
+											td 3 000 Ед
+										tr
+											td Глубина реза
+											td 3 000 Ед
+											td 3 000 Ед
+							
+							br
+
+							.row
+								.col-md-6
+
+									h4 Заголовок четвертого уровня (h4)
+
+									ul
+										li Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+										li Phasellus sagittis ipsum diam, nec porttitor sapien quis.
+										li Donec euismod ullamcorper pulvinar. 
+
+									ol
+										li Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+										li Phasellus sagittis ipsum diam, nec porttitor sapien quis.
+										li Donec euismod ullamcorper pulvinar. 
+
+								.col-md-6
+
+									h5 Заголовок пятого уровня тоже может быть написан как в одну, так и в несколько строк (h5)
+
+									p Аппарат мы используем в учебном центре около 2 лет. Подавляющее большинство отзывов положительные. Результат появляется часто после первой процедуры
+							
+							br
+
+							blockquote <b>Заметка:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+						
+							br
+
+						hr
+						br
+
+
+					
+
+						button.btn.btn--66.btn--turq(style="margin: 0 15rem 30rem 0;") кнопка #1
+						
+						button.btn.btn--50.btn--turq(style="margin: 0 15rem 30rem 0;") кнопка #2
+						
+						button.btn.btn--40.btn--dark_empty(style="margin: 0 15rem 30rem 0;") кнопка #3
+						
+						button.btn.btn--40.btn--dark(style="margin: 0 15rem 30rem 0;") кнопка #4
+						
+						button.btn.btn--link(style="margin: 0 15rem 30rem 0;")
+							| кнопка #5
+							+sprite('icon-more')
+						
+
+						hr
+				
+
+						label.ui-label.ui-label--select
+							| Сортировать:
+							select.ui-select.ui-select--inline
+								option по цене
+								option по популярности
+								option по дате
+
+						select(data-placeholder="-- Не выбрано --").ui-select
+							option
+							option Название 1
+							option Название 2
+							option Название 3
+
+						
+						hr
+
+
+						a(href="#" style="margin: 0 0 30rem;").btn-pdf
+							| Скачать пример документа
+							small (15MB .PDF)
+							+sprite('icon-pdf')
+
+						br
+
+						label.ui-check
+							input(type="checkbox").ui-check__input
+							span.ui-check__checkbox
+								+sprite('icon-check')
+							| Lorem ipsum dolor
+						
+						br
+
+						label.ui-check
+							input(type="checkbox").ui-check__input
+							span.ui-check__checkbox
+								+sprite('icon-check')
+							| Phasellus sagittis ipsum
+						
+						br
+
+						label.ui-check
+							input(type="radio").ui-check__input
+							span.ui-check__radio
+							| Donec euismod ullamcorper
+						
+						br
+
+						label.ui-check
+							input(type="radio").ui-check__input
+							span.ui-check__radio
+							| Lorem ipsum dolor
+
+						
+						br
+						br
+
+						nav.pages
+							a(href="#").pages__prev.is-disabled
+								+sprite('icon-pages-prev')
+							a(href="#").pages__link 1
+							a(href="#").pages__link.is-active 2
+							a(href="#").pages__link 3
+							span.pages__dots ...
+							a(href="#").pages__link 54
+							a(href="#").pages__next
+								+sprite('icon-pages-next')
+
+
+
+				.main__sidebar
+
+					nav.sidebar-nav
+						span.sidebar-nav__heading Каталог товаров
+						ul.sidebar-nav__menu
+							li
+								a(href="#").sidebar-nav__link Мезороллеры <small>(236)</small>
+							li.is-active
+
+								span.sidebar-nav__toggle
+
+								a(href="#").sidebar-nav__link
+									| Косметика для мезороллера <small>(15)</small>
+
+								ul.sidebar-nav__submenu
+									li
+										a(href="#").sidebar-nav__sublink Косметика MESOMATRIX (АЮНА)
+									li
+										a(href="#").sidebar-nav__sublink Косметика MezoRollers Profi
+									li
+										a(href="#").sidebar-nav__sublink Косметика DMAE Complex 40+
+									li
+										a(href="#").sidebar-nav__sublink Косметика Актив Плюс
+									li
+										a(href="#").sidebar-nav__sublink Косметика Плазан
+									li
+										a(href="#").sidebar-nav__sublink Мезококтейли FLORYLIS
+									li
+										a(href="#").sidebar-nav__sublink Маски после процедуры
+									li
+										a(href="#").sidebar-nav__sublink Активные ампулы TEANA
+							li
+								a(href="#").sidebar-nav__link Все для мезотерапии <small>(65)</small>
+							li
+								a(href="#").sidebar-nav__link Депиляция <small>(11)</small>
+							li
+								a(href="#").sidebar-nav__link Расходные материалы <small>(72)</small>
+							li
+								a(href="#").sidebar-nav__link Временное тату <small>(5)</small>
+							li
+								span.sidebar-nav__toggle
+								a(href="#").sidebar-nav__link Блеск тату <small>(3)</small>
+								ul.sidebar-nav__submenu
+									li
+										a(href="#").sidebar-nav__sublink Косметика MESOMATRIX (АЮНА)
+									li
+										a(href="#").sidebar-nav__sublink Косметика MezoRollers Profi
+									li
+										a(href="#").sidebar-nav__sublink Косметика DMAE Complex 40+
+									li
+										a(href="#").sidebar-nav__sublink Косметика Актив Плюс
+									li
+										a(href="#").sidebar-nav__sublink Косметика Плазан
+									li
+										a(href="#").sidebar-nav__sublink Мезококтейли FLORYLIS
+									li
+										a(href="#").sidebar-nav__sublink Маски после процедуры
+									li
+										a(href="#").sidebar-nav__sublink Активные ампулы TEANA
+							li
+								a(href="#").sidebar-nav__link Альгинатные маски <small>(11)</small>
+							li
+								a(href="#").sidebar-nav__link Косметика для тела <small>(72)</small>
+							li
+								a(href="#").sidebar-nav__link Для волос <small>(5)</small>
+							li
+								a(href="#").sidebar-nav__link Маникюр / Педикюр <small>(72)</small>
+							li
+								a(href="#").sidebar-nav__link Учебные материалы <small>(5)</small>
+							li
+								a(href="#").sidebar-nav__link Электроды и комплектующие <small>(3)</small>
+							li
+								a(href="#").sidebar-nav__link Дезинфекция <small>(11)</small>
+							li
+								a(href="#").sidebar-nav__link Пирсинг <small>(72)</small>
+							li
+								a(href="#").sidebar-nav__link Аппараты для салона <small>(5)</small>
+						hr
+						ul.sidebar-nav__menu
+							li
+								a(href="#").sidebar-nav__link.sidebar-nav__link-400
+									mark Спецпредложения <small>(236)</small>
+							li
+								a(href="#").sidebar-nav__link.sidebar-nav__link-400 Популярные товары <small>(236)</small>
+							li
+								a(href="#").sidebar-nav__link.sidebar-nav__link-400 Новые товары <small>(236)</small>
+
+					.sidebar-manual
+						span.sidebar-manual__heading Справочник процедур
+						ul.sidebar-manual__menu
+							li
+								a(href="#").sidebar-manual__link Ионофорез (электрофорез) и гальванизация
+							li
+								a(href="#").sidebar-manual__link Миостимуляция
+							li
+								a(href="#").sidebar-manual__link Аппаратный лифтинг
+							li
+								a(href="#").sidebar-manual__link Микротоковая терапия
+							li
+								a(href="#").sidebar-manual__link Лимфодренаж
+							li
+								a(href="#").sidebar-manual__link Обёртывания
+
+						a(href="#").sidebar-manual__all ...  все процедуры
+
+						
+			// Styleguide :: End
+
+		// Main :: End
+
+		// Footer :: Start
+		footer.footer
+			block footer
+				include includes/_footer
+		// Footer :: End
+
+		// Popups :: Start
+		block popups
+			include includes/_popups
+		// Popups :: End
+
+
+		// Scripts :: Start
+		include includes/_loadScripts
+		// Scripts :: End

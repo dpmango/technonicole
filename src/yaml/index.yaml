@@ -1,0 +1,10 @@
+ProjectTitle: Technonicole
+
+PageList:
+- file: homepage.html
+  ready: 90
+- file: collection.html
+  ready: 40
+- file: styleguide.html
+  ready: 0
+

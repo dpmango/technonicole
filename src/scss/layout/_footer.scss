@@ -1,0 +1,440 @@
+// --------------------------------------------------------------------------
+// Footer
+// --------------------------------------------------------------------------
+
+.footer {
+	background: #414042;
+	color: #fff;
+
+	font-size: 13rem;
+	line-height: 20rem;
+	font-weight: 300;
+	
+}
+
+
+.footer__panel {
+	padding: 20rem 0;
+	&--white {
+		background: #fff;
+		border-top: 1px solid #E7E7E7;
+		border-bottom: 1px solid #E7E7E7;
+	}
+
+
+	@include breakpoint(xl) {
+		.row {
+			justify-content: space-between;
+		}
+	}
+}
+
+// ------
+
+
+.is-partners-open {
+	.footer__partners-btn {
+		[class^="icon-"] {
+			transform: rotate(180deg);
+		}
+	}
+	.footer__partners-dropdown {
+		display: flex;
+	}
+}
+
+.footer__partners {
+	margin: -20rem 0;
+	padding: 16rem 0;
+}
+
+.footer__partners-btn {
+	display: block;
+	width: 100%;
+	border: none;
+	background: none;
+
+	font: 700 14rem/30rem $fontBase;
+	text-transform: uppercase;
+	white-space: nowrap;
+
+	color: #000;
+
+	cursor: pointer;
+
+	[class^="icon-"] {
+		transition: transform 0.25s;
+		color: #E30613;
+		margin: 0 0 0 10rem;
+	}
+	@include breakpoint(lg) {
+		display: none;
+	}
+}
+
+.footer__partners-dropdown {
+	
+	flex-wrap: wrap;
+	align-items: center;
+	padding: 16rem 0 0;
+	display: none;
+	animation: fadeIn 0.5s forwards;
+	@include breakpoint(lg) {
+		padding: 0;
+		display: flex;
+		flex-wrap: nowrap;
+	}
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.footer__partners-menu {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	flex: 1;
+
+	font-size: 14rem;
+	line-height: 30rem;
+	font-weight: 700;
+	text-transform: uppercase;
+
+	& > li {
+		width: 100%;
+		margin: 0 0 20rem;
+	}
+
+	@include breakpoint(md) {
+		justify-content: center;
+		& > li {
+			width: auto;
+			margin: 0 40rem 20rem 0;
+		}
+	}
+
+	@include breakpoint(lg) {
+		flex-wrap: nowrap;
+		justify-content: flex-start;
+		& > li {
+			width: auto;
+			margin: 0 40rem 0 0;
+		}
+	}
+}
+
+
+.footer__partners-link {
+	display: block;
+	text-decoration: none;
+	color: #000;
+	white-space: nowrap;
+	transition: 0.25s;
+	[class^="icon-"] {
+		margin: 0 10rem 0 0;
+	}
+	&:hover {
+		text-decoration: none;
+		color: #E61930;
+	}
+}
+
+.footer__partners-control {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	.btn {
+		min-width: 150rem;
+		width: 100%;
+		margin: 0 0 10rem;
+		&:last-child {
+			margin: 0;
+		}
+	}
+
+	@include breakpoint(md) {
+		flex-wrap: nowrap;
+		justify-content: center;
+		.btn {
+			width: auto;
+			margin: 0 10rem 0 0;
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+
+	@include breakpoint(lg) {
+		width: auto;
+	}
+}
+
+
+// ------
+
+
+.footer__nav {
+	margin: -20rem 0;
+	padding: 34rem 0;
+	font-size: 13rem;
+	line-height: 21rem;
+	font-weight: 300;
+}
+
+
+.footer__nav-group {
+	@include breakpoint(md) {
+		margin: 0 0 28rem;
+		&:last-child {
+			margin: 0;
+		}
+	}
+}
+
+.footer__nav-title {
+	display: block;
+	font-size: 14rem;
+	font-weight: 400;
+	margin: 0 0 18rem;
+	text-transform: uppercase;
+	.footer__nav-link {
+		border-bottom: 1px solid rgba(#c7c9cb,0.5);
+	}
+
+	@include breakpoint(md) {
+		margin: 0 0 10rem;
+	}
+}
+
+.footer__nav-menu {
+
+	display: none;
+
+	@include breakpoint(md) {
+		display: block;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		& > li {
+			margin: 0 0 10rem;
+			&:last-child {
+				margin: 0;
+			}
+		}
+	}
+	
+}
+
+.footer__nav-link {
+	text-decoration: none;
+	color: #c7c9cb;
+	&:hover {
+		text-decoration: none;
+		color: #fff;
+	}
+}
+
+// -----
+
+
+.footer__search {
+	padding: 15rem 0;
+	margin: -20rem 0;
+}
+
+
+.footer__search-field {
+	position: relative;
+	display: flex;
+}
+
+
+.footer__search-btn {
+	display: inline-block;
+	vertical-align: top;
+	border: none;
+	padding: 0;
+	background: none;
+	font: 400 18rem/35rem $fontBase;
+	color: #e30613;
+	cursor: pointer;
+	margin: 0 20rem 0 0;
+	white-space: nowrap;
+	[class^="icon-"] {
+		margin: 0 18rem 0 0;
+	}
+}
+
+.footer__search-input {
+	font: 400 18rem/25rem $fontBase;
+	border: none;
+	border-left: 1rem solid #959595;
+	padding: 5rem 0 5rem 20rem;
+	color: #000;
+	width: 100%;
+	flex: 1;
+	&::placeholder {
+		color: #959595;
+	}
+}
+
+// -----
+
+
+
+.footer__logo {
+	max-width: 205rem;
+	margin: 0 auto 20rem;
+	height: 34rem;
+	text-align: center;
+	img {
+		display: inline-block;
+		max-height: 34rem;
+	}
+
+	@include breakpoint(xl) {
+		text-align: left;
+		margin: 0 0 10rem;
+	}
+}
+
+// -----
+
+.footer__copyright {
+	font-size: 13rem;
+	line-height: 20rem;
+	font-weight: 300;
+	color: #c7c9cb;
+	white-space: nowrap;
+	position: relative;
+	display: block;
+	margin: 0 0 20rem;
+	text-align: center;
+
+	@include breakpoint(xl) {
+		left: 42rem;
+		text-align: left;
+	}
+}
+
+// -----
+
+.footer__social {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	margin: 0 0 20rem;
+
+	@include breakpoint(xl) {
+		justify-content: center;
+	}
+}
+
+.footer__social-link {
+	display: block;
+	line-height: 40rem;
+	padding: 0 20rem;
+	text-decoration: none;
+	color: #A0A0A1;
+	transition: 0.25s;
+	&:hover {
+		text-decoration: none;
+		color: #fff;
+	}
+
+	@include breakpoint(md) {
+		padding: 0 10rem;
+	}
+
+}
+
+
+// -----
+
+
+.footer__info {
+	max-width: 100%;
+	padding: 0 0 15rem;
+	@include breakpoint(xl) {
+		padding: 0;
+		margin: 0 auto;
+		width: 630rem;
+	}
+}
+
+.footer__info-group {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 0 0 5rem;
+
+	@include breakpoint(xl) {
+		flex-wrap: nowrap;
+		margin: 0;
+		justify-content: space-between;
+	}
+
+}
+
+.footer__info-btn {
+	transition: 0.25s;
+	display: inline-block;
+	vertical-align: top;
+	text-align: center;
+	text-decoration: none;
+	color: #c7c9cb;
+	padding: 6rem 17rem;
+	border: 1px solid #676669;
+	border-radius: 4rem;
+	margin: 0 0 20rem;
+	width: 100%;
+
+	
+
+	&:hover {
+		border-color: #fff;
+		color: #fff;
+		text-decoration: none;
+	}
+
+
+	@include breakpoint(md) {
+		width: auto;
+		margin: 0 10rem 10rem 0;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
+.footer__info-link {
+	transition: 0.25s;
+	display: inline-block;
+	vertical-align: top;
+	text-decoration: none;
+	color: #ffffff;
+	width: 100%;
+	margin: 0 0 24rem;
+	text-align: center;
+	&:hover {
+		color: #fff;
+		text-decoration: underline;
+	}
+	
+
+	@include breakpoint(md) {
+		width: auto;
+		margin: 0 10rem 10rem 0;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}

@@ -1,0 +1,31 @@
+// --------------------------------------------------------------------------
+// Layout
+// --------------------------------------------------------------------------
+
+html, body {
+	height: 100%;
+}
+
+html {
+	font-size: 1px;
+}
+
+body {
+	background: $baseBg;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.app {
+	position: relative;
+	min-height: 100%;
+	overflow: hidden;
+	width: 100%;
+	min-width: 320px;
+	
+}
+
+.container-fluid {
+	max-width: $baseMaxWidth;
+	padding: 0 20rem;
+}

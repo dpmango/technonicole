@@ -1,0 +1,63 @@
+//- --------------------------------------------------------------------------
+//- States
+//- --------------------------------------------------------------------------
+
+
+.row-offset-10 {
+	margin: 0 -5px;
+	& > [class^="col-"] {
+		padding: 0 5px;
+	}
+}
+
+
+
+
+.is-hidden {
+	display: none;
+}
+
+.is-sm-visible {
+	@include breakpointMax(sm) {
+		display: block;
+	}
+}
+
+.is-md-visible {
+	@include breakpointMax(md) {
+		display: none;
+	}
+}
+
+.is-lg-visible {
+	@include breakpointMax(lg) {
+		display: block;
+	}
+}
+
+.is-xl-visible {
+	@include breakpointMax(xl) {
+		display: none;
+	}
+}
+
+
+// -----
+
+.is-md-hidden {
+	@include breakpoint(md) {
+		display: none;
+	}
+}
+
+.is-lg-hidden {
+	@include breakpoint(lg) {
+		display: none;
+	}
+}
+
+.is-xl-hidden {
+	@include breakpoint(xl) {
+		display: none;
+	}
+}

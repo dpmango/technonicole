@@ -1,0 +1,98 @@
+//- --------------------------------------------------------------------------
+//- Header
+//- --------------------------------------------------------------------------
+
+.header__panel.header__panel--top
+	.container-fluid
+
+		.header__language
+			button.header__language-btn
+				img(src="images/img-language-ru.png", alt="")
+			.header__language-dropdown
+				.header__language-item
+					img(src="images/img-language-ru.png", alt="")
+
+
+		.header__location
+			button.header__location-btn
+				+sprite('icon-location')
+				| Москва
+			.header__location-dropdown
+				.header__location-item Москва
+				.header__location-item Санкт-Петербург
+					
+		nav.header__social
+			a(href="#").header__social-link
+				+sprite('icon-social-fb')
+			a(href="#").header__social-link
+				+sprite('icon-social-vk')
+			a(href="#").header__social-link
+				+sprite('icon-social-od')
+			a(href="#").header__social-link
+				+sprite('icon-social-yt')
+			a(href="#").header__social-link
+				+sprite('icon-social-im')
+
+		p.header__phone
+			small.header__phone-text горячая линия
+			a(href="tel:88002000565").header__phone-link 8 800 200 05 65
+
+
+.header__panel.header__panel--middle
+	.container-fluid
+
+		.header__logo
+			a(href="#")
+				img(src="images/logo.svg" alt="ТЕХНОНИКОЛЬ")
+
+		nav.header__subnav
+			ul.header__subnav-menu
+				li
+					a(href="#").header__subnav-link
+						+sprite('icon-nav-points')
+						| точки продаж
+				li
+					a(href="#").header__subnav-link
+						+sprite('icon-nav-shop')
+						| интернет-магазин
+
+		a(href="#").header__basket
+			figure.header__basket-icon
+				+sprite('icon-basket')
+				mark 3
+			p.header__basket-price
+				small корзина
+				| 10 200 р.
+		
+		.header__call
+			a(href="#").btn.btn--34.btn--red
+				+sprite('icon-call')
+				| звонок с сайта
+
+
+.header__panel.header__panel--bottom
+	.container-fluid
+
+		nav.header__nav
+
+			button.header__nav-btn
+				span
+				span
+				span
+			
+			.header__nav-dropdown
+				ul.header__nav-menu
+					li
+						a(href="#").header__nav-link Каталог
+					li
+						a(href="#").header__nav-link Монтаж
+					li
+						a(href="#").header__nav-link Фотогалерея
+					li
+						a(href="#").header__nav-link Поддержка
+					li
+						a(href="#").header__nav-link Информация
+					li
+						a(href="#").header__nav-link Журнал
+					li
+						a(href="#").header__nav-link Контакты

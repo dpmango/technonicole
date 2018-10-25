@@ -1,0 +1,154 @@
+//- --------------------------------------------------------------------------
+//- Typography
+//- --------------------------------------------------------------------------
+
+
+.ui-typography {
+    table {
+        @extend .ui-table;
+    }
+
+    ul {
+        @extend .ui-ul;
+    }
+
+    ol {
+        @extend .ui-ol;
+    }
+}
+
+body {
+    font: 400 14rem/23rem $fontBase;
+    color: $baseColor;
+}   
+
+
+* {
+    outline: none;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 25rem;
+}
+
+h1 {
+    font-size: 30rem;
+    line-height: 34rem;
+    font-weight: 400;
+    margin: 0 0 25rem;
+    @include breakpoint(md) {
+        font-size: 36rem;
+        line-height: 40rem;
+    }
+}
+
+h2 {
+    font-size: 24rem;
+    line-height: 30rem;
+    font-weight: 400;
+    margin: 0 0 25rem;
+    @include breakpoint(md) {
+        font-size: 27rem;
+        line-height: 32rem;
+    }
+}
+
+h3 {
+    font-size: 20rem;
+    line-height: 27rem;
+    font-weight: 400;
+    margin: 0 0 25rem;
+    @include breakpoint(md) {
+        font-size: 22rem;
+    }
+    
+}
+
+h4 {
+    font-size: 16rem;
+    line-height: 27rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 0 0 25rem;
+}
+
+h5 {
+    font-size: 17rem;
+    line-height: 23rem;
+    font-weight: 700;
+}
+
+p {
+    margin: 0 0 25rem;
+}
+
+table {
+    clear: both;
+}
+
+figure {
+    margin: 0 0 25rem;
+    &.pull-left {
+        float: left;
+        max-width: 300rem;
+        margin: 0 30rem 25rem 0;
+    }
+    &.pull-right {
+        float: right;
+        max-width: 300rem;
+        margin: 0 0 25rem 30rem;
+    }
+}
+
+figcaption {
+    font-size: 13rem;
+    line-height: 19rem;
+    font-style: italic;
+    color: #a7a7a7;
+    padding: 25rem 0 0;
+}
+
+img {
+    vertical-align: top;
+    max-width: 100%;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #E7E8E9;
+    margin: 25rem 0;
+}
+
+blockquote {
+    border-left: 5px solid #E7E8E9;
+    padding: 5rem 0 5rem 24rem;
+    margin: 0 0 25rem;
+    font-size: 17rem;
+    line-height: 24rem;
+    font-weight: 300;
+    font-style: italic;
+    color: #4c4c4c;
+}
+
+b, strong {
+    font-weight: 700;
+}
+
+
+a {
+    transition: color 0.25s;
+    text-decoration: underline;
+    color: #E30613;
+    &:hover {
+        color: #E30613;
+        text-decoration: underline;
+    }
+}
+
+mark {
+    background: none;
+    color: #FFAD18;
+}
+
+
