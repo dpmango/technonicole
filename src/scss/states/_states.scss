@@ -3,6 +3,11 @@
 //- --------------------------------------------------------------------------
 
 
+.nowrap {
+	white-space: nowrap;
+}
+
+
 .row-offset-10 {
 	margin: 0 -5px;
 	& > [class^="col-"] {
@@ -31,7 +36,7 @@
 
 .is-lg-visible {
 	@include breakpointMax(lg) {
-		display: block;
+		display: none;
 	}
 }
 

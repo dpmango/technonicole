@@ -12,36 +12,43 @@ block main
 			
 
 			.collection__sku
+				
+				// Heading для мобилки
+				span.collection__heading.is-lg-hidden Коллекция САМБА
+
 				.row
 					.col-lg-6
 
-						.collection__images.js-slick-collection
 
-							.collection__images-item
-								img(src="images/img-collection-01.jpg", alt="")
+						.collection__wrapper
 
-							.collection__images-item
-								img(src="images/img-collection-02.jpg", alt="")
+							.collection__slides.js-slick-collection
 
-							.collection__images-item
-								img(src="images/img-collection-03.jpg", alt="")
+								.collection__slides-item
+									img(src="images/img-collection-01.jpg", alt="")
+
+								.collection__slides-item
+									img(src="images/img-collection-02.jpg", alt="")
+
+								.collection__slides-item
+									img(src="images/img-collection-03.jpg", alt="")
 
 
-						.collection__cutting
-							.row
-								.col
-									| Форма нарезки
-								.col
-									img(src="images/img-cutting-01.jpg", alt="")
-								.col
-									| «соната»
+							.collection__cutting
+
+								p.collection__cutting-text Форма нарезки
+
+								figure.collection__cutting-image
+									img(src="images/img-cutting-01.png", alt="")
+
+								p.collection__cutting-title «СОНАТА»
 								
 
 
 					.col-lg-6
 
 
-						h1.collection__heading Коллекция САМБА
+						h1.collection__heading.is-lg-visible Коллекция САМБА
 
 						.collection__adv
 							.collection__adv-item
@@ -61,19 +68,19 @@ block main
 
 						.collection__colors
 							
-							.collection__colors-item
+							.collection__colors-item.is-active(data-color)
 								figure.collection__colors-image
 									img(src="images/img-color-01.jpg", alt="")
 									+sprite('icon-colors-check')
 								p.collection__colors-title Малахит
 
-							.collection__colors-item
+							.collection__colors-item(data-color)
 								figure.collection__colors-image
 									img(src="images/img-color-02.jpg", alt="")
 									+sprite('icon-colors-check')
 								p.collection__colors-title Рубин
 
-							.collection__colors-item
+							.collection__colors-item(data-color)
 								figure.collection__colors-image
 									img(src="images/img-color-03.jpg", alt="")
 									+sprite('icon-colors-check')
@@ -82,8 +89,8 @@ block main
 						.collection__control
 
 							.collection__area
-								p Площадь, м²
-								input(type="number" min="0" max="100").ui-number
+								p Площадь, <b>м²</b>
+								input(type="number" value="1" min="1" max="100").ui-number
 								small 1 упаковка = 3м²
 
 							p.collection__price
@@ -101,72 +108,76 @@ block main
 
 			.collection__details
 
-				h2 описание
+				.collection__content
 
-				p Изящная кровля с эффектно проработанной тенью подчеркнёт неповторимый облик любого здания. Насыщенные цвета удивительных по красоте камней, издревле использовавшихся для создания ювелирных изделий, нашли свое отражение в черепице, которая станет настоящим украшением Вашего дома! 
+					h2 описание
 
-				h2 Характеристики и документация
+					p Изящная кровля с эффектно проработанной тенью подчеркнёт неповторимый облик любого здания. Насыщенные цвета удивительных по красоте камней, издревле использовавшихся для создания ювелирных изделий, нашли свое отражение в черепице, которая станет настоящим украшением Вашего дома!
+
+				.collection__content 
+
+					h2 Характеристики и документация
 
 				.row
 					.col-lg-9
 
-						table.ui-table
+						table.collection__table
 							tr
 								th Основа
 								td Сверхпрочный стеклохолст
 								th Размер пачки, мм
-								td 320 x 1003 x 73
+								td.nowrap 320 x 1003 x 73
 
 							tr
 								th Тип посыпки
 								td Крупнозернистая базальтовая посыпка
 								th Вес пачки, кг
-								td 26,4
+								td.nowrap 26,4
 							tr
 								th Водонепроницаемость
 								td 100%
 								th Пачек в паллете, шт
-								td 36
+								td.nowrap 36
 							tr
 								th Толщина гонта, мм
 								td 3,0 (±0,2)
 								th Размер паллета, см
-								td 105 x 105
+								td.nowrap 105 x 105
 
 							tr
 								th Вес 1м² готового покрытия, кг
 								td 8,8
 								th Вес паллета, кг
-								td 975
+								td.nowrap 975
 					.col-lg-3
 
-						.docs
-							ul.docs__menu
-								li
-									a(href="#").docs__link
-										figure.docs__link-icon
-											img(src="images/icon-pdf.png", alt="")
-										span.docs__link-text Технический лист
-								li
-									a(href="#").docs__link
-										figure.docs__link-icon
-											img(src="images/icon-pdf.png", alt="")
-										span.docs__link-text Гарантийный сертификат
-								li
-									a(href="#").docs__link
-										figure.docs__link-icon
-											img(src="images/icon-pdf.png", alt="")
-										span.docs__link-text Сертификат соответствия
-								li
-									a(href="#").docs__link
-										figure.docs__link-icon
-											img(src="images/icon-pdf.png", alt="")
-										span.docs__link-text Инструкция по монтажу
-								li
-									a(href="#").docs__link
-										figure.docs__link-icon
-											img(src="images/icon-pdf.png", alt="")
-										span.docs__link-text Брошюра
+					
+						ul.collection__docs
+							li
+								a(href="#").collection__docs-link
+									figure
+										img(src="images/icon-pdf.png", alt="")
+									| Технический лист
+							li
+								a(href="#").collection__docs-link
+									figure
+										img(src="images/icon-pdf.png", alt="")
+									| Гарантийный сертификат
+							li
+								a(href="#").collection__docs-link
+									figure
+										img(src="images/icon-pdf.png", alt="")
+									| Сертификат соответствия
+							li
+								a(href="#").collection__docs-link
+									figure
+										img(src="images/icon-pdf.png", alt="")
+									| Инструкция по монтажу
+							li
+								a(href="#").collection__docs-link
+									figure
+										img(src="images/icon-pdf.png", alt="")
+									| Брошюра
 
 
 
@@ -182,30 +193,34 @@ block main
 				a(href="#").services__item
 					figure.services__item-image
 						img(src="images/img-services-01.jpg", alt="")
-					span.services__item-title
-						+sprite('icon-services-01')
-						| Интерактивный подбор кровли
+					.services__item-desc
+						figure.services__item-icon
+							+sprite('icon-services-01')
+						span.services__item-title Интерактивный подбор кровли
 
 				a(href="#").services__item
 					figure.services__item-image
 						img(src="images/img-services-02.jpg", alt="")
-					span.services__item-title
-						+sprite('icon-services-02')
-						| Кровельный калькулятор
+					.services__item-desc
+						figure.services__item-icon
+							+sprite('icon-services-02')
+						span.services__item-title Кровельный калькулятор
 
 				a(href="#").services__item
 					figure.services__item-image
 						img(src="images/img-services-03.jpg", alt="")
-					span.services__item-title
-						+sprite('icon-services-03')
-						| Точки продаж
+					.services__item-desc
+						figure.services__item-icon
+							+sprite('icon-services-03')
+						span.services__item-title Точки продаж
 
 				a(href="#").services__item
 					figure.services__item-image
 						img(src="images/img-services-04.jpg", alt="")
-					span.services__item-title
-						+sprite('icon-services-04')
-						| подобрать ендовый ковёр и коньково- карнизную черепицу
+					.services__item-desc
+						figure.services__item-icon
+							+sprite('icon-services-04')
+						span.services__item-title подобрать ендовый ковёр и коньково- карнизную черепицу
 
 	// Services :: End
 
@@ -215,39 +230,49 @@ block main
 	.gallery
 		.container-fluid
 
+			h2.gallery__heading галерея
+
 			.gallery__slides.js-slick-gallery
-
-				a(href="#" data-fancybox="gallery").gallery__item
-					img(src="images/img-gallery-01.jpg", alt="")
-					+sprite('icon-zoom')
-
-				a(href="#" data-fancybox="gallery").gallery__item
-					img(src="images/img-gallery-02.jpg", alt="")
-					+sprite('icon-zoom')
-
-				a(href="#" data-fancybox="gallery").gallery__item
-					img(src="images/img-gallery-03.jpg", alt="")
-					+sprite('icon-zoom')
-
-				a(href="#" data-fancybox="gallery").gallery__item
-					img(src="images/img-gallery-04.jpg", alt="")
-					+sprite('icon-zoom')
-
-				a(href="#" data-fancybox="gallery").gallery__item
-					img(src="images/img-gallery-05.jpg", alt="")
-					+sprite('icon-zoom')
-
-				a(href="#" data-fancybox="gallery").gallery__item
-					img(src="images/img-gallery-06.jpg", alt="")
-					+sprite('icon-zoom')
-
-				a(href="#" data-fancybox="gallery").gallery__item
-					img(src="images/img-gallery-07.jpg", alt="")
-					+sprite('icon-zoom')
-
-				a(href="#" data-fancybox="gallery").gallery__item
-					img(src="images/img-gallery-08.jpg", alt="")
-					+sprite('icon-zoom')
+				
+				.gallery__slides-item
+					a(href="images/img-gallery-01.jpg" data-fancybox="gallery").gallery__item
+						img(src="images/img-gallery-01.jpg", alt="")
+						+sprite('icon-zoom')
+					
+				.gallery__slides-item
+					a(href="images/img-gallery-02.jpg" data-fancybox="gallery").gallery__item
+						img(src="images/img-gallery-02.jpg", alt="")
+						+sprite('icon-zoom')
+					
+				.gallery__slides-item
+					a(href="images/img-gallery-03.jpg" data-fancybox="gallery").gallery__item
+						img(src="images/img-gallery-03.jpg", alt="")
+						+sprite('icon-zoom')
+					
+				.gallery__slides-item
+					a(href="images/img-gallery-04.jpg" data-fancybox="gallery").gallery__item
+						img(src="images/img-gallery-04.jpg", alt="")
+						+sprite('icon-zoom')
+					
+				.gallery__slides-item
+					a(href="images/img-gallery-05.jpg" data-fancybox="gallery").gallery__item
+						img(src="images/img-gallery-05.jpg", alt="")
+						+sprite('icon-zoom')
+					
+				.gallery__slides-item
+					a(href="images/img-gallery-06.jpg" data-fancybox="gallery").gallery__item
+						img(src="images/img-gallery-06.jpg", alt="")
+						+sprite('icon-zoom')
+					
+				.gallery__slides-item
+					a(href="images/img-gallery-07.jpg" data-fancybox="gallery").gallery__item
+						img(src="images/img-gallery-07.jpg", alt="")
+						+sprite('icon-zoom')
+					
+				.gallery__slides-item
+					a(href="images/img-gallery-08.jpg" data-fancybox="gallery").gallery__item
+						img(src="images/img-gallery-08.jpg", alt="")
+						+sprite('icon-zoom')
 
 	// Gallery :: End
 
@@ -262,15 +287,33 @@ block main
 
 				.reviews__item
 					.row
-						.col-lg-6
+						.col-md-6
 							figure.reviews__item-image
-								img(src="images/img-reviews-01.jpg", alt="")
-								+sprite('icon-video')
-						.col-lg-6
+								a(href="#")
+									img(src="images/img-reviews-01.jpg", alt="")
+									+sprite('icon-video')
+						.col-md-6.align-self-center
 
-							blockquote.reviews__blockquote
-								p Раньше, наши дети просыпались от шума дождя. После замены крыши они спят спокойно.
-								cite Лейла Смирнова <small>домовладелец</small>
+							.reviews__item-desc
+
+								blockquote.reviews__item-blockquote
+									p Раньше, наши дети просыпались от шума дождя. После замены крыши они спят спокойно.
+									cite Лейла Смирнова <small>домовладелец</small>
+
+				.reviews__item
+					.row
+						.col-md-6
+							figure.reviews__item-image
+								a(href="#")
+									img(src="images/img-reviews-01.jpg", alt="")
+									+sprite('icon-video')
+						.col-md-6.align-self-center
+
+							.reviews__item-desc
+
+								blockquote.reviews__item-blockquote
+									p Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Переулка силуэт эта жизни предупреждал он...
+									cite Лейла Смирнова <small>домовладелец</small>
 
 	// Reviews :: End
 
@@ -280,7 +323,7 @@ block main
 	.video
 		.container-fluid
 
-			h2.video__heading
+			h2.video__heading видео
 
 			.video__slides.js-slick-video
 

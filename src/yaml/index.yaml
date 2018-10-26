@@ -2,9 +2,9 @@ ProjectTitle: Technonicole
 
 PageList:
 - file: homepage.html
-  ready: 90
+  ready: 100
 - file: collection.html
-  ready: 40
+  ready: 100
 - file: styleguide.html
   ready: 0
 

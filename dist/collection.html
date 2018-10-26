@@ -106,23 +106,24 @@
         <div class="collection">
           <div class="container-fluid">
             <div class="collection__sku">
+              <!-- Heading для мобилки--><span class="collection__heading is-lg-hidden">Коллекция САМБА</span>
               <div class="row">
                 <div class="col-lg-6">
-                  <div class="collection__images js-slick-collection">
-                    <div class="collection__images-item"><img src="images/img-collection-01.jpg" alt=""></div>
-                    <div class="collection__images-item"><img src="images/img-collection-02.jpg" alt=""></div>
-                    <div class="collection__images-item"><img src="images/img-collection-03.jpg" alt=""></div>
-                  </div>
-                  <div class="collection__cutting">
-                    <div class="row">
-                      <div class="col">Форма нарезки</div>
-                      <div class="col"><img src="images/img-cutting-01.jpg" alt=""></div>
-                      <div class="col">«соната»</div>
+                  <div class="collection__wrapper">
+                    <div class="collection__slides js-slick-collection">
+                      <div class="collection__slides-item"><img src="images/img-collection-01.jpg" alt=""></div>
+                      <div class="collection__slides-item"><img src="images/img-collection-02.jpg" alt=""></div>
+                      <div class="collection__slides-item"><img src="images/img-collection-03.jpg" alt=""></div>
+                    </div>
+                    <div class="collection__cutting">
+                      <p class="collection__cutting-text">Форма нарезки</p>
+                      <figure class="collection__cutting-image"><img src="images/img-cutting-01.png" alt=""></figure>
+                      <p class="collection__cutting-title">«СОНАТА»</p>
                     </div>
                   </div>
                 </div>
                 <div class="col-lg-6">
-                  <h1 class="collection__heading">Коллекция САМБА</h1>
+                  <h1 class="collection__heading is-lg-visible">Коллекция САМБА</h1>
                   <div class="collection__adv">
                     <div class="collection__adv-item">
                       <figure class="collection__adv-image"><img src="images/img-adv-01.jpg" alt=""></figure>
@@ -139,7 +140,7 @@
                   </div>
                   <h2 class="collection__subheading">Выберите цвет:</h2>
                   <div class="collection__colors">
-                    <div class="collection__colors-item">
+                    <div class="collection__colors-item is-active" data-color>
                       <figure class="collection__colors-image"><img src="images/img-color-01.jpg" alt="">
                         <svg class="icon-colors-check">
                           <use xlink:href="sprites/sprite.svg#icon-colors-check"></use>
@@ -147,7 +148,7 @@
                       </figure>
                       <p class="collection__colors-title">Малахит</p>
                     </div>
-                    <div class="collection__colors-item">
+                    <div class="collection__colors-item" data-color>
                       <figure class="collection__colors-image"><img src="images/img-color-02.jpg" alt="">
                         <svg class="icon-colors-check">
                           <use xlink:href="sprites/sprite.svg#icon-colors-check"></use>
@@ -155,7 +156,7 @@
                       </figure>
                       <p class="collection__colors-title">Рубин</p>
                     </div>
-                    <div class="collection__colors-item">
+                    <div class="collection__colors-item" data-color>
                       <figure class="collection__colors-image"><img src="images/img-color-03.jpg" alt="">
                         <svg class="icon-colors-check">
                           <use xlink:href="sprites/sprite.svg#icon-colors-check"></use>
@@ -166,8 +167,8 @@
                   </div>
                   <div class="collection__control">
                     <div class="collection__area">
-                      <p>Площадь, м²</p>
-                      <input class="ui-number" type="number" min="0" max="100"><small>1 упаковка = 3м²</small>
+                      <p>Площадь, <b>м²</b></p>
+                      <input class="ui-number" type="number" value="1" min="1" max="100"><small>1 упаковка = 3м²</small>
                     </div>
                     <p class="collection__price">29 990 ₽<small>9м² = 3 упаковки</small></p>
                     <div class="collection__buttons"><a class="btn btn--60 btn--red" href="#">Добавить в корзину
@@ -182,59 +183,61 @@
               </div>
             </div>
             <div class="collection__details">
-              <h2>описание</h2>
-              <p>Изящная кровля с эффектно проработанной тенью подчеркнёт неповторимый облик любого здания. Насыщенные цвета удивительных по красоте камней, издревле использовавшихся для создания ювелирных изделий, нашли свое отражение в черепице, которая станет настоящим украшением Вашего дома! </p>
-              <h2>Характеристики и документация</h2>
+              <div class="collection__content">
+                <h2>описание</h2>
+                <p>Изящная кровля с эффектно проработанной тенью подчеркнёт неповторимый облик любого здания. Насыщенные цвета удивительных по красоте камней, издревле использовавшихся для создания ювелирных изделий, нашли свое отражение в черепице, которая станет настоящим украшением Вашего дома!</p>
+              </div>
+              <div class="collection__content"> 
+                <h2>Характеристики и документация</h2>
+              </div>
               <div class="row">
                 <div class="col-lg-9">
-                  <table class="ui-table">
+                  <table class="collection__table">
                     <tr>
                       <th>Основа</th>
                       <td>Сверхпрочный стеклохолст</td>
                       <th>Размер пачки, мм</th>
-                      <td>320 x 1003 x 73</td>
+                      <td class="nowrap">320 x 1003 x 73</td>
                     </tr>
                     <tr>
                       <th>Тип посыпки</th>
                       <td>Крупнозернистая базальтовая посыпка</td>
                       <th>Вес пачки, кг</th>
-                      <td>26,4</td>
+                      <td class="nowrap">26,4</td>
                     </tr>
                     <tr>
                       <th>Водонепроницаемость</th>
                       <td>100%</td>
                       <th>Пачек в паллете, шт</th>
-                      <td>36</td>
+                      <td class="nowrap">36</td>
                     </tr>
                     <tr>
                       <th>Толщина гонта, мм</th>
                       <td>3,0 (±0,2)</td>
                       <th>Размер паллета, см</th>
-                      <td>105 x 105</td>
+                      <td class="nowrap">105 x 105</td>
                     </tr>
                     <tr>
                       <th>Вес 1м² готового покрытия, кг</th>
                       <td>8,8</td>
                       <th>Вес паллета, кг</th>
-                      <td>975</td>
+                      <td class="nowrap">975</td>
                     </tr>
                   </table>
                 </div>
                 <div class="col-lg-3">
-                  <div class="docs">
-                    <ul class="docs__menu">
-                      <li><a class="docs__link" href="#">
-                          <figure class="docs__link-icon"><img src="images/icon-pdf.png" alt=""></figure><span class="docs__link-text">Технический лист</span></a></li>
-                      <li><a class="docs__link" href="#">
-                          <figure class="docs__link-icon"><img src="images/icon-pdf.png" alt=""></figure><span class="docs__link-text">Гарантийный сертификат</span></a></li>
-                      <li><a class="docs__link" href="#">
-                          <figure class="docs__link-icon"><img src="images/icon-pdf.png" alt=""></figure><span class="docs__link-text">Сертификат соответствия</span></a></li>
-                      <li><a class="docs__link" href="#">
-                          <figure class="docs__link-icon"><img src="images/icon-pdf.png" alt=""></figure><span class="docs__link-text">Инструкция по монтажу</span></a></li>
-                      <li><a class="docs__link" href="#">
-                          <figure class="docs__link-icon"><img src="images/icon-pdf.png" alt=""></figure><span class="docs__link-text">Брошюра</span></a></li>
-                    </ul>
-                  </div>
+                  <ul class="collection__docs">
+                    <li><a class="collection__docs-link" href="#">
+                        <figure><img src="images/icon-pdf.png" alt=""></figure>Технический лист</a></li>
+                    <li><a class="collection__docs-link" href="#">
+                        <figure><img src="images/icon-pdf.png" alt=""></figure>Гарантийный сертификат</a></li>
+                    <li><a class="collection__docs-link" href="#">
+                        <figure><img src="images/icon-pdf.png" alt=""></figure>Сертификат соответствия</a></li>
+                    <li><a class="collection__docs-link" href="#">
+                        <figure><img src="images/icon-pdf.png" alt=""></figure>Инструкция по монтажу</a></li>
+                    <li><a class="collection__docs-link" href="#">
+                        <figure><img src="images/icon-pdf.png" alt=""></figure>Брошюра</a></li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -245,53 +248,79 @@
         <div class="services">
           <div class="container-fluid">
             <div class="services__slides js-slick-services"><a class="services__item" href="#">
-                <figure class="services__item-image"><img src="images/img-services-01.jpg" alt=""></figure><span class="services__item-title">
-                  <svg class="icon-services-01">
-                    <use xlink:href="sprites/sprite.svg#icon-services-01"></use>
-                  </svg>Интерактивный подбор кровли</span></a><a class="services__item" href="#">
-                <figure class="services__item-image"><img src="images/img-services-02.jpg" alt=""></figure><span class="services__item-title">
-                  <svg class="icon-services-02">
-                    <use xlink:href="sprites/sprite.svg#icon-services-02"></use>
-                  </svg>Кровельный калькулятор</span></a><a class="services__item" href="#">
-                <figure class="services__item-image"><img src="images/img-services-03.jpg" alt=""></figure><span class="services__item-title">
-                  <svg class="icon-services-03">
-                    <use xlink:href="sprites/sprite.svg#icon-services-03"></use>
-                  </svg>Точки продаж</span></a><a class="services__item" href="#">
-                <figure class="services__item-image"><img src="images/img-services-04.jpg" alt=""></figure><span class="services__item-title">
-                  <svg class="icon-services-04">
-                    <use xlink:href="sprites/sprite.svg#icon-services-04"></use>
-                  </svg>подобрать ендовый ковёр и коньково- карнизную черепицу</span></a></div>
+                <figure class="services__item-image"><img src="images/img-services-01.jpg" alt=""></figure>
+                <div class="services__item-desc">
+                  <figure class="services__item-icon">
+                    <svg class="icon-services-01">
+                      <use xlink:href="sprites/sprite.svg#icon-services-01"></use>
+                    </svg>
+                  </figure><span class="services__item-title">Интерактивный подбор кровли</span>
+                </div></a><a class="services__item" href="#">
+                <figure class="services__item-image"><img src="images/img-services-02.jpg" alt=""></figure>
+                <div class="services__item-desc">
+                  <figure class="services__item-icon">
+                    <svg class="icon-services-02">
+                      <use xlink:href="sprites/sprite.svg#icon-services-02"></use>
+                    </svg>
+                  </figure><span class="services__item-title">Кровельный калькулятор</span>
+                </div></a><a class="services__item" href="#">
+                <figure class="services__item-image"><img src="images/img-services-03.jpg" alt=""></figure>
+                <div class="services__item-desc">
+                  <figure class="services__item-icon">
+                    <svg class="icon-services-03">
+                      <use xlink:href="sprites/sprite.svg#icon-services-03"></use>
+                    </svg>
+                  </figure><span class="services__item-title">Точки продаж</span>
+                </div></a><a class="services__item" href="#">
+                <figure class="services__item-image"><img src="images/img-services-04.jpg" alt=""></figure>
+                <div class="services__item-desc">
+                  <figure class="services__item-icon">
+                    <svg class="icon-services-04">
+                      <use xlink:href="sprites/sprite.svg#icon-services-04"></use>
+                    </svg>
+                  </figure><span class="services__item-title">подобрать ендовый ковёр и коньково- карнизную черепицу</span>
+                </div></a></div>
           </div>
         </div>
         <!-- Services :: End-->
         <!-- Gallery :: Start-->
         <div class="gallery">
           <div class="container-fluid">
-            <div class="gallery__slides js-slick-gallery"><a class="gallery__item" href="#" data-fancybox="gallery"><img src="images/img-gallery-01.jpg" alt="">
-                <svg class="icon-zoom">
-                  <use xlink:href="sprites/sprite.svg#icon-zoom"></use>
-                </svg></a><a class="gallery__item" href="#" data-fancybox="gallery"><img src="images/img-gallery-02.jpg" alt="">
-                <svg class="icon-zoom">
-                  <use xlink:href="sprites/sprite.svg#icon-zoom"></use>
-                </svg></a><a class="gallery__item" href="#" data-fancybox="gallery"><img src="images/img-gallery-03.jpg" alt="">
-                <svg class="icon-zoom">
-                  <use xlink:href="sprites/sprite.svg#icon-zoom"></use>
-                </svg></a><a class="gallery__item" href="#" data-fancybox="gallery"><img src="images/img-gallery-04.jpg" alt="">
-                <svg class="icon-zoom">
-                  <use xlink:href="sprites/sprite.svg#icon-zoom"></use>
-                </svg></a><a class="gallery__item" href="#" data-fancybox="gallery"><img src="images/img-gallery-05.jpg" alt="">
-                <svg class="icon-zoom">
-                  <use xlink:href="sprites/sprite.svg#icon-zoom"></use>
-                </svg></a><a class="gallery__item" href="#" data-fancybox="gallery"><img src="images/img-gallery-06.jpg" alt="">
-                <svg class="icon-zoom">
-                  <use xlink:href="sprites/sprite.svg#icon-zoom"></use>
-                </svg></a><a class="gallery__item" href="#" data-fancybox="gallery"><img src="images/img-gallery-07.jpg" alt="">
-                <svg class="icon-zoom">
-                  <use xlink:href="sprites/sprite.svg#icon-zoom"></use>
-                </svg></a><a class="gallery__item" href="#" data-fancybox="gallery"><img src="images/img-gallery-08.jpg" alt="">
-                <svg class="icon-zoom">
-                  <use xlink:href="sprites/sprite.svg#icon-zoom"></use>
-                </svg></a></div>
+            <h2 class="gallery__heading">галерея</h2>
+            <div class="gallery__slides js-slick-gallery">
+              <div class="gallery__slides-item"><a class="gallery__item" href="images/img-gallery-01.jpg" data-fancybox="gallery"><img src="images/img-gallery-01.jpg" alt="">
+                  <svg class="icon-zoom">
+                    <use xlink:href="sprites/sprite.svg#icon-zoom"></use>
+                  </svg></a></div>
+              <div class="gallery__slides-item"><a class="gallery__item" href="images/img-gallery-02.jpg" data-fancybox="gallery"><img src="images/img-gallery-02.jpg" alt="">
+                  <svg class="icon-zoom">
+                    <use xlink:href="sprites/sprite.svg#icon-zoom"></use>
+                  </svg></a></div>
+              <div class="gallery__slides-item"><a class="gallery__item" href="images/img-gallery-03.jpg" data-fancybox="gallery"><img src="images/img-gallery-03.jpg" alt="">
+                  <svg class="icon-zoom">
+                    <use xlink:href="sprites/sprite.svg#icon-zoom"></use>
+                  </svg></a></div>
+              <div class="gallery__slides-item"><a class="gallery__item" href="images/img-gallery-04.jpg" data-fancybox="gallery"><img src="images/img-gallery-04.jpg" alt="">
+                  <svg class="icon-zoom">
+                    <use xlink:href="sprites/sprite.svg#icon-zoom"></use>
+                  </svg></a></div>
+              <div class="gallery__slides-item"><a class="gallery__item" href="images/img-gallery-05.jpg" data-fancybox="gallery"><img src="images/img-gallery-05.jpg" alt="">
+                  <svg class="icon-zoom">
+                    <use xlink:href="sprites/sprite.svg#icon-zoom"></use>
+                  </svg></a></div>
+              <div class="gallery__slides-item"><a class="gallery__item" href="images/img-gallery-06.jpg" data-fancybox="gallery"><img src="images/img-gallery-06.jpg" alt="">
+                  <svg class="icon-zoom">
+                    <use xlink:href="sprites/sprite.svg#icon-zoom"></use>
+                  </svg></a></div>
+              <div class="gallery__slides-item"><a class="gallery__item" href="images/img-gallery-07.jpg" data-fancybox="gallery"><img src="images/img-gallery-07.jpg" alt="">
+                  <svg class="icon-zoom">
+                    <use xlink:href="sprites/sprite.svg#icon-zoom"></use>
+                  </svg></a></div>
+              <div class="gallery__slides-item"><a class="gallery__item" href="images/img-gallery-08.jpg" data-fancybox="gallery"><img src="images/img-gallery-08.jpg" alt="">
+                  <svg class="icon-zoom">
+                    <use xlink:href="sprites/sprite.svg#icon-zoom"></use>
+                  </svg></a></div>
+            </div>
           </div>
         </div>
         <!-- Gallery :: End-->
@@ -302,18 +331,37 @@
             <div class="reviews__slides js-slick-reviews">
               <div class="reviews__item">
                 <div class="row">
-                  <div class="col-lg-6">
-                    <figure class="reviews__item-image"><img src="images/img-reviews-01.jpg" alt="">
-                      <svg class="icon-video">
-                        <use xlink:href="sprites/sprite.svg#icon-video"></use>
-                      </svg>
-                    </figure>
+                  <div class="col-md-6">
+                    <figure class="reviews__item-image"><a href="#"><img src="images/img-reviews-01.jpg" alt="">
+                        <svg class="icon-video">
+                          <use xlink:href="sprites/sprite.svg#icon-video"></use>
+                        </svg></a></figure>
                   </div>
-                  <div class="col-lg-6">
-                    <blockquote class="reviews__blockquote">
-                      <p>Раньше, наши дети просыпались от шума дождя. После замены крыши они спят спокойно.</p>
-                      <cite>Лейла Смирнова <small>домовладелец</small></cite>
-                    </blockquote>
+                  <div class="col-md-6 align-self-center">
+                    <div class="reviews__item-desc">
+                      <blockquote class="reviews__item-blockquote">
+                        <p>Раньше, наши дети просыпались от шума дождя. После замены крыши они спят спокойно.</p>
+                        <cite>Лейла Смирнова <small>домовладелец</small></cite>
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="reviews__item">
+                <div class="row">
+                  <div class="col-md-6">
+                    <figure class="reviews__item-image"><a href="#"><img src="images/img-reviews-01.jpg" alt="">
+                        <svg class="icon-video">
+                          <use xlink:href="sprites/sprite.svg#icon-video"></use>
+                        </svg></a></figure>
+                  </div>
+                  <div class="col-md-6 align-self-center">
+                    <div class="reviews__item-desc">
+                      <blockquote class="reviews__item-blockquote">
+                        <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Переулка силуэт эта жизни предупреждал он...</p>
+                        <cite>Лейла Смирнова <small>домовладелец</small></cite>
+                      </blockquote>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -324,7 +372,7 @@
         <!-- Video :: Start-->
         <div class="video">
           <div class="container-fluid">
-            <h2 class="video__heading"></h2>
+            <h2 class="video__heading">видео</h2>
             <div class="video__slides js-slick-video"><a class="video__item" href="#">
                 <figure class="video__item-image"><img src="images/img-video-01.jpg" alt="">
                   <svg class="icon-video">

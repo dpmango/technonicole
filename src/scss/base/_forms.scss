@@ -3,62 +3,6 @@
 //- --------------------------------------------------------------------------
 
 
-// -----
-
-
-.ui-control {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    margin: 0 0 -20rem;
-    .ui-check {
-        flex: 1;
-        margin: 0 20rem 20rem 0;
-    }
-    .btn {
-        width: 100%;
-        min-width: 180rem;
-        margin: 0 0 20rem;
-    }
-    @include breakpoint(md) {
-        .btn {
-            width: auto;
-            order: 1;
-            margin: 0 0 0 auto;
-        }
-    }
-    @include breakpoint(lg) {
-        min-width: 240rem;
-    }
-}
-
-
-.ui-delivery, .ui-payments {
-    .ui-check {
-        margin: 0;
-    }
-    .row {
-        margin: 0 -8px -16px;
-        & > [class^="col-"] {
-            padding: 0 8px 16px;
-        }
-    }
-}
-
-
-.ui-fieldset {
-    margin: 0 0 30rem;
-    padding: 0 0 30rem;
-    border: none;
-    border-bottom: 1px solid #DDDFE0;
-    &:last-child {
-        margin: 0;
-        padding: 0;
-        border: none;
-    }
-}
-
-
 .ui-legend {
     display: block;
     font-size: 24rem;
@@ -86,44 +30,6 @@
     
 }
 
-.ui-error {
-    display: block;
-    color: #f1002c;
-    font-size: 13rem;
-    line-height: 20rem;
-    font-weight: 400;
-    margin: 0 0 -10rem;
-}
-
-
-.ui-placeholder {
-    position: absolute;
-    top: 0;
-    left: 0;
-    font: 400 17rem/24rem $fontBase;
-    color: #9299a2;
-    border: 1px solid transparent;
-    z-index: 5;
-    cursor: text;
-    transition: 0.25s;
-    padding: 20rem 18rem;
-   
-
-}
-
-.ui-forgot {
-    position: absolute;
-    top: 50%;
-    right: 18rem;
-    z-index: 10;
-    font-size: 15rem;
-    line-height: 1;
-    text-decoration: none;
-    transform: translate(0,-50%);
-    &:hover {
-        text-decoration: none;
-    }
-}
 
 .ui-field {
     display: block;
@@ -378,67 +284,73 @@
     display: inline-block;
     vertical-align: top;
     position: relative;
-    padding: 0 20rem;
-    width: 100%;
-    overflow: hidden;
-    background: #fff;
-    border: 1px solid #C7C8C9;
-    margin: 0 0 10rem;
-}
+    width: 80rem;
+    margin: 0 0 20rem;
+    
+    .jq-number__field {
+        position: relative;
+        width: 100%;
+        input {
+            display: block;
+            width: 100%;
+            -moz-appearance: textfield;
+            text-align: left;
+            font: 600 24rem/28rem $fontBase;
+            text-align: center;
+            border: 1px solid #E5E5E5;
+            padding: 5rem 21rem 5rem 5rem;
+            margin: 0;
 
+        }
+    }
 
-.ui-number__input {
-    border: none;
-    border-radius: 0;
-    box-shadow: none;
-    font: 400 14rem/18rem $fontBase;
-    color: #4c4c4c;
-    width: 100%;
-    text-align: center;
-    padding: 10rem;
-    -moz-appearance: textfield;
-    &::-webkit-inner-spin-button,
-    &::-webkit-outer-spin-button {
+    .jq-number__field input::-webkit-inner-spin-button,
+    .jq-number__field input::-webkit-outer-spin-button {
         margin: 0;
-        -webkit-appearance: none
-    }
-}
-
-
-
-.ui-number__btn {
-    display: block;
-    position: absolute;
-    top: 50%;
-    width: 40rem;
-    height: 28rem;
-    font: 400 24rem/28rem $fontBase;
-    color: #888888;
-    cursor: pointer;
-    text-align: center;
-    padding: 2rem;
-    margin: -14rem 0 0;
-    border: none;
-    background: none;
-    &:hover {
-        color: #000;
+        -webkit-appearance: none;
     }
 
-    &--minus {
-        left: 0;
+
+    .jq-number__spin {
+        display: block;
+        position: absolute;
+        right: 3rem;
+        width: 17rem;
+        height: 17rem;
+        cursor: pointer;
+        background: linear-gradient(to bottom, #e9e9e9 0%,#dadada 100%);
+        color: #A4A4A4;
         &:after {
-            content: '-';
             display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            font-size: 13rem;
+            line-height: 17rem;
+            font-weight: 600;
+        }
+        &.plus {
+            top: 3rem;
+            &:after {
+                content: '+';
+            }
+        }
+        &.minus {
+            bottom: 3rem;
+            &:after {
+                content: '-';
+            }
+        }
+        &:hover {
+            color: #000;
         }
     }
-    &--plus {
-        right: 0;
-        &:after {
-            content: '+';
-            display: block;
-        }
-    }
+
 }
+
 
 
 // -----

@@ -28,6 +28,16 @@
 		
 	}
 
+
+	[class^="icon-add"] {
+		margin: 0 0 0 10rem;
+		top: -2rem;
+	}
+	[class^="icon-location"] {
+		margin: 0 10rem 0;
+		top: -1rem;
+	}
+
 }
 
 .btn--block {
@@ -56,6 +66,18 @@
 	
 }
 
+.btn--60 {
+	font-size: 14rem;
+	padding: 18rem 54rem;
+
+	@include breakpointMax(lg) {
+		font-size: 13rem;
+		line-height: 16rem;
+		padding: 16rem 30rem;
+	}
+	
+}
+
 
 .btn--dark-empty {
 	border-color: #000;
@@ -73,6 +95,8 @@
 	&:hover {
 		background: #e30613;
 		color: #fff;
+		// border-color: #b7000b;
+		// color: #b7000b;
 	}
 }
 
@@ -83,5 +107,16 @@
 	&:hover {
 		background: #b7000b;
 		color: #fff;
+	}
+}
+
+
+.btn--link {
+	color: #000;
+	[class^="icon-"] {
+		color: #E50000;
+	}
+	&:hover {
+		color: #E50000;
 	}
 }

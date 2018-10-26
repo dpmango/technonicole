@@ -1,0 +1,85 @@
+// --------------------------------------------------------------------------
+// Services
+// --------------------------------------------------------------------------
+
+.services {
+	padding: 48rem 0 44rem;
+	@include breakpoint(lg) {
+		padding: 100rem 0;
+	}
+}
+
+
+.services__slides {
+	margin: 0 -5rem;
+	.slick-slide {
+		margin: 0 5rem;
+	}
+
+}
+
+
+.services__item {
+	display: block;
+	text-decoration: none;
+	color: #000;
+	text-align: center;
+	&:hover {
+		text-decoration: none;
+		color: #E61930;
+
+		.services__item-image img {
+			transform: scale(1.1);
+		}
+
+	}
+}
+
+
+.services__item-image {
+	display: block;
+	position: relative;
+	overflow: hidden;
+	margin: 0 0 15rem;
+
+	backface-visibility: hidden;
+	&:before {
+		content: '';
+		float: left;
+		padding: 100% 0 0;
+	}
+	img {
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		transition: 0.7s;
+	}
+}
+
+
+.services__item-desc {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0 15rem;
+	min-height: 51rem;
+}
+
+.services__item-icon {
+	margin: 0 18rem 0 0;
+	color: #E61930;
+}
+
+
+.services__item-title {
+	font-size: 14rem;
+	line-height: 17rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	text-align: left;
+}

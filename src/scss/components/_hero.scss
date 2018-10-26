@@ -9,6 +9,7 @@
 
 .hero__slides {
 	position: relative;
+	white-space: nowrap;
 }
 
 .hero__item {
@@ -18,6 +19,10 @@
 	background: #000;
 	color: #fff;
 	min-height: 350rem;
+	white-space: nowrap;
+	display: inline-block;
+	vertical-align: top;
+	width: 100%;
 	@include breakpoint(sm) {
 		padding: 136rem 0 96rem;
 	}

@@ -203,94 +203,159 @@ $(function() {
 	   	autoplay: false
 	});
 
+	$('[data-color]').on('click', function(event) {
+		event.preventDefault();
+
+	 	var dataIndex = $(this).index();
+
+	    $('[data-color]').removeClass('is-active').eq(dataIndex).addClass('is-active');
+	    $('.js-slick-collection').slick('slickGoTo', dataIndex);
+
+	});
+
+
+	$('.js-slick-services').slick({
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		arrows: false,
+		dots: true,
+		fade: false,
+		infinite: true,
+		nextArrow: slickNext,
+	   	prevArrow: slickPrev,
+	   	autoplay: true,
+	   	autoplaySpeed: 5000,
+	   	pauseOnHover: true,
+	   	responsive: [
+	   		{
+	   			breakpoint: 992,
+	   			settings: {
+	   				slidesToShow: 3,
+	   				dots: true,
+	   				arrows: false
+	   			}
+	   		},
+	   		{
+	   			breakpoint: 768,
+	   			settings: {
+	   				slidesToShow: 2,
+	   				dots: true,
+	   				arrows: false
+	   			}
+	   		},
+	   		{
+	   			breakpoint: 576,
+	   			settings: {
+	   				slidesToShow: 1,
+	   				dots: true,
+	   				arrows: false
+	   			}
+	   		}
+	   	]
+	});
+
+
 	
 
-	// $('[data-gallery]').each(function(){
+	$('.js-slick-gallery').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
 
-	//     var gallery = $(this),
-	//         gallerySlides = gallery.find('[data-gallery-slides]'),
-	//         galleryThumbs = gallery.find('[data-gallery-thumbs]');
+		rows: 2,
+		slidesPerRow: 4,
 
-	//     gallerySlides.on('init afterChange', function(event, slick, currentSlide, nextSlide){
-	//       $('[data-color]').removeClass('is-active').eq(slick.currentSlide).addClass('is-active');
-	//     });
-
-	//     gallerySlides.slick({
-	//       slidesToShow: 1,
-	//       slidesToScroll: 1,
-	//       arrows: false,
-	//       fade: false,
-	//       asNavFor: galleryThumbs,
-	//       infinite: true,
-	//       mobileFirst: true,
-	//       adaptiveHeight: true,
-	//       responsive: [
-	//         {
-	//           breakpoint: 568,
-	//           settings: {
-	//             fade: true
-	//           }
-	//         },
-	//         {
-	//           breakpoint: 992,
-	//           settings: {
-	//             fade: true,
-	//             adaptiveHeight: false
-	//           }
-	//         }
-	//       ]
-	//     });
-
-	//     galleryThumbs.slick({
-	//       infinite: true,
-	//       slidesToShow: 3,
-	//       slidesToScroll: 1,
-	//       asNavFor: gallerySlides,
-	//       dots: false,
-	//       centerMode: false,
-	//       focusOnSelect: true,
-	//       vertical: false,
-	//       arrows: true,
-	//       mobileFirst: true,
-	//       responsive: [
-	//         {
-	//           breakpoint: 568,
-	//           settings: {
-	//             vertical: true
-	//           }
-	//         },
-	//         {
-	//           breakpoint: 768,
-	//           settings: {
-	//             vertical: false
-	//           }
-	//         },
-	//         {
-	//           breakpoint: 992,
-	//           settings: {
-	//             vertical: true
-	//           }
-	//         }
-	//       ]
-	//     });
+		arrows: false,
+		dots: true,
+		fade: false,
+		infinite: false,
+	   	autoplay: false,
+	   	autoplaySpeed: 5000,
+	   	pauseOnHover: true,
+	   	responsive: [
+	   		{
+	   			breakpoint: 992,
+	   			settings: {
+	   				rows: 1,
+	   				slidesPerRow: 1,
+	   				slidesToShow: 3,
+					slidesToScroll: 1,
+	   				dots: true,
+	   				arrows: false
+	   			}
+	   		},
+	   		{
+	   			breakpoint: 768,
+	   			settings: {
+	   				rows: 1,
+	   				slidesPerRow: 1,
+	   				slidesToShow: 2,
+					slidesToScroll: 1,
+	   				dots: true,
+	   				arrows: false
+	   			}
+	   		},
+	   		{
+	   			breakpoint: 576,
+	   			settings: {
+	   				rows: 1,
+	   				slidesPerRow: 1,
+	   				slidesToShow: 1,
+					slidesToScroll: 1,
+	   				dots: true,
+	   				arrows: false
+	   			}
+	   		}
+	   	]
+	});
 
 
-	// });
+
+	$('.js-slick-reviews').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: false,
+		dots: true,
+		fade: false,
+		infinite: true,
+		nextArrow: slickNext,
+	   	prevArrow: slickPrev,
+	   	autoplay: false,
+	   	adaptiveHeight: true
+	});
 
 
-	// $('[data-color]').on('click', function(event) {
-	//   event.preventDefault();
-
-	//   var dataColor = $(this).data('color'),
-	//       dataIndex = $(this).index();
-
-	//     if(dataColor === '') dataColor = 'Цвет не указан'
-
-	//     $('[data-color]').removeClass('is-active').eq(dataIndex).addClass('is-active');
-	//     $('[data-color-selected]').text(dataColor);
-	//     $('[data-gallery-slides]').slick('slickGoTo', dataIndex);
-
-	// });
+	
+	$('.js-slick-video').slick({
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		arrows: false,
+		dots: true,
+		fade: false,
+		infinite: true,
+		nextArrow: slickNext,
+	   	prevArrow: slickPrev,
+	   	autoplay: true,
+	   	autoplaySpeed: 5000,
+	   	pauseOnHover: true,
+	   	responsive: [
+	   		{
+	   			breakpoint: 992,
+	   			settings: {
+	   				slidesToShow: 2,
+	   				dots: true,
+	   				arrows: false
+	   			}
+	   		},
+	   		{
+	   			breakpoint: 576,
+	   			settings: {
+	   				slidesToShow: 1,
+	   				dots: true,
+	   				arrows: false
+	   			}
+	   		}
+	   	]
+	});
 
 	// --------------------------------------------------------------------------
 	// Fancybox
@@ -312,7 +377,6 @@ $(function() {
 		toolbar : true,
 		transitionEffect : 'slide',
 		buttons: [
-			"zoom",
 			"close"
 		]
 	});
@@ -322,7 +386,7 @@ $(function() {
 	// Forms
 	// --------------------------------------------------------------------------
 
-	$('select').styler({
+	$('select, input[type="number"]').styler({
 		selectSearch: false,
 		selectSmartPositioning: false
 	});
