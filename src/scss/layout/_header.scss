@@ -51,8 +51,8 @@
 	margin: 0 12rem 0 0;
 }
 
-.header__language-btn,
-.header__location-btn {
+.header__language-trigger,
+.header__location-trigger {
 	display: inline-block;
 	vertical-align: top;
 	position: relative;
@@ -97,12 +97,55 @@
 	}
 }
 
-.header__language-dropdown,
-.header__location-dropdown {
+.header__language-dropdown {
 	position: absolute;
 	top: 100%;
-	left: 0;
-	display: none;
+	left: -30rem;
+	width: 380rem;
+	background: #414042;
+	border-top: 1px solid #474648;
+	z-index: 100;
+
+	transition: 0.25s;
+	opacity: 0;
+	visibility: hidden;
+}
+
+.header__language-menu {
+	margin: 0 -1px -1px 0;
+	padding: 0;
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	font-size: 12rem;
+	line-height: 18rem;
+	font-weight: 400;
+	& > li {
+		width: 50%;
+		margin: 0;
+		padding: 0 1px 1px 0;
+	}
+}
+
+.header__language-link {
+	display: block;
+	position: relative;
+	padding: 15rem 20rem 15rem 58rem;
+	color: #b7b7b7;
+	text-decoration: none;
+	transition: 0.25s;
+	img, [class^="icon-"] {
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: 30rem;
+		transform: translate(0,-50%);
+	}
+	&:hover, &.is-active {
+		background: #525153;
+		color: #fff;
+		text-decoration: none;
+	}
 }
 
 // -----
@@ -181,7 +224,7 @@
 		vertical-align: middle;
 	}
 
-	@include breakpointMax(md) {
+	@include breakpointMax(lg) {
 		max-width: 160rem;
 	}
 }
@@ -193,7 +236,7 @@
 .header__subnav {
 	flex: 1;
 
-	@include breakpointMax(lg) {
+	@include breakpointMax(md) {
 		display: none;
 	}
 }
@@ -216,6 +259,12 @@
 
 	& > li {
 		padding: 0 28rem;
+	}
+
+	@include breakpointMax(lg) {
+		& > li {
+			padding: 0 10rem;
+		}
 	}
 }
 
@@ -266,7 +315,7 @@
 	}
 
 	@include breakpointMax(md) {
-		padding: 0 0 0 30rem;
+		display: none;
 	}
 }
 
@@ -294,16 +343,10 @@
 		margin: 0 0 0 -6rem;
 	}
 
-	@include breakpointMax(md) {
-		margin: 5rem 0 0;
-	}
 }
 
 .header__basket-price {
 	margin: 0;
-	@include breakpointMax(md) {
-		display: none;
-	}
 }
 
 // -----
@@ -311,10 +354,15 @@
 .header__call {
 	margin: 0 0 0 40rem;
 	.btn {
+		white-space: nowrap;
 		[class^="icon-"] {
 			top: -1rem;
 			margin: 0 15rem 0 0;
 		}
+	}
+
+	@include breakpointMax(lg) {
+		margin: 0 0 0 20rem;
 	}
 
 	@include breakpointMax(md) {
@@ -396,7 +444,7 @@
 		left: 0;
 		right: 0;
 		background: #fff;
-		padding: 20rem;
+		padding: 0;
 		box-shadow: 0 15rem 15rem rgba(0, 0, 0, 0.1);
 
 		transition: 0.25s;
@@ -433,6 +481,7 @@
 		flex-wrap: wrap;
 		& > li {
 			width: 100%;
+			border-bottom: 1px solid #E5E5E5;
 		}
 	}
 }
@@ -449,6 +498,119 @@
 		color: #E30613;
 	}
 	@include breakpointMax(md) {
-		padding: 10rem 0;
+		padding: 15rem 20rem 15rem 50rem;
+		&:hover, &.is-active {
+			background: #F3F3F3;
+			color: #e30613;
+		}
+	}
+}
+
+
+
+// ------
+
+
+.header__nav-group {
+	&--white {
+		background: #fff;
+	}
+	&--dark {
+		background: #414042;
+	}
+
+	@include breakpointMax(md) {
+
+
+		.header__subnav {
+			display: block;
+			padding: 15rem 0;
+		}
+
+		.header__subnav-menu {
+			flex-wrap: wrap;
+			line-height: 48rem;
+			& > li {
+				width: 100%;
+				padding: 0 20rem 0 50rem;
+			}
+		}
+
+		.header__subnav-link {
+			position: relative;
+			padding: 0 0 0 24rem;
+
+			[class^="icon-"] {
+				position: absolute;
+				top: 50%;
+				left: 0;
+				transform: translate(0,-50%);
+				margin: 0;
+			}
+			
+		}
+
+		// -----
+
+		.header__basket {
+			display: block;
+			margin: 0 20rem 20rem 50rem;
+		}
+
+		// -----
+
+		.header__call {
+			margin: 0;
+			padding: 0 20rem 30rem;
+			display: block;
+			.btn {
+				width: 100%;
+				padding: 12rem 20rem;
+			}
+		}
+
+		// -----
+
+		.header__language {
+			border-bottom: 1px solid #676668;
+			margin: 0;
+			padding: 0 0 0 50rem;
+		}
+
+		.header__language-trigger {
+			line-height: 46rem;
+		}
+
+		// -----
+
+		.header__location {
+			border-bottom: 1px solid #676668;
+			margin: 0;
+			padding: 0 0 0 50rem;
+		}
+
+		.header__location-trigger {
+			line-height: 46rem;
+		}
+
+		// -----
+
+		.header__social {
+			display: flex;
+			padding: 5rem 20rem;
+		}
+
+		// -----
+
+		.header__phone {
+			padding: 0 20rem 20rem 50rem;
+			line-height: 30rem;
+		}
+
+
+		.header__phone-text {
+			display: block;
+			line-height: 20rem;
+		}
 	}
 }

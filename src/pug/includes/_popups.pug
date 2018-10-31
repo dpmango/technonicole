@@ -3,28 +3,82 @@
 //- --------------------------------------------------------------------------
 
 
-div(style="display: none;").popup.popup--320#popup-signin
+div(style="display: none;").popup#popup-location
 
 	button.popup__close(data-fancybox-close)
 		+sprite('icon-close')
 
-	span.popup__heading Авторизация
+	.location
 
-	.popup__form
-		form(action="#")
+		span.location__heading
+			+sprite('icon-location')
+			| Выберите ваше местоположение
 
-			label.ui-field
-				input(type="email").ui-input
-				span.ui-placeholder Электронная почта*
 
-			label.ui-field
-				input(type="password").ui-input
-				span.ui-placeholder Ваш пароль*
-				a(href="#").ui-forgot Забыли?
-			
-			button.btn.btn--66.btn--turq.btn--block Войти
+		ul.location__cities
+			li
+				a(href="#").location__cities-link Москва
+			li
+				a(href="#").location__cities-link Сочи
+			li
+				a(href="#").location__cities-link Пермь
+			li
+				a(href="#").location__cities-link Тула
+			li
+				a(href="#").location__cities-link Барнаул
+			li
+				a(href="#").location__cities-link Самара
+			li
+				a(href="#").location__cities-link Владивосток
+			li
+				a(href="#").location__cities-link Тюмень
+			li
+				a(href="#").location__cities-link Уфа
+			li
+				a(href="#").location__cities-link Курган
+			li
+				a(href="#").location__cities-link Ростов-на-Дону
+			li
+				a(href="#").location__cities-link Сургут
+			li
+				a(href="#").location__cities-link Волгоград
+			li
+				a(href="#").location__cities-link Санкт-Петербург
+			li
+				a(href="#").location__cities-link Рязань
+			li
+				a(href="#").location__cities-link Хабаровск
+			li
+				a(href="#").location__cities-link Нижний Новгород
+			li
+				a(href="#").location__cities-link Новосибирск
+			li
+				a(href="#").location__cities-link Екатеринбург
+			li
+				a(href="#").location__cities-link Челябинск
+			li
+				a(href="#").location__cities-link Краснодар
+			li
+				a(href="#").location__cities-link Омск
+			li
+				a(href="#").location__cities-link Казань
+			li
+				a(href="#").location__cities-link Ярославль
 
-	.popup__reg
-		p.popup__reg-caption Еще нет аккаунта на сайте Аюна?<br>Зарегистрируйтесь!
-		a(href="#").btn.btn--dark_empty.btn--block Регистрация
+
+		.location__form
+			form(action="#")
+				label.location__label Не нашли свой город в списке — воспользуйтесь поиском:
+				.location__field
+					button.location__btn
+						+sprite('icon-search')
+					input(type="text" placeholder="Введите название города, региона или страны").location__input
+
+				.location__control
+					p.location__choice
+						| Ваше местоположение:
+						b Москва
+					button.btn.btn--50.btn--red подтвердить
+
+
 

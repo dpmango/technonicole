@@ -6,20 +6,80 @@
 	.container-fluid
 
 		.header__language
-			button.header__language-btn
-				img(src="images/img-language-ru.png", alt="")
+			button.header__language-trigger
+				+sprite('icon-language-ru')
 			.header__language-dropdown
-				.header__language-item
-					img(src="images/img-language-ru.png", alt="")
+				ul.header__language-menu
+					li
+						a(href="#").header__language-link.is-active
+							+sprite('icon-language-ru')
+							| Русский
+					li
+						a(href="#").header__language-link
+							+sprite('icon-language-kz')
+							| Қазақ Тілі
+					li
+						a(href="#").header__language-link
+							+sprite('icon-language-ita')
+							| Italiano
+					li
+						a(href="#").header__language-link
+							+sprite('icon-language-hun')
+							| Magyar
+					li
+						a(href="#").header__language-link
+							+sprite('icon-language-est')
+							| Eesti Keel
+					li
+						a(href="#").header__language-link
+							+sprite('icon-language-lva')
+							| Latviešu Valoda
+					li
+						a(href="#").header__language-link
+							+sprite('icon-language-ltu')
+							| Lietùvių Kalbà
+					li
+						a(href="#").header__language-link
+							+sprite('icon-language-ua')
+							| Українська
+					li
+						a(href="#").header__language-link
+							+sprite('icon-language-svn')
+							| Slovenský Jazyk
+					li
+						a(href="#").header__language-link
+							+sprite('icon-language-pol')
+							| Język Polski
+					li
+						a(href="#").header__language-link
+							+sprite('icon-language-tur')
+							| Türkçe
+					li
+						a(href="#").header__language-link
+							+sprite('icon-language-rou')
+							| Limba Română
+					li
+						a(href="#").header__language-link
+							+sprite('icon-language-bgr')
+							| Български Езык
+					li
+						a(href="#").header__language-link
+							+sprite('icon-language-cze')
+							| Čeština
+					li
+						a(href="#").header__language-link
+							+sprite('icon-language-deu')
+							| Deutsch
+					li
+						a(href="#").header__language-link
+							+sprite('icon-language-eng')
+							| English
 
 
 		.header__location
-			button.header__location-btn
+			button(data-fancybox data-src="#popup-location").header__location-trigger
 				+sprite('icon-location')
 				| Москва
-			.header__location-dropdown
-				.header__location-item Москва
-				.header__location-item Санкт-Петербург
 					
 		nav.header__social
 			a(href="#").header__social-link
@@ -49,11 +109,11 @@
 			ul.header__subnav-menu
 				li
 					a(href="#").header__subnav-link
-						+sprite('icon-nav-points')
+						+sprite('icon-location')
 						| точки продаж
 				li
 					a(href="#").header__subnav-link
-						+sprite('icon-nav-shop')
+						+sprite('icon-shop')
 						| интернет-магазин
 
 		a(href="#").header__basket
@@ -81,6 +141,7 @@
 				span
 			
 			.header__nav-dropdown
+
 				ul.header__nav-menu
 					li
 						a(href="#").header__nav-link Каталог
@@ -96,3 +157,131 @@
 						a(href="#").header__nav-link Журнал
 					li
 						a(href="#").header__nav-link Контакты
+
+				
+				// For mobile only < 768px
+				.is-md-hidden
+					
+
+					.header__nav-group.header__nav-group--white
+
+						nav.header__subnav
+							ul.header__subnav-menu
+								li
+									a(href="#").header__subnav-link
+										+sprite('icon-location')
+										| точки продаж
+								li
+									a(href="#").header__subnav-link
+										+sprite('icon-shop')
+										| интернет-магазин
+
+						a(href="#").header__basket
+							figure.header__basket-icon
+								+sprite('icon-basket')
+								mark 3
+							p.header__basket-price
+								small корзина
+								| 10 200 р.
+						
+						.header__call
+							a(href="#").btn.btn--34.btn--red
+								+sprite('icon-call')
+								| звонок с сайта
+
+					
+					.header__nav-group.header__nav-group--dark
+
+						.header__language
+							button.header__language-trigger
+								+sprite('icon-language-ru')
+								| Русский
+							.header__language-dropdown
+								ul.header__language-menu
+									li
+										a(href="#").header__language-link.is-active
+											+sprite('icon-language-ru')
+											| Русский
+									li
+										a(href="#").header__language-link
+											+sprite('icon-language-kz')
+											| Қазақ Тілі
+									li
+										a(href="#").header__language-link
+											+sprite('icon-language-ita')
+											| Italiano
+									li
+										a(href="#").header__language-link
+											+sprite('icon-language-hun')
+											| Magyar
+									li
+										a(href="#").header__language-link
+											+sprite('icon-language-est')
+											| Eesti Keel
+									li
+										a(href="#").header__language-link
+											+sprite('icon-language-lva')
+											| Latviešu Valoda
+									li
+										a(href="#").header__language-link
+											+sprite('icon-language-ltu')
+											| Lietùvių Kalbà
+									li
+										a(href="#").header__language-link
+											+sprite('icon-language-ua')
+											| Українська
+									li
+										a(href="#").header__language-link
+											+sprite('icon-language-svn')
+											| Slovenský Jazyk
+									li
+										a(href="#").header__language-link
+											+sprite('icon-language-pol')
+											| Język Polski
+									li
+										a(href="#").header__language-link
+											+sprite('icon-language-tur')
+											| Türkçe
+									li
+										a(href="#").header__language-link
+											+sprite('icon-language-rou')
+											| Limba Română
+									li
+										a(href="#").header__language-link
+											+sprite('icon-language-bgr')
+											| Български Езык
+									li
+										a(href="#").header__language-link
+											+sprite('icon-language-cze')
+											| Čeština
+									li
+										a(href="#").header__language-link
+											+sprite('icon-language-deu')
+											| Deutsch
+									li
+										a(href="#").header__language-link
+											+sprite('icon-language-eng')
+											| English
+
+
+						.header__location
+							button(data-fancybox data-src="#popup-location").header__location-trigger
+								+sprite('icon-location')
+								| Москва
+									
+						nav.header__social
+							a(href="#").header__social-link
+								+sprite('icon-social-fb')
+							a(href="#").header__social-link
+								+sprite('icon-social-vk')
+							a(href="#").header__social-link
+								+sprite('icon-social-od')
+							a(href="#").header__social-link
+								+sprite('icon-social-yt')
+							a(href="#").header__social-link
+								+sprite('icon-social-im')
+
+						p.header__phone
+							small.header__phone-text горячая линия
+							a(href="tel:88002000565").header__phone-link 8 800 200 05 65
+

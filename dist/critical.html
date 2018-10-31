@@ -17,21 +17,86 @@
         <div class="header__panel header__panel--top">
           <div class="container-fluid">
             <div class="header__language">
-              <button class="header__language-btn"><img src="images/img-language-ru.png" alt=""></button>
+              <button class="header__language-trigger">
+                <svg class="icon-language-ru">
+                  <use xlink:href="sprites/sprite.svg#icon-language-ru"></use>
+                </svg>
+              </button>
               <div class="header__language-dropdown">
-                <div class="header__language-item"><img src="images/img-language-ru.png" alt=""></div>
+                <ul class="header__language-menu">
+                  <li><a class="header__language-link is-active" href="#">
+                      <svg class="icon-language-ru">
+                        <use xlink:href="sprites/sprite.svg#icon-language-ru"></use>
+                      </svg>Русский</a></li>
+                  <li><a class="header__language-link" href="#">
+                      <svg class="icon-language-kz">
+                        <use xlink:href="sprites/sprite.svg#icon-language-kz"></use>
+                      </svg>Қазақ Тілі</a></li>
+                  <li><a class="header__language-link" href="#">
+                      <svg class="icon-language-ita">
+                        <use xlink:href="sprites/sprite.svg#icon-language-ita"></use>
+                      </svg>Italiano</a></li>
+                  <li><a class="header__language-link" href="#">
+                      <svg class="icon-language-hun">
+                        <use xlink:href="sprites/sprite.svg#icon-language-hun"></use>
+                      </svg>Magyar</a></li>
+                  <li><a class="header__language-link" href="#">
+                      <svg class="icon-language-est">
+                        <use xlink:href="sprites/sprite.svg#icon-language-est"></use>
+                      </svg>Eesti Keel</a></li>
+                  <li><a class="header__language-link" href="#">
+                      <svg class="icon-language-lva">
+                        <use xlink:href="sprites/sprite.svg#icon-language-lva"></use>
+                      </svg>Latviešu Valoda</a></li>
+                  <li><a class="header__language-link" href="#">
+                      <svg class="icon-language-ltu">
+                        <use xlink:href="sprites/sprite.svg#icon-language-ltu"></use>
+                      </svg>Lietùvių Kalbà</a></li>
+                  <li><a class="header__language-link" href="#">
+                      <svg class="icon-language-ua">
+                        <use xlink:href="sprites/sprite.svg#icon-language-ua"></use>
+                      </svg>Українська</a></li>
+                  <li><a class="header__language-link" href="#">
+                      <svg class="icon-language-svn">
+                        <use xlink:href="sprites/sprite.svg#icon-language-svn"></use>
+                      </svg>Slovenský Jazyk</a></li>
+                  <li><a class="header__language-link" href="#">
+                      <svg class="icon-language-pol">
+                        <use xlink:href="sprites/sprite.svg#icon-language-pol"></use>
+                      </svg>Język Polski</a></li>
+                  <li><a class="header__language-link" href="#">
+                      <svg class="icon-language-tur">
+                        <use xlink:href="sprites/sprite.svg#icon-language-tur"></use>
+                      </svg>Türkçe</a></li>
+                  <li><a class="header__language-link" href="#">
+                      <svg class="icon-language-rou">
+                        <use xlink:href="sprites/sprite.svg#icon-language-rou"></use>
+                      </svg>Limba Română</a></li>
+                  <li><a class="header__language-link" href="#">
+                      <svg class="icon-language-bgr">
+                        <use xlink:href="sprites/sprite.svg#icon-language-bgr"></use>
+                      </svg>Български Езык</a></li>
+                  <li><a class="header__language-link" href="#">
+                      <svg class="icon-language-cze">
+                        <use xlink:href="sprites/sprite.svg#icon-language-cze"></use>
+                      </svg>Čeština</a></li>
+                  <li><a class="header__language-link" href="#">
+                      <svg class="icon-language-deu">
+                        <use xlink:href="sprites/sprite.svg#icon-language-deu"></use>
+                      </svg>Deutsch</a></li>
+                  <li><a class="header__language-link" href="#">
+                      <svg class="icon-language-eng">
+                        <use xlink:href="sprites/sprite.svg#icon-language-eng"></use>
+                      </svg>English</a></li>
+                </ul>
               </div>
             </div>
             <div class="header__location">
-              <button class="header__location-btn">
+              <button class="header__location-trigger" data-fancybox data-src="#popup-location">
                 <svg class="icon-location">
                   <use xlink:href="sprites/sprite.svg#icon-location"></use>
                 </svg>Москва
               </button>
-              <div class="header__location-dropdown">
-                <div class="header__location-item">Москва</div>
-                <div class="header__location-item">Санкт-Петербург</div>
-              </div>
             </div>
             <nav class="header__social"><a class="header__social-link" href="#">
                 <svg class="icon-social-fb">
@@ -58,12 +123,12 @@
             <nav class="header__subnav">
               <ul class="header__subnav-menu">
                 <li><a class="header__subnav-link" href="#">
-                    <svg class="icon-nav-points">
-                      <use xlink:href="sprites/sprite.svg#icon-nav-points"></use>
+                    <svg class="icon-location">
+                      <use xlink:href="sprites/sprite.svg#icon-location"></use>
                     </svg>точки продаж</a></li>
                 <li><a class="header__subnav-link" href="#">
-                    <svg class="icon-nav-shop">
-                      <use xlink:href="sprites/sprite.svg#icon-nav-shop"></use>
+                    <svg class="icon-shop">
+                      <use xlink:href="sprites/sprite.svg#icon-shop"></use>
                     </svg>интернет-магазин</a></li>
               </ul>
             </nav><a class="header__basket" href="#">
@@ -94,6 +159,135 @@
                   <li><a class="header__nav-link" href="#">Журнал</a></li>
                   <li><a class="header__nav-link" href="#">Контакты</a></li>
                 </ul>
+                <!-- For mobile only < 768px-->
+                <div class="is-md-hidden">
+                  <div class="header__nav-group header__nav-group--white">
+                    <nav class="header__subnav">
+                      <ul class="header__subnav-menu">
+                        <li><a class="header__subnav-link" href="#">
+                            <svg class="icon-location">
+                              <use xlink:href="sprites/sprite.svg#icon-location"></use>
+                            </svg>точки продаж</a></li>
+                        <li><a class="header__subnav-link" href="#">
+                            <svg class="icon-shop">
+                              <use xlink:href="sprites/sprite.svg#icon-shop"></use>
+                            </svg>интернет-магазин</a></li>
+                      </ul>
+                    </nav><a class="header__basket" href="#">
+                      <figure class="header__basket-icon">
+                        <svg class="icon-basket">
+                          <use xlink:href="sprites/sprite.svg#icon-basket"></use>
+                        </svg>
+                        <mark>3</mark>
+                      </figure>
+                      <p class="header__basket-price"><small>корзина</small>10 200 р.</p></a>
+                    <div class="header__call"><a class="btn btn--34 btn--red" href="#">
+                        <svg class="icon-call">
+                          <use xlink:href="sprites/sprite.svg#icon-call"></use>
+                        </svg>звонок с сайта</a></div>
+                  </div>
+                  <div class="header__nav-group header__nav-group--dark">
+                    <div class="header__language">
+                      <button class="header__language-trigger">
+                        <svg class="icon-language-ru">
+                          <use xlink:href="sprites/sprite.svg#icon-language-ru"></use>
+                        </svg>Русский
+                      </button>
+                      <div class="header__language-dropdown">
+                        <ul class="header__language-menu">
+                          <li><a class="header__language-link is-active" href="#">
+                              <svg class="icon-language-ru">
+                                <use xlink:href="sprites/sprite.svg#icon-language-ru"></use>
+                              </svg>Русский</a></li>
+                          <li><a class="header__language-link" href="#">
+                              <svg class="icon-language-kz">
+                                <use xlink:href="sprites/sprite.svg#icon-language-kz"></use>
+                              </svg>Қазақ Тілі</a></li>
+                          <li><a class="header__language-link" href="#">
+                              <svg class="icon-language-ita">
+                                <use xlink:href="sprites/sprite.svg#icon-language-ita"></use>
+                              </svg>Italiano</a></li>
+                          <li><a class="header__language-link" href="#">
+                              <svg class="icon-language-hun">
+                                <use xlink:href="sprites/sprite.svg#icon-language-hun"></use>
+                              </svg>Magyar</a></li>
+                          <li><a class="header__language-link" href="#">
+                              <svg class="icon-language-est">
+                                <use xlink:href="sprites/sprite.svg#icon-language-est"></use>
+                              </svg>Eesti Keel</a></li>
+                          <li><a class="header__language-link" href="#">
+                              <svg class="icon-language-lva">
+                                <use xlink:href="sprites/sprite.svg#icon-language-lva"></use>
+                              </svg>Latviešu Valoda</a></li>
+                          <li><a class="header__language-link" href="#">
+                              <svg class="icon-language-ltu">
+                                <use xlink:href="sprites/sprite.svg#icon-language-ltu"></use>
+                              </svg>Lietùvių Kalbà</a></li>
+                          <li><a class="header__language-link" href="#">
+                              <svg class="icon-language-ua">
+                                <use xlink:href="sprites/sprite.svg#icon-language-ua"></use>
+                              </svg>Українська</a></li>
+                          <li><a class="header__language-link" href="#">
+                              <svg class="icon-language-svn">
+                                <use xlink:href="sprites/sprite.svg#icon-language-svn"></use>
+                              </svg>Slovenský Jazyk</a></li>
+                          <li><a class="header__language-link" href="#">
+                              <svg class="icon-language-pol">
+                                <use xlink:href="sprites/sprite.svg#icon-language-pol"></use>
+                              </svg>Język Polski</a></li>
+                          <li><a class="header__language-link" href="#">
+                              <svg class="icon-language-tur">
+                                <use xlink:href="sprites/sprite.svg#icon-language-tur"></use>
+                              </svg>Türkçe</a></li>
+                          <li><a class="header__language-link" href="#">
+                              <svg class="icon-language-rou">
+                                <use xlink:href="sprites/sprite.svg#icon-language-rou"></use>
+                              </svg>Limba Română</a></li>
+                          <li><a class="header__language-link" href="#">
+                              <svg class="icon-language-bgr">
+                                <use xlink:href="sprites/sprite.svg#icon-language-bgr"></use>
+                              </svg>Български Езык</a></li>
+                          <li><a class="header__language-link" href="#">
+                              <svg class="icon-language-cze">
+                                <use xlink:href="sprites/sprite.svg#icon-language-cze"></use>
+                              </svg>Čeština</a></li>
+                          <li><a class="header__language-link" href="#">
+                              <svg class="icon-language-deu">
+                                <use xlink:href="sprites/sprite.svg#icon-language-deu"></use>
+                              </svg>Deutsch</a></li>
+                          <li><a class="header__language-link" href="#">
+                              <svg class="icon-language-eng">
+                                <use xlink:href="sprites/sprite.svg#icon-language-eng"></use>
+                              </svg>English</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="header__location">
+                      <button class="header__location-trigger" data-fancybox data-src="#popup-location">
+                        <svg class="icon-location">
+                          <use xlink:href="sprites/sprite.svg#icon-location"></use>
+                        </svg>Москва
+                      </button>
+                    </div>
+                    <nav class="header__social"><a class="header__social-link" href="#">
+                        <svg class="icon-social-fb">
+                          <use xlink:href="sprites/sprite.svg#icon-social-fb"></use>
+                        </svg></a><a class="header__social-link" href="#">
+                        <svg class="icon-social-vk">
+                          <use xlink:href="sprites/sprite.svg#icon-social-vk"></use>
+                        </svg></a><a class="header__social-link" href="#">
+                        <svg class="icon-social-od">
+                          <use xlink:href="sprites/sprite.svg#icon-social-od"></use>
+                        </svg></a><a class="header__social-link" href="#">
+                        <svg class="icon-social-yt">
+                          <use xlink:href="sprites/sprite.svg#icon-social-yt"></use>
+                        </svg></a><a class="header__social-link" href="#">
+                        <svg class="icon-social-im">
+                          <use xlink:href="sprites/sprite.svg#icon-social-im"></use>
+                        </svg></a></nav>
+                    <p class="header__phone"><small class="header__phone-text">горячая линия</small><a class="header__phone-link" href="tel:88002000565">8 800 200 05 65</a></p>
+                  </div>
+                </div>
               </div>
             </nav>
           </div>
@@ -244,25 +438,59 @@
       </footer>
       <!-- Footer :: End-->
       <!-- Popups :: Start-->
-      <div class="popup popup--320" style="display: none;" id="popup-signin">
+      <div class="popup" style="display: none;" id="popup-location">
         <button class="popup__close" data-fancybox-close>
           <svg class="icon-close">
             <use xlink:href="sprites/sprite.svg#icon-close"></use>
           </svg>
-        </button><span class="popup__heading">Авторизация</span>
-        <div class="popup__form">
-          <form action="#">
-            <label class="ui-field">
-              <input class="ui-input" type="email"><span class="ui-placeholder">Электронная почта*</span>
-            </label>
-            <label class="ui-field">
-              <input class="ui-input" type="password"><span class="ui-placeholder">Ваш пароль*</span><a class="ui-forgot" href="#">Забыли?</a>
-            </label>
-            <button class="btn btn--66 btn--turq btn--block">Войти</button>
-          </form>
-        </div>
-        <div class="popup__reg">
-          <p class="popup__reg-caption">Еще нет аккаунта на сайте Аюна?<br>Зарегистрируйтесь!</p><a class="btn btn--dark_empty btn--block" href="#">Регистрация</a>
+        </button>
+        <div class="location"><span class="location__heading">
+            <svg class="icon-location">
+              <use xlink:href="sprites/sprite.svg#icon-location"></use>
+            </svg>Выберите ваше местоположение</span>
+          <ul class="location__cities">
+            <li><a class="location__cities-link" href="#">Москва</a></li>
+            <li><a class="location__cities-link" href="#">Сочи</a></li>
+            <li><a class="location__cities-link" href="#">Пермь</a></li>
+            <li><a class="location__cities-link" href="#">Тула</a></li>
+            <li><a class="location__cities-link" href="#">Барнаул</a></li>
+            <li><a class="location__cities-link" href="#">Самара</a></li>
+            <li><a class="location__cities-link" href="#">Владивосток</a></li>
+            <li><a class="location__cities-link" href="#">Тюмень</a></li>
+            <li><a class="location__cities-link" href="#">Уфа</a></li>
+            <li><a class="location__cities-link" href="#">Курган</a></li>
+            <li><a class="location__cities-link" href="#">Ростов-на-Дону</a></li>
+            <li><a class="location__cities-link" href="#">Сургут</a></li>
+            <li><a class="location__cities-link" href="#">Волгоград</a></li>
+            <li><a class="location__cities-link" href="#">Санкт-Петербург</a></li>
+            <li><a class="location__cities-link" href="#">Рязань</a></li>
+            <li><a class="location__cities-link" href="#">Хабаровск</a></li>
+            <li><a class="location__cities-link" href="#">Нижний Новгород</a></li>
+            <li><a class="location__cities-link" href="#">Новосибирск</a></li>
+            <li><a class="location__cities-link" href="#">Екатеринбург</a></li>
+            <li><a class="location__cities-link" href="#">Челябинск</a></li>
+            <li><a class="location__cities-link" href="#">Краснодар</a></li>
+            <li><a class="location__cities-link" href="#">Омск</a></li>
+            <li><a class="location__cities-link" href="#">Казань</a></li>
+            <li><a class="location__cities-link" href="#">Ярославль</a></li>
+          </ul>
+          <div class="location__form">
+            <form action="#">
+              <label class="location__label">Не нашли свой город в списке — воспользуйтесь поиском:</label>
+              <div class="location__field">
+                <button class="location__btn">
+                  <svg class="icon-search">
+                    <use xlink:href="sprites/sprite.svg#icon-search"></use>
+                  </svg>
+                </button>
+                <input class="location__input" type="text" placeholder="Введите название города, региона или страны">
+              </div>
+              <div class="location__control">
+                <p class="location__choice">Ваше местоположение:<b>Москва</b></p>
+                <button class="btn btn--50 btn--red">подтвердить</button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
       <!-- Popups :: End-->

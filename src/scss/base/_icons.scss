@@ -44,14 +44,14 @@
 
 // -----
 
-.icon-nav-points {
-	width: 20rem;
+.icon-points {
+	width: 14rem;
 	height: 20rem;
 }
 
-.icon-nav-shop {
+.icon-shop {
 	width: 17rem;
-	height: 16rem;
+	height: 15rem;
 }
 
 
@@ -188,4 +188,14 @@
 .icon-colors-check {
 	width: 39rem;
 	height: 39rem;
+}
+
+
+
+// -----
+
+
+[class^="icon-language-"] {
+	width: 16rem;
+	height: 11rem;
 }
