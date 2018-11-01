@@ -133,20 +133,137 @@
 
 		nav.header__nav
 
-			button.header__nav-btn
+			button.header__nav-trigger
 				span
 				span
 				span
 			
-			.header__nav-dropdown
+			.header__nav-content
 
 				ul.header__nav-menu
 					li
-						a(href="#").header__nav-link
-							+sprite('icon-forward')
+						a(href="#").header__nav-link.header__nav-link--arrow
 							| Каталог
 
-						.header__nav-drop
+						.header__nav-dropdown
+
+							span.header__nav-back
+								+sprite('icon-back')
+								| назад
+
+							.header__nav-group
+
+								ul.header__nav-menu
+									li
+										a(href="#").header__nav-link.header__nav-link--arrow Гибкая черепица
+										.header__nav-dropdown
+
+											span.header__nav-back
+												+sprite('icon-back')
+												| назад
+
+											ul.header__nav-menu
+												li
+													a(href="#").header__nav-link Серия Ультра
+													ul.header__nav-menu.header__nav-menu--sub
+														li
+															a(href="#").header__nav-link Самба
+														li
+															a(href="#").header__nav-link Фокстрот
+
+												li
+													a(href="#").header__nav-link Серия Классик
+													ul.header__nav-menu.header__nav-menu--sub
+														li
+															a(href="#").header__nav-link Модерн
+														li
+															a(href="#").header__nav-link Румба
+														li
+															a(href="#").header__nav-link Кадриль
+														li
+															a(href="#").header__nav-link Фламенко
+														li
+															a(href="#").header__nav-link Танго
+
+												li
+													a(href="#").header__nav-link Серия Финская
+													ul.header__nav-menu.header__nav-menu--sub
+														li
+															a(href="#").header__nav-link Аккорд
+														li
+															a(href="#").header__nav-link Соната
+
+												li
+													a(href="#").header__nav-link КОНЬКОВО-КАРНИЗНАЯ ЧЕРЕПИЦА
+
+
+							.header__nav-group
+
+								ul.header__nav-menu
+									li
+										a(href="#").header__nav-link.header__nav-link--arrow Многослойная черепица
+
+										.header__nav-dropdown
+
+											span.header__nav-back
+												+sprite('icon-back')
+												| назад
+
+											ul.header__nav-menu.header__nav-menu--sub
+												li
+													a(href="#").header__nav-link Атлантика
+												li
+													a(href="#").header__nav-link Континент
+												li
+													a(href="#").header__nav-link Вестерн
+												li
+													a(href="#").header__nav-link Джаз
+												li
+													a(href="#").header__nav-link Кантри
+												li
+													a(href="#").header__nav-link Ранчо
+
+							.header__nav-group
+
+								ul.header__nav-menu
+									li
+										a(href="#").header__nav-link Комплектующие для кровли
+										.header__nav-dropdown
+
+											span.header__nav-back
+												+sprite('icon-back')
+												| назад
+
+											ul.header__nav-menu.header__nav-menu--sub
+												li
+													a(href="#").header__nav-link Планки и гвозди
+												li
+													a(href="#").header__nav-link Снегодержатели
+												li
+													a(href="#").header__nav-link Строительная химия
+												li
+													a(href="#").header__nav-link Планки и гвозди
+												li
+													a(href="#").header__nav-link Снегодержатели
+
+							.header__nav-group
+
+								ul.header__nav-menu
+									li
+										a(href="#").header__nav-link Фасадная плитка
+									li
+										a(href="#").header__nav-link Водосточная система
+									li
+										a(href="#").header__nav-link Пластиковая вентиляция
+									li
+										a(href="#").header__nav-link Пневмоинструмент
+
+								
+					li
+						a(href="#").header__nav-link.header__nav-link--arrow
+							| Монтаж
+
+						.header__nav-dropdown
 
 							span.header__nav-back
 								+sprite('icon-back')
@@ -161,13 +278,7 @@
 									a(href="#").header__nav-link Фасадная плитка
 								li
 									a(href="#").header__nav-link Водосточная система
-								li
-									a(href="#").header__nav-link Пластиковая вентиляция
-								li
-									a(href="#").header__nav-link Пневмоинструмент
-								
-					li
-						a(href="#").header__nav-link Монтаж
+
 					li
 						a(href="#").header__nav-link Фотогалерея
 					li
@@ -184,7 +295,7 @@
 				.is-md-hidden
 					
 
-					.header__nav-group.header__nav-group--white
+					.header__nav-panel.header__nav-panel--white
 
 						nav.header__links
 							a(href="#").header__links-item
@@ -209,7 +320,7 @@
 								| звонок с сайта
 
 					
-					.header__nav-group.header__nav-group--dark
+					.header__nav-panel.header__nav-panel--dark
 
 						.header__language
 							button.header__language-trigger

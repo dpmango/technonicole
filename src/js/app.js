@@ -26,7 +26,7 @@ $(function() {
 	// Header
 	// --------------------------------------------------------------------------
 
-	$('.header__nav').on('click', '.header__nav-btn', function(event) {
+	$('.header__nav').on('click', '.header__nav-trigger', function(event) {
 		event.preventDefault();
 		
 		if( $('html').is('.is-nav-open') ) {
@@ -49,37 +49,25 @@ $(function() {
 
 	if ( isTouch || matchMedia('only screen and (max-width: 767px)').matches ) {
 
-		$('.header__nav-menu').on('click', '.header__nav-link', function(event) {
-			event.preventDefault();
-			if( $(this).closest('li').is('.is-open') ) {
-				$(this).closest('li').removeClass('is-open');
-			} else {
-				$(this).closest('.header__nav-menu').find('li').removeClass('is-open');
+		$('.header__nav-menu')
+			.on('click', 'li:has(.header__nav-dropdown) > .header__nav-link', function(event) {
+				event.preventDefault();
 				$(this).closest('li').addClass('is-open');
-			}
-		}).on('click', '.header__nav-back', function(event) {
-			event.preventDefault();
-			$(this).closest('li').removeClass('is-open');
-		});
 
-
-		$(document).on( 'click', function(event) {
-
-			if($(event.target).closest('.header__nav-menu').length==0) {
-				$('.header__nav-menu').find('li').removeClass('is-open');
-				
-			}
-
-		});
+			})
+			.on('click', '.header__nav-back', function(event) {
+				event.preventDefault();
+				$(this).closest('li').removeClass('is-open');
+			});
 
 	} else {
 
 
 		$('.header__nav-menu')
-			.on('mouseenter', 'li',  function(event) {
+			.on('mouseover', 'li',  function(event) {
 				$(this).addClass('is-open');
 			})
-			.on('mouseleave', 'li', function(event) {
+			.on('mouseout', 'li', function(event) {
 				$(this).removeClass('is-open');
 			});
 
@@ -546,23 +534,18 @@ $(function() {
 	// --------------------------------------------------------------------------
 
 
-	// var data = {
-	// 	data: ['Ширяева Майя', 'Зыкова Элеонора', 'Владимиров Артём', 'Большакова София', 'Юдин Роман', 'Майя Ширяева', 'Элеонора Зыкова', 'Артём Владимиров', 'София Большакова', 'Роман Юдин'],
-	// 	list: {	
-	// 	    match: {
-	// 			enabled: true
-	// 	    },
-	// 	    onChooseEvent: function(el) {
-	// 			console.log("onChooseEvent!");
-	// 		}
-	// 	}
-	// };
-
-
 	var data = {
-		url: 'json/autocomplete.json',
+		// url: 'json/autocomplete.json',
+		url: 'http://shinglas.ru/location/autocomplete',
 		listLocation: 'data',
 		getValue: 'label',
+
+		list: {	
+		    match: {
+		      enabled: true
+		    }
+		},
+
 	};
 
 	$('.js-autocomplete').easyAutocomplete(data);

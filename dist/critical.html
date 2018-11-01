@@ -143,14 +143,98 @@
         <div class="header__panel header__panel--bottom">
           <div class="container-fluid">
             <nav class="header__nav">
-              <button class="header__nav-btn"><span></span><span></span><span></span></button>
-              <div class="header__nav-dropdown">
+              <button class="header__nav-trigger"><span></span><span></span><span></span></button>
+              <div class="header__nav-content">
                 <ul class="header__nav-menu">
-                  <li><a class="header__nav-link" href="#">
-                      <svg class="icon-forward">
-                        <use xlink:href="sprites/sprite.svg#icon-forward"></use>
-                      </svg>Каталог</a>
-                    <div class="header__nav-drop"><span class="header__nav-back">
+                  <li><a class="header__nav-link header__nav-link--arrow" href="#">Каталог</a>
+                    <div class="header__nav-dropdown"><span class="header__nav-back">
+                        <svg class="icon-back">
+                          <use xlink:href="sprites/sprite.svg#icon-back"></use>
+                        </svg>назад</span>
+                      <div class="header__nav-group">
+                        <ul class="header__nav-menu">
+                          <li><a class="header__nav-link header__nav-link--arrow" href="#">Гибкая черепица</a>
+                            <div class="header__nav-dropdown"><span class="header__nav-back">
+                                <svg class="icon-back">
+                                  <use xlink:href="sprites/sprite.svg#icon-back"></use>
+                                </svg>назад</span>
+                              <ul class="header__nav-menu">
+                                <li><a class="header__nav-link" href="#">Серия Ультра</a>
+                                  <ul class="header__nav-menu header__nav-menu--sub">
+                                    <li><a class="header__nav-link" href="#">Самба</a></li>
+                                    <li><a class="header__nav-link" href="#">Фокстрот</a></li>
+                                  </ul>
+                                </li>
+                                <li><a class="header__nav-link" href="#">Серия Классик</a>
+                                  <ul class="header__nav-menu header__nav-menu--sub">
+                                    <li><a class="header__nav-link" href="#">Модерн</a></li>
+                                    <li><a class="header__nav-link" href="#">Румба</a></li>
+                                    <li><a class="header__nav-link" href="#">Кадриль</a></li>
+                                    <li><a class="header__nav-link" href="#">Фламенко</a></li>
+                                    <li><a class="header__nav-link" href="#">Танго</a></li>
+                                  </ul>
+                                </li>
+                                <li><a class="header__nav-link" href="#">Серия Финская</a>
+                                  <ul class="header__nav-menu header__nav-menu--sub">
+                                    <li><a class="header__nav-link" href="#">Аккорд</a></li>
+                                    <li><a class="header__nav-link" href="#">Соната</a></li>
+                                  </ul>
+                                </li>
+                                <li><a class="header__nav-link" href="#">КОНЬКОВО-КАРНИЗНАЯ ЧЕРЕПИЦА</a></li>
+                              </ul>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="header__nav-group">
+                        <ul class="header__nav-menu">
+                          <li><a class="header__nav-link header__nav-link--arrow" href="#">Многослойная черепица</a>
+                            <div class="header__nav-dropdown"><span class="header__nav-back">
+                                <svg class="icon-back">
+                                  <use xlink:href="sprites/sprite.svg#icon-back"></use>
+                                </svg>назад</span>
+                              <ul class="header__nav-menu header__nav-menu--sub">
+                                <li><a class="header__nav-link" href="#">Атлантика</a></li>
+                                <li><a class="header__nav-link" href="#">Континент</a></li>
+                                <li><a class="header__nav-link" href="#">Вестерн</a></li>
+                                <li><a class="header__nav-link" href="#">Джаз</a></li>
+                                <li><a class="header__nav-link" href="#">Кантри</a></li>
+                                <li><a class="header__nav-link" href="#">Ранчо</a></li>
+                              </ul>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="header__nav-group">
+                        <ul class="header__nav-menu">
+                          <li><a class="header__nav-link" href="#">Комплектующие для кровли</a>
+                            <div class="header__nav-dropdown"><span class="header__nav-back">
+                                <svg class="icon-back">
+                                  <use xlink:href="sprites/sprite.svg#icon-back"></use>
+                                </svg>назад</span>
+                              <ul class="header__nav-menu header__nav-menu--sub">
+                                <li><a class="header__nav-link" href="#">Планки и гвозди</a></li>
+                                <li><a class="header__nav-link" href="#">Снегодержатели</a></li>
+                                <li><a class="header__nav-link" href="#">Строительная химия</a></li>
+                                <li><a class="header__nav-link" href="#">Планки и гвозди</a></li>
+                                <li><a class="header__nav-link" href="#">Снегодержатели</a></li>
+                              </ul>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="header__nav-group">
+                        <ul class="header__nav-menu">
+                          <li><a class="header__nav-link" href="#">Фасадная плитка</a></li>
+                          <li><a class="header__nav-link" href="#">Водосточная система</a></li>
+                          <li><a class="header__nav-link" href="#">Пластиковая вентиляция</a></li>
+                          <li><a class="header__nav-link" href="#">Пневмоинструмент</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li><a class="header__nav-link header__nav-link--arrow" href="#">Монтаж</a>
+                    <div class="header__nav-dropdown"><span class="header__nav-back">
                         <svg class="icon-back">
                           <use xlink:href="sprites/sprite.svg#icon-back"></use>
                         </svg>назад</span>
@@ -159,12 +243,9 @@
                         <li><a class="header__nav-link" href="#">Многослойная черепица</a></li>
                         <li><a class="header__nav-link" href="#">Фасадная плитка</a></li>
                         <li><a class="header__nav-link" href="#">Водосточная система</a></li>
-                        <li><a class="header__nav-link" href="#">Пластиковая вентиляция</a></li>
-                        <li><a class="header__nav-link" href="#">Пневмоинструмент</a></li>
                       </ul>
                     </div>
                   </li>
-                  <li><a class="header__nav-link" href="#">Монтаж</a></li>
                   <li><a class="header__nav-link" href="#">Фотогалерея</a></li>
                   <li><a class="header__nav-link" href="#">Поддержка</a></li>
                   <li><a class="header__nav-link" href="#">Информация</a></li>
@@ -173,7 +254,7 @@
                 </ul>
                 <!-- For mobile only < 768px-->
                 <div class="is-md-hidden">
-                  <div class="header__nav-group header__nav-group--white">
+                  <div class="header__nav-panel header__nav-panel--white">
                     <nav class="header__links"><a class="header__links-item" href="#">
                         <svg class="icon-location">
                           <use xlink:href="sprites/sprite.svg#icon-location"></use>
@@ -193,7 +274,7 @@
                           <use xlink:href="sprites/sprite.svg#icon-call"></use>
                         </svg>звонок с сайта</a></div>
                   </div>
-                  <div class="header__nav-group header__nav-group--dark">
+                  <div class="header__nav-panel header__nav-panel--dark">
                     <div class="header__language">
                       <button class="header__language-trigger">
                         <svg class="icon-language-ru">
