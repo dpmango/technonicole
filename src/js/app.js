@@ -494,21 +494,46 @@ $(function() {
 
 	$('.js-calc-input').on('change', function(event) {
 
-		var count   = $(this).val(),
-			area = $(this).data('area'),
+
+
+		var area    = $(this).val(),
+			count   = $(this).data('count'),
 			price   = $(this).data('price'),
 
-			text    = Plurize(count, 'упаковка', 'упаковки', 'упаковок'),
+			
+			calculateArea  = area,
+			calculateCount = Math.ceil(area / count),
+			calculatePrice = FormatPrice(price * calculateCount),
 
-			calculatePrice = FormatPrice(price * count),
-			calculateArea  = area * count;
+			text    = Plurize(calculateCount, 'упаковка', 'упаковки', 'упаковок');
 
 
 
-			$('.js-calc-total').html(calculatePrice + ' ₽ <small>' + calculateArea + ' м² = ' + count + ' ' + text + '</small>');
+			$('.js-calc-total').html(calculatePrice + ' ₽ <small>' + calculateArea + ' м² = ' + calculateCount + ' ' + text + '</small>');
+
+			console.log( calculateArea )
+
+			console.log( calculateCount )
+			console.log( calculatePrice )
 
 
 			return false;
+
+		// var count   = $(this).val(),
+		// 	area = $(this).data('area'),
+		// 	price   = $(this).data('price'),
+
+		// 	text    = Plurize(count, 'упаковка', 'упаковки', 'упаковок'),
+
+		// 	calculatePrice = FormatPrice(price * count),
+		// 	calculateArea  = area * count;
+
+
+
+		// 	$('.js-calc-total').html(calculatePrice + ' ₽ <small>' + calculateArea + ' м² = ' + count + ' ' + text + '</small>');
+
+
+		// 	return false;
 
 	});
 	
