@@ -120,18 +120,13 @@
       <div class="header__panel header__panel--middle">
         <div class="container-fluid">
           <div class="header__logo"><a href="#"><img src="images/logo.svg" alt="ТЕХНОНИКОЛЬ"></a></div>
-          <nav class="header__subnav">
-            <ul class="header__subnav-menu">
-              <li><a class="header__subnav-link" href="#">
-                  <svg class="icon-location">
-                    <use xlink:href="sprites/sprite.svg#icon-location"></use>
-                  </svg>точки продаж</a></li>
-              <li><a class="header__subnav-link" href="#">
-                  <svg class="icon-shop">
-                    <use xlink:href="sprites/sprite.svg#icon-shop"></use>
-                  </svg>интернет-магазин</a></li>
-            </ul>
-          </nav><a class="header__basket" href="#">
+          <nav class="header__links"><a class="header__links-item" href="#">
+              <svg class="icon-location">
+                <use xlink:href="sprites/sprite.svg#icon-location"></use>
+              </svg>точки продаж</a><a class="header__links-item" href="#">
+              <svg class="icon-shop">
+                <use xlink:href="sprites/sprite.svg#icon-shop"></use>
+              </svg>интернет-магазин</a></nav><a class="header__basket" href="#">
             <figure class="header__basket-icon">
               <svg class="icon-basket">
                 <use xlink:href="sprites/sprite.svg#icon-basket"></use>
@@ -151,7 +146,24 @@
             <button class="header__nav-btn"><span></span><span></span><span></span></button>
             <div class="header__nav-dropdown">
               <ul class="header__nav-menu">
-                <li><a class="header__nav-link" href="#">Каталог</a></li>
+                <li><a class="header__nav-link" href="#">
+                    <svg class="icon-forward">
+                      <use xlink:href="sprites/sprite.svg#icon-forward"></use>
+                    </svg>Каталог</a>
+                  <div class="header__nav-drop"><span class="header__nav-back">
+                      <svg class="icon-back">
+                        <use xlink:href="sprites/sprite.svg#icon-back"></use>
+                      </svg>назад</span>
+                    <ul class="header__nav-menu">
+                      <li><a class="header__nav-link" href="#">Гибкая черепица</a></li>
+                      <li><a class="header__nav-link" href="#">Многослойная черепица</a></li>
+                      <li><a class="header__nav-link" href="#">Фасадная плитка</a></li>
+                      <li><a class="header__nav-link" href="#">Водосточная система</a></li>
+                      <li><a class="header__nav-link" href="#">Пластиковая вентиляция</a></li>
+                      <li><a class="header__nav-link" href="#">Пневмоинструмент</a></li>
+                    </ul>
+                  </div>
+                </li>
                 <li><a class="header__nav-link" href="#">Монтаж</a></li>
                 <li><a class="header__nav-link" href="#">Фотогалерея</a></li>
                 <li><a class="header__nav-link" href="#">Поддержка</a></li>
@@ -162,18 +174,13 @@
               <!-- For mobile only < 768px-->
               <div class="is-md-hidden">
                 <div class="header__nav-group header__nav-group--white">
-                  <nav class="header__subnav">
-                    <ul class="header__subnav-menu">
-                      <li><a class="header__subnav-link" href="#">
-                          <svg class="icon-location">
-                            <use xlink:href="sprites/sprite.svg#icon-location"></use>
-                          </svg>точки продаж</a></li>
-                      <li><a class="header__subnav-link" href="#">
-                          <svg class="icon-shop">
-                            <use xlink:href="sprites/sprite.svg#icon-shop"></use>
-                          </svg>интернет-магазин</a></li>
-                    </ul>
-                  </nav><a class="header__basket" href="#">
+                  <nav class="header__links"><a class="header__links-item" href="#">
+                      <svg class="icon-location">
+                        <use xlink:href="sprites/sprite.svg#icon-location"></use>
+                      </svg>точки продаж</a><a class="header__links-item" href="#">
+                      <svg class="icon-shop">
+                        <use xlink:href="sprites/sprite.svg#icon-shop"></use>
+                      </svg>интернет-магазин</a></nav><a class="header__basket" href="#">
                     <figure class="header__basket-icon">
                       <svg class="icon-basket">
                         <use xlink:href="sprites/sprite.svg#icon-basket"></use>
@@ -444,12 +451,12 @@
     <!-- Footer :: End-->
     <!-- Popups :: Start-->
     <div class="popup" style="display: none;" id="popup-location">
-      <button class="popup__close" data-fancybox-close>
-        <svg class="icon-close">
-          <use xlink:href="sprites/sprite.svg#icon-close"></use>
-        </svg>
-      </button>
-      <div class="location"><span class="location__heading">
+      <div class="location">
+        <button class="location__close" data-fancybox-close>
+          <svg class="icon-close">
+            <use xlink:href="sprites/sprite.svg#icon-close"></use>
+          </svg>
+        </button><span class="location__heading">
           <svg class="icon-location">
             <use xlink:href="sprites/sprite.svg#icon-location"></use>
           </svg>Выберите ваше местоположение</span>

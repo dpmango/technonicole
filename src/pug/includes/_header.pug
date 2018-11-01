@@ -105,16 +105,14 @@
 			a(href="#")
 				img(src="images/logo.svg" alt="ТЕХНОНИКОЛЬ")
 
-		nav.header__subnav
-			ul.header__subnav-menu
-				li
-					a(href="#").header__subnav-link
-						+sprite('icon-location')
-						| точки продаж
-				li
-					a(href="#").header__subnav-link
-						+sprite('icon-shop')
-						| интернет-магазин
+		nav.header__links
+			a(href="#").header__links-item
+				+sprite('icon-location')
+				| точки продаж
+
+			a(href="#").header__links-item
+				+sprite('icon-shop')
+				| интернет-магазин
 
 		a(href="#").header__basket
 			figure.header__basket-icon
@@ -144,7 +142,30 @@
 
 				ul.header__nav-menu
 					li
-						a(href="#").header__nav-link Каталог
+						a(href="#").header__nav-link
+							+sprite('icon-forward')
+							| Каталог
+
+						.header__nav-drop
+
+							span.header__nav-back
+								+sprite('icon-back')
+								| назад
+
+							ul.header__nav-menu
+								li
+									a(href="#").header__nav-link Гибкая черепица
+								li
+									a(href="#").header__nav-link Многослойная черепица
+								li
+									a(href="#").header__nav-link Фасадная плитка
+								li
+									a(href="#").header__nav-link Водосточная система
+								li
+									a(href="#").header__nav-link Пластиковая вентиляция
+								li
+									a(href="#").header__nav-link Пневмоинструмент
+								
 					li
 						a(href="#").header__nav-link Монтаж
 					li
@@ -165,16 +186,14 @@
 
 					.header__nav-group.header__nav-group--white
 
-						nav.header__subnav
-							ul.header__subnav-menu
-								li
-									a(href="#").header__subnav-link
-										+sprite('icon-location')
-										| точки продаж
-								li
-									a(href="#").header__subnav-link
-										+sprite('icon-shop')
-										| интернет-магазин
+						nav.header__links
+							a(href="#").header__links-item
+								+sprite('icon-location')
+								| точки продаж
+								
+							a(href="#").header__links-item
+								+sprite('icon-shop')
+								| интернет-магазин
 
 						a(href="#").header__basket
 							figure.header__basket-icon

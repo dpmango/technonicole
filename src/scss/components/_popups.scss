@@ -8,8 +8,7 @@
 	background: #fff;
 	box-shadow: 0 0 32px rgba(0, 0, 0, 0.2);
 	position: relative;
-
-	padding: 25rem 50rem 40rem;
+	
 }
 
 
@@ -33,7 +32,35 @@
 
 
 .location {
+	padding: 25rem 50rem 40rem;
+	@include breakpointMax(lg) {
+		padding: 25rem;
+	}
+	@include breakpointMax(md) {
+		padding: 20rem;
+	}
+}
 
+
+.location__close {
+	border: none;
+	padding: 0;
+	background: none;
+	position: absolute;
+	top: 32rem;
+	right: 50rem;
+	color: #e30613;
+	cursor: pointer;
+	z-index: 10;
+
+	@include breakpointMax(lg) {
+		top: 28rem;
+		right: 25rem;
+	}
+	@include breakpointMax(md) {
+		right: 20rem;
+		top: 24rem;
+	}
 }
 
 
@@ -56,6 +83,10 @@
 		color: #E30613;
 		margin: 0 10rem 0 0;
 	}
+
+	@include breakpointMax(lg) {
+		padding-right: 30rem;
+	}
 }
 
 
@@ -75,6 +106,18 @@
 	& > li {
 		width: 25%;
 	}
+
+	@include breakpointMax(lg) {
+		& > li {
+			width: 33.333%;
+		}
+	}
+
+	@include breakpointMax(md) {
+		& > li {
+			width: 50%;
+		}
+	}
 }
 
 .location__cities-link {
@@ -87,6 +130,10 @@
 		text-decoration: none;
 		background: #FEF2F3;
 		color: #e30613;
+	}
+
+	@include breakpointMax(md) {
+		padding: 10rem;
 	}
 }
 
@@ -146,6 +193,10 @@
 	.btn {
 		min-width: 205rem;
 	}
+
+	@include breakpointMax(md) {
+		flex-wrap: wrap;
+	}
 }
 
 
@@ -162,5 +213,10 @@
 		line-height: 30rem;
 		font-weight: 300;
 		color: #000;
+	}
+
+	@include breakpointMax(md) {
+		text-align: center;
+		margin: 0 0 20rem;
 	}
 }

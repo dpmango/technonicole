@@ -21,15 +21,6 @@ $(function() {
 	
 	var isTouch = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
-	function detectTouch() {
-		if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-	        $('html').addClass('touch-device');
-	    }
-	    else {
-	    	$('html').addClass('no-touch-device');
-	    }
-	}
-	detectTouch();
 
 	// --------------------------------------------------------------------------
 	// Header
@@ -52,6 +43,69 @@ $(function() {
 		}
 
 	});
+
+
+
+
+	if ( isTouch || matchMedia('only screen and (max-width: 767px)').matches ) {
+
+		$('.header__nav-menu').on('click', '.header__nav-link', function(event) {
+			event.preventDefault();
+			if( $(this).closest('li').is('.is-open') ) {
+				$(this).closest('li').removeClass('is-open');
+			} else {
+				$(this).closest('.header__nav-menu').find('li').removeClass('is-open');
+				$(this).closest('li').addClass('is-open');
+			}
+		}).on('click', '.header__nav-back', function(event) {
+			event.preventDefault();
+			$(this).closest('li').removeClass('is-open');
+		});
+
+
+		$(document).on( 'click', function(event) {
+
+			if($(event.target).closest('.header__nav-menu').length==0) {
+				$('.header__nav-menu').find('li').removeClass('is-open');
+				
+			}
+
+		});
+
+	} else {
+
+
+		$('.header__nav-menu')
+			.on('mouseenter', 'li',  function(event) {
+				$(this).addClass('is-open');
+			})
+			.on('mouseleave', 'li', function(event) {
+				$(this).removeClass('is-open');
+			});
+
+	}
+
+
+
+	$('.header__language').on('click', '.header__language-trigger', function(event) {
+		event.preventDefault();
+		if( $(this).closest('.header__language').is('.is-open') ) {
+			$(this).closest('.header__language').removeClass('is-open');
+		} else {
+			$(this).closest('.header__language').addClass('is-open');
+		}
+	});
+
+
+	$(document).on( 'click', function(event) {
+
+		if($(event.target).closest('.header__language').length==0) {
+			$('.header__language').removeClass('is-open');
+			
+		}
+
+	});
+
 
 	// --------------------------------------------------------------------------
 	// Footer
