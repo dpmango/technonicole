@@ -3,7 +3,7 @@
 //- --------------------------------------------------------------------------
 
 
-div(style="display: none;").popup#popup-location
+div(style="display: nones;").popup#popup-location
 
 
 	.location
@@ -73,7 +73,7 @@ div(style="display: none;").popup#popup-location
 				.location__field
 					button.location__btn
 						+sprite('icon-search')
-					input(type="text" placeholder="Введите название города, региона или страны").location__input
+					input(type="text" placeholder="Введите название города, региона или страны").location__input.js-autocomplete
 
 				.location__control
 					p.location__choice

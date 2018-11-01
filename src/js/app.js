@@ -253,6 +253,10 @@ $(function() {
 
 
 
+	$('.js-slick-collection').on('init afterChange', function(event, slick, currentSlide, nextSlide){
+		$('[data-color]').removeClass('is-active').eq(slick.currentSlide).addClass('is-active');
+    });
+
 	$('.js-slick-collection').slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,
@@ -453,39 +457,101 @@ $(function() {
 		selectSmartPositioning: false
 	});
 
-	
-	$('.ui-number').on('click', '[data-number]', function(event){
 
-		event.preventDefault();
+	$('input[type="number"]').on('keyup blur', function() {
 
-	    var input    = $(this).closest('.ui-number').find('input'),
-	    	inputVal = parseInt(input.val()) || 0,
-	    	inputMin = input.data('min'),
-	    	inputMax = input.data('max');
+	    var maxlength = $(this).attr('maxlength');
+	    var val = $(this).val();
 
-
-	    if( $(this).data('number') == '-' ){
-
-			if(inputVal <= inputMin){
-				event.preventDefault();
-			}
-			else{
-				input.val( inputVal - 1 );
-			}
-	    } 
-	    if( $(this).data('number') == '+' ){
-	    	
-			if(inputVal >= inputMax){
-				event.preventDefault();
-			}
-			else{
-				input.val( inputVal + 1 );
-			}
+	    if (val.length > maxlength) {
+	        $(this).val(val.slice(0, maxlength));
 	    }
 
+	});
 
+
+	function Plurize(number, one, two, five) {
+		var n = Math.abs(number);
+		n %= 100;
+		if (n >= 5 && n <= 20) {
+		return five;
+		}
+		n %= 10;
+		if (n === 1) {
+		return one;
+		}
+		if (n >= 2 && n <= 4) {
+		return two;
+		}
+		return five;
+	};
+
+
+	function FormatPrice(n) {
+		return (n + "").split("").reverse().join("").replace(/(\d{3})/g, "$1 ").split("").reverse().join("").replace(/^ /, "");
+	}
+
+
+	$('.js-calc-input').on('change', function(event) {
+
+		var count   = $(this).val(),
+			area = $(this).data('area'),
+			price   = $(this).data('price'),
+
+			text    = Plurize(count, 'упаковка', 'упаковки', 'упаковок'),
+
+			calculatePrice = FormatPrice(price * count),
+			calculateArea  = area * count;
+
+
+
+			$('.js-calc-total').html(calculatePrice + ' ₽ <small>' + calculateArea + ' м² = ' + count + ' ' + text + '</small>');
+
+
+			return false;
 
 	});
+	
+
+
+	// --------------------------------------------------------------------------
+	// Tabs
+	// --------------------------------------------------------------------------
+
+	$('[data-type-btn]').on('click', function(event) {
+		event.preventDefault();
+		
+		var selected = $(this).data('type-btn');
+
+		$('[data-type-btn]').removeClass('is-active');
+
+		$(this).addClass('is-active');
+
+		$('[data-type]').removeClass('is-hidden').siblings().not('[data-type='+ selected +']').addClass('is-hidden');
+
+		console.log(selected);
+
+	});
+
+
+	// --------------------------------------------------------------------------
+	// Autocomplete
+	// --------------------------------------------------------------------------
+
+
+	var data = {
+		data: ['Ширяева Майя', 'Зыкова Элеонора', 'Владимиров Артём', 'Большакова София', 'Юдин Роман', 'Майя Ширяева', 'Элеонора Зыкова', 'Артём Владимиров', 'София Большакова', 'Роман Юдин'],
+		list: {	
+		    match: {
+				enabled: true
+		    },
+		    onChooseEvent: function(el) {
+				console.log("onChooseEvent!");
+			}
+		}
+	};
+
+	$('.js-autocomplete').easyAutocomplete(data);
 
 
 	// --------------------------------------------------------------------------

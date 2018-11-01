@@ -61,6 +61,7 @@
   },
   "dependencies": {
     "@fancyapps/fancybox": "^3.3.5",
+    "easy-autocomplete": "^1.3.5",
     "inputmask": "^3.3.11",
     "ion-rangeslider": "^2.2.0",
     "jquery": "2.1.1",

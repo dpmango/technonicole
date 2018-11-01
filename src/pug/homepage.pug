@@ -188,13 +188,13 @@ block main
 
 				ul.media__nav-menu
 					li
-						a(href="#").media__nav-link.is-active все
+						button(data-type-btn="*").media__nav-link.is-active все
 					li
-						a(href="#").media__nav-link Статьи  
+						button(data-type-btn="articles").media__nav-link Статьи  
 					li
-						a(href="#").media__nav-link Новости
+						button(data-type-btn="news").media__nav-link Новости
 					li
-						a(href="#").media__nav-link Видео
+						button(data-type-btn="videos").media__nav-link Видео
 
 				a(href="#").media__nav-link
 					| перейти в журнал
@@ -202,7 +202,7 @@ block main
 
 			.media__grid
 				.row
-					.col-sm-6.col-lg-4
+					.col-sm-6.col-lg-4(data-type="articles")
 
 						a(href="#").media__item
 							figure.media__item-image
@@ -211,7 +211,7 @@ block main
 								h3.media__item-title Реальные истории: авторский проект частного дома «Четвертьхаус» (1/4 купола)
 								span.media__item-date 03.08.2018
 
-					.col-sm-6.col-lg-4
+					.col-sm-6.col-lg-4(data-type="videos")
 
 						a(href="#").media__item
 							figure.media__item-image
@@ -221,7 +221,7 @@ block main
 								h3.media__item-title Реальные истории: Масштабная перепланировка мансарды с новой крышей. Отзыв героев программы «Дачный ответ».
 								span.media__item-date 25.07.2018
 
-					.col-sm-6.col-lg-4
+					.col-sm-6.col-lg-4(data-type="news")
 
 						a(href="#").media__item
 							figure.media__item-image
@@ -231,7 +231,7 @@ block main
 								span.media__item-date 13.07.2018
 
 
-					.col-sm-6.col-lg-8
+					.col-sm-6.col-lg-8(data-type="news")
 
 						a(href="#").media__item.media__item--large
 							figure.media__item-image
@@ -240,7 +240,7 @@ block main
 								h3.media__item-title Реальные истории: Настоящий рок-клуб и уютная спальня на большой мансарде. Отзыв героев программы «Дачный ответ». 
 								span.media__item-date 03.08.2018
 
-					.col-sm-6.col-lg-4
+					.col-sm-6.col-lg-4(data-type="articles")
 
 						a(href="#").media__item
 							figure.media__item-image

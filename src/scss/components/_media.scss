@@ -96,10 +96,17 @@
 
 
 .media__nav-link {
+	font: 600 14rem/20rem $fontBase;
+	text-transform: uppercase;
 	text-decoration: none;
 	color: #000;
 	display: block;
 	white-space: nowrap;
+	padding: 0;
+	border: none;
+	background: none;
+	cursor: pointer;
+	transition: 0.25s;
 	[class^="icon-"] {
 		color: #E30613;
 		margin: 0 0 0 10rem;
@@ -111,12 +118,24 @@
 }
 
 
+@keyframes fadeInScale {
+	0% {
+		opacity: 0;
+		transform: scale(0.8);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
 .media__grid {
 	margin: 0 -20rem 30rem;
 	.row {
 		margin: 0 -10rem -20rem;
 		& > [class^="col-"] {
 			padding: 0 10rem 20rem;
+			animation: fadeInScale 0.4s forwards;
 		}
 	}
 

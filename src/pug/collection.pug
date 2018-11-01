@@ -90,12 +90,12 @@ block main
 
 							.collection__area
 								p Площадь, <b>м²</b>
-								input(type="number" value="1" min="1" max="100").ui-number
-								small 1 упаковка = 3м²
+								input(type="number" value="1" min="1" max="999" maxlength="3" data-price="9750" data-area="1.5").ui-number.js-calc-input
+								small 1 упаковка = 1.5м²
 
-							p.collection__price
-								| 29 990 ₽
-								small 9м² = 3 упаковки
+							p.collection__price.js-calc-total
+								| 9750 ₽
+								small 3 м² = 1 упаковка
 
 							.collection__buttons
 								a(href="#").btn.btn--60.btn--red
@@ -289,7 +289,7 @@ block main
 					.row
 						.col-md-6
 							figure.reviews__item-image
-								a(href="#")
+								a(href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" data-fancybox)
 									img(src="images/img-reviews-01.jpg", alt="")
 									+sprite('icon-video')
 						.col-md-6.align-self-center
@@ -304,7 +304,7 @@ block main
 					.row
 						.col-md-6
 							figure.reviews__item-image
-								a(href="#")
+								a(href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" data-fancybox)
 									img(src="images/img-reviews-01.jpg", alt="")
 									+sprite('icon-video')
 						.col-md-6.align-self-center
@@ -327,24 +327,24 @@ block main
 
 			.video__slides.js-slick-video
 
-				a(href="#").video__item
+				a(href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" data-fancybox="gallery").video__item
 					figure.video__item-image
-						img(src="images/img-video-01.jpg", alt="")
+						img(src="images/img-video-01.jpg" alt="")
 						+sprite('icon-video')
 					.video__item-desc
 						h3.video__item-title Производство гибкой черепицы
 
 
-				a(href="#").video__item
+				a(href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" data-fancybox="gallery").video__item
 					figure.video__item-image
-						img(src="images/img-video-02.jpg", alt="")
+						img(src="images/img-video-02.jpg" alt="")
 						+sprite('icon-video')
 					.video__item-desc
 						h3.video__item-title Производство гибкой черепицы
 
-				a(href="#").video__item
+				a(href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" data-fancybox="gallery").video__item
 					figure.video__item-image
-						img(src="images/img-video-03.jpg", alt="")
+						img(src="images/img-video-03.jpg" alt="")
 						+sprite('icon-video')
 					.video__item-desc
 						h3.video__item-title Производство гибкой черепицы

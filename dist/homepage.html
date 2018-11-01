@@ -451,10 +451,18 @@
             <h2 class="media__heading"><span class="media__heading-image"><img src="images/logo-small.svg" alt=""></span><span class="media__heading-text">журнал</span></h2>
             <nav class="media__nav">
               <ul class="media__nav-menu">
-                <li><a class="media__nav-link is-active" href="#">все</a></li>
-                <li><a class="media__nav-link" href="#">Статьи  </a></li>
-                <li><a class="media__nav-link" href="#">Новости</a></li>
-                <li><a class="media__nav-link" href="#">Видео</a></li>
+                <li>
+                  <button class="media__nav-link is-active" data-type-btn="*">все</button>
+                </li>
+                <li>
+                  <button class="media__nav-link" data-type-btn="articles">Статьи  </button>
+                </li>
+                <li>
+                  <button class="media__nav-link" data-type-btn="news">Новости</button>
+                </li>
+                <li>
+                  <button class="media__nav-link" data-type-btn="videos">Видео</button>
+                </li>
               </ul><a class="media__nav-link" href="#">перейти в журнал
                 <svg class="icon-arrow-right">
                   <use xlink:href="sprites/sprite.svg#icon-arrow-right"></use>
@@ -462,12 +470,12 @@
             </nav>
             <div class="media__grid">
               <div class="row">
-                <div class="col-sm-6 col-lg-4"><a class="media__item" href="#">
+                <div class="col-sm-6 col-lg-4" data-type="articles"><a class="media__item" href="#">
                     <figure class="media__item-image"><img src="images/img-media-01.jpg" alt=""></figure>
                     <div class="media__item-desc">
                       <h3 class="media__item-title">Реальные истории: авторский проект частного дома «Четвертьхаус» (1/4 купола)</h3><span class="media__item-date">03.08.2018</span>
                     </div></a></div>
-                <div class="col-sm-6 col-lg-4"><a class="media__item" href="#">
+                <div class="col-sm-6 col-lg-4" data-type="videos"><a class="media__item" href="#">
                     <figure class="media__item-image"><img src="images/img-media-02.jpg" alt="">
                       <svg class="icon-video">
                         <use xlink:href="sprites/sprite.svg#icon-video"></use>
@@ -476,17 +484,17 @@
                     <div class="media__item-desc">
                       <h3 class="media__item-title">Реальные истории: Масштабная перепланировка мансарды с новой крышей. Отзыв героев программы «Дачный ответ».</h3><span class="media__item-date">25.07.2018</span>
                     </div></a></div>
-                <div class="col-sm-6 col-lg-4"><a class="media__item" href="#">
+                <div class="col-sm-6 col-lg-4" data-type="news"><a class="media__item" href="#">
                     <figure class="media__item-image"><img src="images/img-media-03.jpg" alt=""></figure>
                     <div class="media__item-desc">
                       <h3 class="media__item-title">ТЕХНОНИКОЛЬ провела в Челябинске Турнир мастеров</h3><span class="media__item-date">13.07.2018</span>
                     </div></a></div>
-                <div class="col-sm-6 col-lg-8"><a class="media__item media__item--large" href="#">
+                <div class="col-sm-6 col-lg-8" data-type="news"><a class="media__item media__item--large" href="#">
                     <figure class="media__item-image"><img src="images/img-media-04.jpg" alt=""></figure>
                     <div class="media__item-desc">
                       <h3 class="media__item-title">Реальные истории: Настоящий рок-клуб и уютная спальня на большой мансарде. Отзыв героев программы «Дачный ответ». </h3><span class="media__item-date">03.08.2018</span>
                     </div></a></div>
-                <div class="col-sm-6 col-lg-4"><a class="media__item" href="#">
+                <div class="col-sm-6 col-lg-4" data-type="articles"><a class="media__item" href="#">
                     <figure class="media__item-image"><img src="images/img-media-05.jpg" alt=""></figure>
                     <div class="media__item-desc">
                       <h3 class="media__item-title">Профессионалы строительных маркетов</h3><span class="media__item-date">25.07.2018</span>
@@ -639,7 +647,7 @@
       </footer>
       <!-- Footer :: End-->
       <!-- Popups :: Start-->
-      <div class="popup" style="display: none;" id="popup-location">
+      <div class="popup" style="display: nones;" id="popup-location">
         <div class="location">
           <button class="location__close" data-fancybox-close>
             <svg class="icon-close">
@@ -684,7 +692,7 @@
                     <use xlink:href="sprites/sprite.svg#icon-search"></use>
                   </svg>
                 </button>
-                <input class="location__input" type="text" placeholder="Введите название города, региона или страны">
+                <input class="location__input js-autocomplete" type="text" placeholder="Введите название города, региона или страны">
               </div>
               <div class="location__control">
                 <p class="location__choice">Ваше местоположение:<b>Москва</b></p>
