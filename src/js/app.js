@@ -511,29 +511,11 @@ $(function() {
 
 			$('.js-calc-total').html(calculatePrice + ' ₽ <small>' + calculateArea + ' м² = ' + calculateCount + ' ' + text + '</small>');
 
-			console.log( calculateArea )
-
-			console.log( calculateCount )
 			console.log( calculatePrice )
 
 
 			return false;
 
-		// var count   = $(this).val(),
-		// 	area = $(this).data('area'),
-		// 	price   = $(this).data('price'),
-
-		// 	text    = Plurize(count, 'упаковка', 'упаковки', 'упаковок'),
-
-		// 	calculatePrice = FormatPrice(price * count),
-		// 	calculateArea  = area * count;
-
-
-
-		// 	$('.js-calc-total').html(calculatePrice + ' ₽ <small>' + calculateArea + ' м² = ' + count + ' ' + text + '</small>');
-
-
-		// 	return false;
 
 	});
 	
