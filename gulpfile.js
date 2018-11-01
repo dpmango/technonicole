@@ -80,6 +80,8 @@ var src = {
 	scss: 'src/scss/**/*.scss',
 	js: 'src/js/**/*.js',
 	images: 'src/images/**/*',
+
+	json: 'src/json/**/*',
 	
 	spriteImages: 'src/sprites/_images/',
 	spriteSvg: 'src/sprites/_svg/*.svg'
@@ -92,6 +94,8 @@ var dist = {
 	css: 'dist/css',
 	js: 'dist/js',
 	images: 'dist/images/',
+
+	json: 'dist/json/',
 
 	spriteImages: 'dist/sprites/',
 	spriteSvg: 'dist/sprites/'
@@ -296,6 +300,20 @@ gulp.task('images', function() {
 
 });
 
+
+// --------------------------------------------------------------------------
+// Json
+// --------------------------------------------------------------------------
+
+
+gulp.task('json', function() {
+
+	return gulp.src(src.json)
+		.pipe(gulp.dest(dist.json))
+		.pipe(browserSync.reload({ stream: true }))
+
+});
+
 // --------------------------------------------------------------------------
 // Scss
 // --------------------------------------------------------------------------
@@ -421,6 +439,9 @@ gulp.task('watch', function() {
 	gulp.watch(src.scss, ['scss']);
 	gulp.watch(src.js, ['js']);
 
+
+	gulp.watch(src.json, ['json']);
+
 	browserSync.init({
 		server: 'dist/',
 		port: 8000,
@@ -435,7 +456,7 @@ gulp.task('watch', function() {
 
 gulp.task('default', function() {
 
-	runSequence('clean', 'spriteImages', 'spriteSvg', 'js', 'scss', 'html', 'critical', 'fonts', 'images', 'pages', 'watch')
+	runSequence('clean', 'spriteImages', 'spriteSvg', 'js', 'scss', 'html', 'critical', 'fonts', 'images', 'json', 'pages', 'watch')
 
 });
 

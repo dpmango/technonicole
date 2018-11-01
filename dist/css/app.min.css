@@ -2468,6 +2468,12 @@ body.compensate-for-scrollbar {
 .fancybox-content {
   overflow: visible; }
 
+.fancybox-slide--video {
+  background: rgba(0, 0, 0, 0.5); }
+
+.fancybox-content {
+  box-shadow: 0 0 32px rgba(0, 0, 0, 0.2); }
+
 .easy-autocomplete {
   min-width: 100%;
   width: auto !important; }
@@ -2481,7 +2487,7 @@ body.compensate-for-scrollbar {
   box-shadow: 0 6px 11px 0 rgba(0, 0, 0, 0.13), inset 0 0 0 1px #dbdbdb;
   border-radius: 0 0 4px 4px;
   margin: -2px 0;
-  max-height: 235px;
+  max-height: 222px;
   overflow-y: auto;
   z-index: 100;
   height: auto !important; }
@@ -2504,16 +2510,16 @@ body.compensate-for-scrollbar {
 .eac-item {
   display: block;
   font-size: 14px;
-  line-height: 17px;
+  line-height: 20px;
   transition: 0.25s;
-  padding: 15px 30px 15px 20px;
+  padding: 12px 30px 12px 20px;
   cursor: pointer;
   position: relative;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  background: url(../svg/icon-autocomplete.svg) right 5px top 15px no-repeat;
-  color: #232221; }
+  color: #232221;
+  height: 44px; }
   .eac-item:hover {
     background-color: #f5f5f5; }
 

@@ -546,16 +546,23 @@ $(function() {
 	// --------------------------------------------------------------------------
 
 
+	// var data = {
+	// 	data: ['Ширяева Майя', 'Зыкова Элеонора', 'Владимиров Артём', 'Большакова София', 'Юдин Роман', 'Майя Ширяева', 'Элеонора Зыкова', 'Артём Владимиров', 'София Большакова', 'Роман Юдин'],
+	// 	list: {	
+	// 	    match: {
+	// 			enabled: true
+	// 	    },
+	// 	    onChooseEvent: function(el) {
+	// 			console.log("onChooseEvent!");
+	// 		}
+	// 	}
+	// };
+
+
 	var data = {
-		data: ['Ширяева Майя', 'Зыкова Элеонора', 'Владимиров Артём', 'Большакова София', 'Юдин Роман', 'Майя Ширяева', 'Элеонора Зыкова', 'Артём Владимиров', 'София Большакова', 'Роман Юдин'],
-		list: {	
-		    match: {
-				enabled: true
-		    },
-		    onChooseEvent: function(el) {
-				console.log("onChooseEvent!");
-			}
-		}
+		url: 'json/autocomplete.json',
+		listLocation: 'data',
+		getValue: 'label',
 	};
 
 	$('.js-autocomplete').easyAutocomplete(data);

@@ -964,3 +964,12 @@ body.compensate-for-scrollbar {
 .fancybox-content {
     overflow: visible;
 }
+
+
+.fancybox-slide--video {
+   background: rgba(0,0,0,0.5);
+}
+
+.fancybox-content {
+     box-shadow: 0 0 32px rgba(0, 0, 0, 0.2);
+}
