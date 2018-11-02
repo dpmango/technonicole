@@ -523,7 +523,12 @@ $(function() {
 
 	var data = {
 		// url: 'json/autocomplete.json',
-		url: 'http://shinglas.ru/location/autocomplete',
+		// url: 'http://shinglas.ru/location/autocomplete',
+
+		url: function(phrase) {
+			return "http://shinglas.ru/location/autocomplete?q=" + phrase;
+		},
+		
 		listLocation: 'data',
 		getValue: 'label',
 
