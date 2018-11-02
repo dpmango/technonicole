@@ -46,32 +46,19 @@ $(function() {
 
 
 
-
-	if ( isTouch || matchMedia('only screen and (max-width: 767px)').matches ) {
-
-		$('.header__nav-menu')
-			.on('click', 'li:has(.header__nav-dropdown) > .header__nav-link', function(event) {
+	$('.header__nav-menu')
+		.on('click', 'li:has(.header__nav-dropdown) > .header__nav-link', function(event) {
+			if ( isTouch || matchMedia('only screen and (max-width: 767px)').matches ) {
 				event.preventDefault();
 				$(this).closest('li').addClass('is-open');
-
-			})
-			.on('click', '.header__nav-back', function(event) {
+			}
+		})
+		.on('click', '.header__nav-back', function(event) {
+			if ( isTouch || matchMedia('only screen and (max-width: 767px)').matches ) {
 				event.preventDefault();
 				$(this).closest('li').removeClass('is-open');
-			});
-
-	} else {
-
-
-		$('.header__nav-menu')
-			.on('mouseover', 'li',  function(event) {
-				$(this).addClass('is-open');
-			})
-			.on('mouseout', 'li', function(event) {
-				$(this).removeClass('is-open');
-			});
-
-	}
+			}
+		});
 
 
 
@@ -535,8 +522,8 @@ $(function() {
 
 
 	var data = {
-		url: 'json/autocomplete.json',
-		// url: 'http://shinglas.ru/location/autocomplete',
+		// url: 'json/autocomplete.json',
+		url: 'http://shinglas.ru/location/autocomplete',
 		listLocation: 'data',
 		getValue: 'label',
 

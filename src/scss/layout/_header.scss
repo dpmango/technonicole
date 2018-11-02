@@ -456,6 +456,10 @@
 	}
 }
 
+
+
+
+
 .header__nav-menu {
 	margin: 0 -20rem;
 	padding: 0;
@@ -581,14 +585,27 @@
 
 
 
-
+@include breakpointMax(md) {
 
 .is-open > .header__nav-dropdown {
 	opacity: 1;
 	visibility: visible;
 	transform: translate(0,0);
+	pointer-events: initial;
 }
 
+}
+
+@include breakpoint(md) {
+	.header__nav-menu {
+		& > li:hover > .header__nav-dropdown {
+			opacity: 1;
+			visibility: visible;
+			transform: translate(0,0);
+			pointer-events: initial;
+		}
+	}
+}
 
 
 .header__nav-dropdown {

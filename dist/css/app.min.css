@@ -6247,11 +6247,21 @@ body {
         background: #F3F3F3;
         color: #e30613; } }
 
-.is-open > .header__nav-dropdown {
-  opacity: 1;
-  visibility: visible;
-  -ms-transform: translate(0, 0);
-  transform: translate(0, 0); }
+@media (max-width: 767px) {
+  .is-open > .header__nav-dropdown {
+    opacity: 1;
+    visibility: visible;
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0);
+    pointer-events: initial; } }
+
+@media (min-width: 768px) {
+  .header__nav-menu > li:hover > .header__nav-dropdown {
+    opacity: 1;
+    visibility: visible;
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0);
+    pointer-events: initial; } }
 
 @media (max-width: 767px) {
   .header__nav-dropdown {
