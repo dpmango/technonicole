@@ -610,6 +610,8 @@
 
 .header__nav-dropdown {
 
+	pointer-events: none;
+
 	@include breakpointMax(md) {
 		position: absolute;
 		top: 0;
