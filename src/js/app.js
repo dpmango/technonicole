@@ -535,8 +535,8 @@ $(function() {
 
 
 	var data = {
-		// url: 'json/autocomplete.json',
-		url: 'http://shinglas.ru/location/autocomplete',
+		url: 'json/autocomplete.json',
+		// url: 'http://shinglas.ru/location/autocomplete',
 		listLocation: 'data',
 		getValue: 'label',
 
