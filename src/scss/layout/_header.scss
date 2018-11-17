@@ -183,7 +183,7 @@
 	transition: 0.25s;
 	&:hover {
 		text-decoration: none;
-		color: #fff;
+		color: #000;
 	}
 }
 
@@ -478,6 +478,10 @@
 		padding: 0 20rem;
 	}
 
+	&--journal {
+		justify-content: flex-start;
+	}
+
 	&--sub {
 		font-weight: 400;
 		margin: 0;
@@ -533,6 +537,37 @@
 		}
 
 
+	}
+}
+
+
+.header__nav-title {
+	display: block;
+	position: relative;
+	z-index: 1;
+	padding: 15rem 20rem 15rem 0;
+	margin: 0 28rem 0 0;
+	color: #fff;
+	&:after {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		width: 100vw;
+		background: #E30613;
+		z-index: -1;
+	}
+	&:before {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 100%;
+		border-top: 25rem solid transparent;
+		border-bottom: 25rem solid transparent;
+		border-left: 25rem solid #E30613;
 	}
 }
 
@@ -875,4 +910,31 @@
 			line-height: 20rem;
 		}
 	}
+}
+
+
+
+
+.header__search {
+	position: relative;
+	margin: 0 0 0 auto;
+}
+
+.header__search-btn {
+	margin: 0;
+	padding: 0;
+	background: none;
+	border: none;
+	color: #A0A0A1;
+	cursor: pointer;
+	transition: 0.25s;
+	width: 46rem;
+	text-align: center;
+	&:hover {
+		color: #E30613;
+	}
+}
+
+.header__search-field {
+	display: none;
 }

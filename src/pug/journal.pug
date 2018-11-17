@@ -1,0 +1,434 @@
+---
+title: Журнал - Technonicol
+bodyClass: page-journal
+---
+extends includes/_app-journal
+
+block main
+
+	// Banners :: Start
+	.banners
+		.container-fluid
+			
+			.banners__slides.js-slick-banners
+				
+				.banners__item
+
+					a(href="#").news__item.news__item--bg.news__item--650
+						figure.news__item-image
+							img(src="images/img-news-slides-01.jpg", alt="")
+						.news__item-desc
+							h2.news__item-title Разработана инструкция по монтажу водосточной системы
+							ul.news__item-info
+								li
+									+sprite('icon-views')
+									| 1 004
+								li
+									+sprite('icon-comments')
+									| 97
+
+				.banners__item
+
+					a(href="#").news__item.news__item--bg.news__item--300
+						figure.news__item-image
+							img(src="images/img-news-slides-04.jpg", alt="")
+						.news__item-desc
+							h2.news__item-title Использование новых машин Engel Victory 160
+							ul.news__item-info
+								li
+									+sprite('icon-views')
+									| 1 004
+								li
+									+sprite('icon-comments')
+									| 97
+
+					a(href="#").news__item.news__item--bg.news__item--300
+						figure.news__item-image
+							img(src="images/img-news-slides-05.jpg", alt="")
+						.news__item-desc
+							h2.news__item-title Новый пример по укладке черепицы
+							ul.news__item-info
+								li
+									+sprite('icon-views')
+									| 1 004
+								li
+									+sprite('icon-comments')
+									| 97
+
+
+				.banners__item
+					.row
+						.col-lg-6
+
+							a(href="#").news__item.news__item--bg.news__item--650
+								figure.news__item-image
+									img(src="images/img-news-slides-02.jpg", alt="")
+								.news__item-desc
+									h2.news__item-title Открытие новой линии производства SHINGLAS
+									ul.news__item-info
+										li
+											+sprite('icon-views')
+											| 1 004
+										li
+											+sprite('icon-comments')
+											| 97
+						.col-lg-6
+
+							a(href="#").news__item.news__item--bg.news__item--650
+								figure.news__item-image
+									img(src="images/img-news-slides-03.jpg", alt="")
+								.news__item-desc
+									h2.news__item-title Новая защита для строительных конструкций
+									ul.news__item-info
+										li
+											+sprite('icon-views')
+											| 1 004
+										li
+											+sprite('icon-comments')
+											| 97
+
+
+				
+
+	// Banners :: End
+
+	// Txt :: Start
+	.txt
+		.container-fluid
+			.row.align-items-center
+				.col-lg-7
+
+					h2.txt__heading Всё начинается <br> с дома
+					
+				.col-lg-5
+
+					figure.txt__image
+						img(src="images/img-01.jpg", alt="")
+
+			.row
+				.col-lg-7
+
+					p.txt__text.txt__text--line Теперь у всех преверженцев марки ТЕХНОНИКОЛЬ появился новый источник для вдохновения и получения свежей информации, лайфхаков, полезных инструкций по монтажу — журнал о кровлях и фасадах.
+
+				.col-lg-5
+
+					p.txt__text Здесь вы без труда сможете найти ответы на все интересующие вас вопросы связанные с монтажом, строительными материалами и средствами защиты вашего жилья от непредсказуемых погодных условий.
+
+	// Txt :: End
+
+	// News :: Start
+	.news
+		.container-fluid
+
+			.news__sorting
+
+				.news__themes
+					button.news__themes-btn
+						span.news__themes-icon
+						| темы
+					.news__themes-dropdown
+
+				nav.news__tags
+					a(href="#").news__tags-btn #shinglas
+					a(href="#").news__tags-btn #гибкая черепица
+					a(href="#").news__tags-btn #водосточная система
+					a(href="#").news__tags-btn #вентиляция
+					a(href="#").news__tags-btn #hauberk
+					a(href="#").news__tags-btn #фасаднаяплитка
+
+
+			.news__grid
+				.row
+					.col-lg-6
+
+						a(href="#").news__item.news__item--bg
+							figure.news__item-image
+								img(src="images/img-news-01.jpg", alt="")
+							.news__item-desc
+								h3.news__item-title Новая коллекция черепицы АТЛАНТИКА
+								ul.news__item-info
+									li
+										+sprite('icon-views')
+										| 1 004
+									li
+										+sprite('icon-comments')
+										| 97
+
+					.col-lg-3
+
+						a(href="#").news__item
+							figure.news__item-image
+								img(src="images/img-news-02.jpg", alt="")
+							.news__item-desc
+								h3.news__item-title Надёжные крыши и фасады Бреста
+								p.news__item-text Совершив путешествие сквозь реликтовые зеленые леса биосферного заповедника «Беловежская Пуща», специалисты ТЕХНОНИКОЛЬ прибыли в последнюю точку нашего кровельно-фасадного марафона – город Брест. 
+								ul.news__item-info
+									li
+										+sprite('icon-views')
+										| 145
+									li
+										+sprite('icon-comments')
+										| 32
+
+					.col-lg-3
+
+						a(href="#").news__item
+							figure.news__item-image
+								img(src="images/img-news-03.jpg", alt="")
+							.news__item-desc
+								h3.news__item-title Славянский кровельный практикум
+								p.news__item-text В городе проведения знаменитого песенного фестиваля состоялся не менее зрелищный практикум компании ТЕХНОНИКОЛЬ для подрядчиков Витебской области.
+								ul.news__item-info
+									li
+										+sprite('icon-views')
+										| 72
+									li
+										+sprite('icon-comments')
+										| 15
+
+					.col-lg-3
+
+						a(href="#").news__item
+							figure.news__item-image
+								img(src="images/img-news-04.jpg", alt="")
+							.news__item-desc
+								h3.news__item-title Выбор надёжного фундамента. Лайфхаки
+								p.news__item-text В Новосибирске прошел турнир мастеров по кровельным и фасадным работам. В мероприятии приняли участие более 30 профессионалов своего дела.
+								ul.news__item-info
+									li
+										+sprite('icon-views')
+										| 102
+									li
+										+sprite('icon-comments')
+										| 24
+
+					.col-lg-3
+
+						a(href="#").news__item
+							figure.news__item-image
+								img(src="images/img-news-05.jpg", alt="")
+							.news__item-desc
+								h3.news__item-title Могилевский кровельный десант готов
+								p.news__item-text Продолжаем серию профессиональных практикумов по кровельным и фасадным материалам ТЕХНОНИКОЛЬ для белорусских подрядчиков и специалистов по продажам.
+								ul.news__item-info
+									li
+										+sprite('icon-views')
+										| 203
+									li
+										+sprite('icon-comments')
+										| 42
+
+					.col-lg-6
+
+						a(href="#").news__item.news__item--bg
+							figure.news__item-image
+								img(src="images/img-news-06.jpg", alt="")
+							.news__item-desc
+								h3.news__item-title Урок по монтажу фасадной плитки для коттеджа
+								ul.news__item-info
+									li
+										+sprite('icon-views')
+										| 1 004
+									li
+										+sprite('icon-comments')
+										| 97
+
+					.col-lg-3
+
+						a(href="#").news__item
+							figure.news__item-image
+								img(src="images/img-news-07.jpg", alt="")
+							.news__item-desc
+								h3.news__item-title Защита фасадной плитки от физических повреждений
+								p.news__item-text Совершив путешествие сквозь реликтовые зеленые леса биосферного заповедника «Беловежская Пуща», специалисты ТЕХНОНИКОЛЬ прибыли в последнюю точку нашего кровельно-фасадного марафона – город Брест. 
+								ul.news__item-info
+									li
+										+sprite('icon-views')
+										| 145
+									li
+										+sprite('icon-comments')
+										| 32
+
+					.col-lg-6
+
+						a(href="#").news__item.news__item--bg
+							figure.news__item-image
+								img(src="images/img-news-08.jpg", alt="")
+							.news__item-desc
+								h3.news__item-title Фасадная плитка HAUBERK.К лицу любого дома
+								ul.news__item-info
+									li
+										+sprite('icon-views')
+										| 908
+									li
+										+sprite('icon-comments')
+										| 19
+
+					.col-lg-3
+
+						a(href="#").news__item
+							figure.news__item-image
+								img(src="images/img-news-09.jpg", alt="")
+							.news__item-desc
+								h3.news__item-title Интервью с участницей «Дачный ответ»
+								p.news__item-text Продолжаем серию профессиональных практикумов по кровельным и фасадным материалам ТЕХНОНИКОЛЬ для белорусских подрядчиков и специалистов по продажам.
+								ul.news__item-info
+									li
+										+sprite('icon-views')
+										| 72
+									li
+										+sprite('icon-comments')
+										| 15
+
+			.news__control
+				a(href="#").btn.btn--53.btn--red-empty смотреть ещё
+	// News :: End
+
+
+	// Join :: Start
+	.join
+		.container-fluid
+		
+			.join__desc
+				h2.join__heading Присоединяйтесь!
+
+				p.join__hashtag по хештегу #технониколь в социальных сетях
+
+				p.join__text Теперь у всех преверженцев марки ТЕХНОНИКОЛЬ появился новый источник для вдохновения и получения свежей информации, лайфхаков, полезных инструкций по монтажу — журнал о кровлях и фасадах. Здесь вы без труда сможете найти ответы на все интересующие вас вопросы связанные с монтажом, строительными материалами и средствами защиты вашего жилья от непредсказуемых погодных условий.
+				
+			.join__grid
+				.row.js-isotope
+					.col-lg-4
+
+						.join__item.join__item--widget
+							.join__item-acc
+								figure.join__item-acc-image
+									img(src="images/logo-small.svg", alt="")
+								p.join__item-acc-caption
+									b tn.shinglas_hauberk
+									| Подписчики: 2 тыс
+								a(href="#").join__item-acc-btn Посмотреть профиль
+							.join__item-widget
+								img(src="images/img-widget-01.jpg", alt="")
+
+					.col-lg-4
+
+						.join__item
+							.join__item-acc
+								figure.join__item-acc-image
+									img(src="images/logo-small.svg", alt="")
+								p.join__item-acc-caption
+									b tn.shinglas_hauberk
+									| Подписчики: 2 тыс
+							.join__item-image
+								a(href="#")
+									img(src="images/img-join-01.jpg", alt="")
+							.join__item-desc
+								h3.join__item-title
+									a(href="#") Двухслойная черепица из коллекции РАНЧО, цвет Коричневый — универсальное решение для любых фасадов
+								ul.join__item-info
+									li
+										+sprite('icon-join-likes')
+										| 243
+									li
+										+sprite('icon-join-comments')
+										| 8
+									li
+										+sprite('icon-join-share')
+										| 15
+
+					.col-lg-4
+
+						.join__item
+							.join__item-acc
+								figure.join__item-acc-image
+									img(src="images/logo-small.svg", alt="")
+								p.join__item-acc-caption
+									b tn.shinglas_hauberk
+									| Подписчики: 2 тыс
+							.join__item-image
+								a(href="#")
+									img(src="images/img-join-02.jpg", alt="")
+							.join__item-desc
+								h3.join__item-title
+									a(href="#") Разместить на загородном участке дом, беседку и еще несколько строений так, чтобы осталось достаточно места для...
+								nav.join__item-tags
+									a(href="#") #технониколь
+									a(href="#") #шинглас
+									a(href="#") #shinglas
+									a(href="#") #многослонаячерепица
+									a(href="#") #техноникольшинглас
+									a(href="#") #техноникольshinglas
+									a(href="#") #мягкаякровля#мягкаячерепица
+									a(href="#") #гибкаячерепица
+								ul.join__item-info
+									li
+										+sprite('icon-join-likes')
+										| 243
+									li
+										+sprite('icon-join-comments')
+										| 8
+									li
+										+sprite('icon-join-share')
+										| 15
+
+					
+
+					.col-lg-4
+
+						.join__item.join__item--widget
+							.join__item-acc
+								figure.join__item-acc-image
+									img(src="images/logo-small.svg", alt="")
+								p.join__item-acc-caption
+									b tn.shinglas_hauberk
+									| Подписчики: 2 тыс
+								a(href="#").join__item-acc-btn Посмотреть профиль
+							.join__item-widget
+								img(src="images/img-widget-02.jpg", alt="")
+
+
+					.col-lg-4
+
+						.join__item.join__item--widget
+							.join__item-acc
+								figure.join__item-acc-image
+									img(src="images/logo-small.svg", alt="")
+								p.join__item-acc-caption
+									b tn.shinglas_hauberk
+									| Подписчики: 2 тыс
+								a(href="#").join__item-acc-btn Посмотреть профиль
+							.join__item-widget
+								img(src="images/img-widget-03.jpg", alt="")
+
+					.col-lg-4
+
+						.join__item
+							.join__item-acc
+								figure.join__item-acc-image
+									img(src="images/logo-small.svg", alt="")
+								p.join__item-acc-caption
+									b tn.shinglas_hauberk
+									| Подписчики: 2 тыс
+							.join__item-image
+								a(href="#")
+									img(src="images/img-join-03.jpg", alt="")
+							.join__item-desc
+								h3.join__item-title
+									a(href="#") tn.shinglas_hauberkКогда досточно черепицы, чтобы даже совсем небольшой дом эффектно выделялся на фоне остальных. На фото коллекция двухслойной черепицы РАНЧО, цвет Серый. 
+								ul.join__item-info
+									li
+										+sprite('icon-join-likes')
+										| 243
+									li
+										+sprite('icon-join-comments')
+										| 8
+									li
+										+sprite('icon-join-share')
+										| 15
+
+
+			
+			.join__control
+				a(href="#").btn.btn--53.btn--red-empty смотреть ещё
+	// Join :: ENd

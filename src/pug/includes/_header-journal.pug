@@ -1,0 +1,59 @@
+//- --------------------------------------------------------------------------
+//- Header
+//- --------------------------------------------------------------------------
+
+.header__panel.header__panel--middle
+	.container-fluid
+
+		.header__logo
+			a(href="#")
+				img(src="images/logo.svg" alt="ТЕХНОНИКОЛЬ")
+
+		nav.header__social
+			a(href="#").header__social-link
+				+sprite('icon-social-fb')
+			a(href="#").header__social-link
+				+sprite('icon-social-vk')
+			a(href="#").header__social-link
+				+sprite('icon-social-od')
+			a(href="#").header__social-link
+				+sprite('icon-social-yt')
+			a(href="#").header__social-link
+				+sprite('icon-social-im')
+
+		.header__search
+			form(action="#")
+				button.header__search-btn
+					+sprite('icon-search')
+				.header__search-field
+					input(type="search" placeholder="Поиск").header__search-input
+
+
+.header__panel.header__panel--bottom
+	.container-fluid
+
+		nav.header__nav
+
+			ul.header__nav-menu.header__nav-menu--journal
+				li
+					span.header__nav-title скатные кровли и фасады
+				li
+					a(href="#").header__nav-link
+						| проектирование
+				li
+					a(href="#").header__nav-link
+						| сделай сам
+				li
+					a(href="#").header__nav-link
+						| 360°
+				li
+					a(href="#").header__nav-link
+						| дизайн
+				li
+					a(href="#").header__nav-link
+						| реальные истории
+				li
+					a(href="#").header__nav-link
+						| о проекте
+
+

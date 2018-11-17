@@ -1,0 +1,60 @@
+// --------------------------------------------------------------------------
+// Txt
+// --------------------------------------------------------------------------
+
+.txt {
+	padding: 45rem 0;
+
+	font-size: 16rem;
+	line-height: 24rem;
+	font-weight: 300;
+	color :#959595;
+
+	.container-fluid {
+		max-width: 1040px;
+	}
+
+	.row {
+		margin: 0 -32rem;
+		& > [class^="col-"] {
+			padding: 0 32rem;
+		}
+	}
+}
+
+.txt__heading {
+	display: block;
+	font-size: 57rem;
+	line-height: 67rem;
+	font-weight: 300;
+	margin: 0 0 64rem;
+	color: #000;
+	text-transform: uppercase;
+}
+
+.txt__image {
+	margin: 0 0 64rem;
+	img {
+		display: block;
+		width: 100%;
+	}
+}
+
+.txt__text {
+	position: relative;
+	display: block;
+	margin: 0 24rem 24rem 0;
+	&--line {
+		padding: 0 0 0 172rem;
+		&:after {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 12rem;
+			left: 0;
+			width: 118rem;
+			height: 1px;
+			background: #E30613;
+		}
+	}
+}

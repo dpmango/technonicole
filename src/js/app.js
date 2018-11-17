@@ -398,6 +398,34 @@ $(function() {
 	   	]
 	});
 
+
+
+
+	$('.js-slick-banners').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: false,
+		dots: false,
+		fade: false,
+		infinite: true,
+		nextArrow: slickNext,
+	   	prevArrow: slickPrev,
+	   	autoplay: false,
+	   	autoplaySpeed: 5000,
+	   	pauseOnHover: true,
+	   	centerMode: true,
+	   	centerPadding: 0,
+	   	responsive: [
+	   		{
+	   			breakpoint: 992,
+	   			settings: {
+	   				dots: true,
+	   				arrows: false
+	   			}
+	   		}
+	   	]
+	});
+
 	// --------------------------------------------------------------------------
 	// Fancybox
 	// --------------------------------------------------------------------------
@@ -422,6 +450,36 @@ $(function() {
 		]
 	});
 
+
+	// --------------------------------------------------------------------------
+	// Isotope
+	// --------------------------------------------------------------------------
+
+
+	if ( $('.js-isotope').length ) {
+
+		$(window).on('load', function(event) {
+			
+
+			var isotope = new Isotope( '.js-isotope', {
+				layoutMode: 'masonry',
+				// getSortData: {
+				// 	director: '.is-director',
+				// 	manager:  '.is-manager',
+				// 	designer: '.is-designer',
+				// 	booker:   '.is-booker',
+				// 	printer:  '.is-printer',
+				// 	logistic: '.is-logist',
+				// 	admin:    '.is-admin',
+				// 	leader:   '.is-leader',
+				// 	text:     '.is-text'
+				// },
+				// filter: '*'
+			});
+
+		});
+
+	}
 
 	// --------------------------------------------------------------------------
 	// Forms

@@ -1,0 +1,39 @@
+// --------------------------------------------------------------------------
+// Banners
+// --------------------------------------------------------------------------
+
+.banners {
+	padding: 30rem 0;
+}
+
+.banners__slides {
+	margin: 0 -25rem;
+	width: auto;
+
+	.slick-list {
+		overflow: visible;
+	}
+
+	.news__item {
+		margin: 0 0 50rem;
+		&:last-child {
+			margin: 0;
+		}
+		
+		&--350 {
+			.news__item-desc {
+				padding: 30rem 40rem;
+			}
+ 		}
+
+		&--650 {
+			.news__item-desc {
+				padding: 30rem 50rem;
+			}
+ 		}
+	}
+}
+
+.banners__item {
+	padding: 0 25rem;
+}

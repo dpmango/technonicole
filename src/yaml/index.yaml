@@ -7,4 +7,6 @@ PageList:
   ready: 100
 - file: styleguide.html
   ready: 0
+- file: journal.html
+  ready: 100
 
