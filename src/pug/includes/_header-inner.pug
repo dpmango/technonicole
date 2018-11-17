@@ -32,28 +32,33 @@
 .header__panel.header__panel--bottom
 	.container-fluid
 
-		nav.header__nav
+		nav.header__innernav
 
-			ul.header__nav-menu.header__nav-menu--journal
-				li
-					span.header__nav-title скатные кровли и фасады
-				li
-					a(href="#").header__nav-link
-						| проектирование
-				li
-					a(href="#").header__nav-link
-						| сделай сам
-				li
-					a(href="#").header__nav-link
-						| 360°
-				li
-					a(href="#").header__nav-link
-						| дизайн
-				li
-					a(href="#").header__nav-link
-						| реальные истории
-				li
-					a(href="#").header__nav-link
-						| о проекте
+			span.header__innernav-title скатные кровли и фасады
+
+			button.header__innernav-trigger
+				| Темы
+				span.header__innernav-trigger-icon
+
+			.header__innernav-content
+				ul.header__innernav-menu
+					li
+						a(href="#").header__innernav-link
+							| проектирование
+					li
+						a(href="#").header__innernav-link
+							| сделай сам
+					li
+						a(href="#").header__innernav-link
+							| 360°
+					li
+						a(href="#").header__innernav-link
+							| дизайн
+					li
+						a(href="#").header__innernav-link
+							| реальные истории
+					li
+						a(href="#").header__innernav-link
+							| о проекте
 
 

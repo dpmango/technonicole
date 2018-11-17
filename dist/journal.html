@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="images/favicon.ico">
     <link rel="stylesheet" href="css/app.min.css">
   </head>
-  <body class="page-journal">
+  <body class="page-inner">
     <div class="app">
       <!-- Header :: Start-->
       <header class="header">
@@ -49,16 +49,18 @@
         </div>
         <div class="header__panel header__panel--bottom">
           <div class="container-fluid">
-            <nav class="header__nav">
-              <ul class="header__nav-menu header__nav-menu--journal">
-                <li><span class="header__nav-title">скатные кровли и фасады</span></li>
-                <li><a class="header__nav-link" href="#">проектирование</a></li>
-                <li><a class="header__nav-link" href="#">сделай сам</a></li>
-                <li><a class="header__nav-link" href="#">360°</a></li>
-                <li><a class="header__nav-link" href="#">дизайн</a></li>
-                <li><a class="header__nav-link" href="#">реальные истории</a></li>
-                <li><a class="header__nav-link" href="#">о проекте</a></li>
-              </ul>
+            <nav class="header__innernav"><span class="header__innernav-title">скатные кровли и фасады</span>
+              <button class="header__innernav-trigger">Темы<span class="header__innernav-trigger-icon"></span></button>
+              <div class="header__innernav-content">
+                <ul class="header__innernav-menu">
+                  <li><a class="header__innernav-link" href="#">проектирование</a></li>
+                  <li><a class="header__innernav-link" href="#">сделай сам</a></li>
+                  <li><a class="header__innernav-link" href="#">360°</a></li>
+                  <li><a class="header__innernav-link" href="#">дизайн</a></li>
+                  <li><a class="header__innernav-link" href="#">реальные истории</a></li>
+                  <li><a class="header__innernav-link" href="#">о проекте</a></li>
+                </ul>
+              </div>
             </nav>
           </div>
         </div>
@@ -122,7 +124,7 @@
                   </div></a></div>
               <div class="banners__item">
                 <div class="row">
-                  <div class="col-lg-6"><a class="news__item news__item--bg news__item--650" href="#">
+                  <div class="col-6"><a class="news__item news__item--bg news__item--650" href="#">
                       <figure class="news__item-image"><img src="images/img-news-slides-02.jpg" alt=""></figure>
                       <div class="news__item-desc">
                         <h2 class="news__item-title">Открытие новой линии производства SHINGLAS</h2>
@@ -139,7 +141,7 @@
                           </li>
                         </ul>
                       </div></a></div>
-                  <div class="col-lg-6"><a class="news__item news__item--bg news__item--650" href="#">
+                  <div class="col-6"><a class="news__item news__item--bg news__item--650" href="#">
                       <figure class="news__item-image"><img src="images/img-news-slides-03.jpg" alt=""></figure>
                       <div class="news__item-desc">
                         <h2 class="news__item-title">Новая защита для строительных конструкций</h2>
@@ -166,18 +168,18 @@
         <div class="txt">
           <div class="container-fluid">
             <div class="row align-items-center">
-              <div class="col-lg-7">
+              <div class="col-md-6 col-lg-7">
                 <h2 class="txt__heading">Всё начинается <br> с дома</h2>
               </div>
-              <div class="col-lg-5">
+              <div class="col-md-6 col-lg-5">
                 <figure class="txt__image"><img src="images/img-01.jpg" alt=""></figure>
               </div>
             </div>
             <div class="row">
-              <div class="col-lg-7">
+              <div class="col-md-6 col-lg-7">
                 <p class="txt__text txt__text--line">Теперь у всех преверженцев марки ТЕХНОНИКОЛЬ появился новый источник для вдохновения и получения свежей информации, лайфхаков, полезных инструкций по монтажу — журнал о кровлях и фасадах.</p>
               </div>
-              <div class="col-lg-5">
+              <div class="col-md-6 col-lg-5">
                 <p class="txt__text">Здесь вы без труда сможете найти ответы на все интересующие вас вопросы связанные с монтажом, строительными материалами и средствами защиты вашего жилья от непредсказуемых погодных условий.</p>
               </div>
             </div>
@@ -196,7 +198,7 @@
             </div>
             <div class="news__grid">
               <div class="row">
-                <div class="col-lg-6"><a class="news__item news__item--bg" href="#">
+                <div class="col-sm-6 col-lg-4 col-xl-6"><a class="news__item news__item--bg" href="#">
                     <figure class="news__item-image"><img src="images/img-news-01.jpg" alt=""></figure>
                     <div class="news__item-desc">
                       <h3 class="news__item-title">Новая коллекция черепицы АТЛАНТИКА</h3>
@@ -213,7 +215,7 @@
                         </li>
                       </ul>
                     </div></a></div>
-                <div class="col-lg-3"><a class="news__item" href="#">
+                <div class="col-sm-6 col-lg-4 col-xl-3"><a class="news__item" href="#">
                     <figure class="news__item-image"><img src="images/img-news-02.jpg" alt=""></figure>
                     <div class="news__item-desc">
                       <h3 class="news__item-title">Надёжные крыши и фасады Бреста</h3>
@@ -231,7 +233,7 @@
                         </li>
                       </ul>
                     </div></a></div>
-                <div class="col-lg-3"><a class="news__item" href="#">
+                <div class="col-sm-6 col-lg-4 col-xl-3"><a class="news__item" href="#">
                     <figure class="news__item-image"><img src="images/img-news-03.jpg" alt=""></figure>
                     <div class="news__item-desc">
                       <h3 class="news__item-title">Славянский кровельный практикум</h3>
@@ -249,7 +251,7 @@
                         </li>
                       </ul>
                     </div></a></div>
-                <div class="col-lg-3"><a class="news__item" href="#">
+                <div class="col-sm-6 col-lg-4 col-xl-3"><a class="news__item" href="#">
                     <figure class="news__item-image"><img src="images/img-news-04.jpg" alt=""></figure>
                     <div class="news__item-desc">
                       <h3 class="news__item-title">Выбор надёжного фундамента. Лайфхаки</h3>
@@ -267,7 +269,7 @@
                         </li>
                       </ul>
                     </div></a></div>
-                <div class="col-lg-3"><a class="news__item" href="#">
+                <div class="col-sm-6 col-lg-4 col-xl-3"><a class="news__item" href="#">
                     <figure class="news__item-image"><img src="images/img-news-05.jpg" alt=""></figure>
                     <div class="news__item-desc">
                       <h3 class="news__item-title">Могилевский кровельный десант готов</h3>
@@ -285,7 +287,7 @@
                         </li>
                       </ul>
                     </div></a></div>
-                <div class="col-lg-6"><a class="news__item news__item--bg" href="#">
+                <div class="col-sm-6 col-lg-4 col-xl-6"><a class="news__item news__item--bg" href="#">
                     <figure class="news__item-image"><img src="images/img-news-06.jpg" alt=""></figure>
                     <div class="news__item-desc">
                       <h3 class="news__item-title">Урок по монтажу фасадной плитки для коттеджа</h3>
@@ -302,7 +304,7 @@
                         </li>
                       </ul>
                     </div></a></div>
-                <div class="col-lg-3"><a class="news__item" href="#">
+                <div class="col-sm-6 col-lg-4 col-xl-3"><a class="news__item" href="#">
                     <figure class="news__item-image"><img src="images/img-news-07.jpg" alt=""></figure>
                     <div class="news__item-desc">
                       <h3 class="news__item-title">Защита фасадной плитки от физических повреждений</h3>
@@ -320,10 +322,10 @@
                         </li>
                       </ul>
                     </div></a></div>
-                <div class="col-lg-6"><a class="news__item news__item--bg" href="#">
+                <div class="col-sm-6 col-lg-4 col-xl-6"><a class="news__item news__item--bg" href="#">
                     <figure class="news__item-image"><img src="images/img-news-08.jpg" alt=""></figure>
                     <div class="news__item-desc">
-                      <h3 class="news__item-title">Фасадная плитка HAUBERK.К лицу любого дома</h3>
+                      <h3 class="news__item-title">Фасадная плитка HAUBERK. К лицу любого дома</h3>
                       <ul class="news__item-info">
                         <li>
                           <svg class="icon-views">
@@ -337,7 +339,7 @@
                         </li>
                       </ul>
                     </div></a></div>
-                <div class="col-lg-3"><a class="news__item" href="#">
+                <div class="col-sm-6 col-lg-4 col-xl-3"><a class="news__item" href="#">
                     <figure class="news__item-image"><img src="images/img-news-09.jpg" alt=""></figure>
                     <div class="news__item-desc">
                       <h3 class="news__item-title">Интервью с участницей «Дачный ответ»</h3>
@@ -371,7 +373,7 @@
             </div>
             <div class="join__grid">
               <div class="row js-isotope">
-                <div class="col-lg-4">
+                <div class="col-sm-6 col-lg-4">
                   <div class="join__item join__item--widget">
                     <div class="join__item-acc">
                       <figure class="join__item-acc-image"><img src="images/logo-small.svg" alt=""></figure>
@@ -380,7 +382,7 @@
                     <div class="join__item-widget"><img src="images/img-widget-01.jpg" alt=""></div>
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-sm-6 col-lg-4">
                   <div class="join__item">
                     <div class="join__item-acc">
                       <figure class="join__item-acc-image"><img src="images/logo-small.svg" alt=""></figure>
@@ -409,7 +411,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-sm-6 col-lg-4">
                   <div class="join__item">
                     <div class="join__item-acc">
                       <figure class="join__item-acc-image"><img src="images/logo-small.svg" alt=""></figure>
@@ -439,7 +441,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-sm-6 col-lg-4">
                   <div class="join__item join__item--widget">
                     <div class="join__item-acc">
                       <figure class="join__item-acc-image"><img src="images/logo-small.svg" alt=""></figure>
@@ -448,7 +450,7 @@
                     <div class="join__item-widget"><img src="images/img-widget-02.jpg" alt=""></div>
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-sm-6 col-lg-4">
                   <div class="join__item join__item--widget">
                     <div class="join__item-acc">
                       <figure class="join__item-acc-image"><img src="images/logo-small.svg" alt=""></figure>
@@ -457,7 +459,7 @@
                     <div class="join__item-widget"><img src="images/img-widget-03.jpg" alt=""></div>
                   </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-sm-6 col-lg-4">
                   <div class="join__item">
                     <div class="join__item-acc">
                       <figure class="join__item-acc-image"><img src="images/logo-small.svg" alt=""></figure>

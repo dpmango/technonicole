@@ -82,6 +82,30 @@ $(function() {
 	});
 
 
+
+	// ------
+
+
+	$('.header__innernav').on('click', '.header__innernav-trigger', function(event) {
+		event.preventDefault();
+		
+		if( $('html').is('.is-innernav-open') ) {
+			$('html').removeClass('is-innernav-open');
+		} else {
+			$('html').addClass('is-innernav-open');
+		}
+	});
+
+	$(document).on( 'click', function(event) {
+
+		if($(event.target).closest('.header__innernav').length==0) {
+			$('html').removeClass('is-innernav-open');
+		}
+
+	});
+
+
+
 	// --------------------------------------------------------------------------
 	// Footer
 	// --------------------------------------------------------------------------

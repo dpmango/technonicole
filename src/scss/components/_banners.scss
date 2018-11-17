@@ -4,6 +4,9 @@
 
 .banners {
 	padding: 30rem 0;
+	@include breakpointMax(md) {
+		padding: 0;
+	}
 }
 
 .banners__slides {
@@ -20,20 +23,60 @@
 			margin: 0;
 		}
 		
-		&--350 {
+		&--300 {
+			height: 300rem;
 			.news__item-desc {
 				padding: 30rem 40rem;
 			}
  		}
 
 		&--650 {
+			height: 650rem;
 			.news__item-desc {
 				padding: 30rem 50rem;
 			}
  		}
 	}
+
+	@include breakpointMax(lg) {
+
+		margin: 0 -15rem;
+
+		.news__item {
+			margin: 0 0 20rem;
+			&--650 {
+				height: 320rem;
+				.news__item-desc {
+					padding: 20rem;
+				}
+			}
+			&--300 {
+				height: 150rem;
+				.news__item-desc {
+					padding: 20rem;
+				}
+			}
+		}
+		
+	}
+
+	@include breakpointMax(md) {
+		margin: 0 -30rem;
+	}
 }
 
 .banners__item {
 	padding: 0 25rem;
+	@include breakpointMax(lg) {
+		padding: 0 15rem;
+	}
+	@include breakpointMax(md) {
+		padding: 0 10rem;
+		.row {
+			margin: 0 -10rem;
+			& > [class^="col-"] {
+				padding: 0 10rem;
+			}
+		}
+	}
 }

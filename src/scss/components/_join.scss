@@ -17,6 +17,7 @@
 	color: #959595;
 
 	padding: 0 0 30rem;
+
 }
 
 .join__heading {
@@ -26,6 +27,19 @@
 	font-weight: 300;
 	margin: 0 0 30rem;
 	color: #000;
+
+	@include breakpointMax(xl) {
+		font-size: 64rem;
+	}
+	@include breakpointMax(lg) {
+		font-size: 56rem;
+	}
+	@include breakpointMax(md) {
+		font-size: 48rem;
+	}
+	@include breakpointMax(sm) {
+		font-size: 30rem;
+	}
 }
 
 .join__hashtag {
@@ -35,6 +49,11 @@
 	color: #959595;
 	margin: 0 0 40rem;
 	text-transform: uppercase;
+	display: block;
+	max-width: 90%;
+	@include breakpointMax(lg) {
+		font-size: 20rem;
+	}
 }
 
 .join__text {
@@ -43,6 +62,16 @@
 
 .join__grid {
 	margin: 0 0 10rem;
+
+	@include breakpointMax(md) {
+		margin: 0 -20rem 10rem;
+		.row {
+			margin: 0 -10rem -20rem;
+			& > [class^="col-"] {
+				padding: 0 10rem 20rem;
+			}
+		}
+	}
 }
 
 // -----
@@ -50,7 +79,8 @@
 .join__item {
 	position: relative;
 	display: block;
-	padding: 0 0 30rem;
+	margin: 0 0 30rem;
+	transition: 0.25s;
 	&--widget {
 		.join__item-acc {
 			position: relative;
@@ -62,12 +92,22 @@
 			}
 		}
 	}
+	&:hover {
+		box-shadow: 0 5rem 25rem rgba(0,0,0,0.2);
+		.join__item-image img {
+			transform: scale(1.1);
+		}
+	}
+
+	@include breakpointMax(md) {
+		margin: 0;
+	}
 }
 
 .join__item-acc {
 	display: flex;
 	align-items: center;
-	padding: 8rem 0 8rem 8rem;
+	padding: 8rem;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -84,7 +124,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	margin: 0 10rem 0 0;
+	margin: -4rem 10rem -4rem 0;
 	img {
 		display: block;
 		max-width: 100%;
@@ -111,19 +151,31 @@
 	vertical-align: top;
 	margin: 0 0 0 auto;
 	font-size: 13rem;
-	line-height: 28rem;
+	line-height: 16rem;
 	font-weight: 600;
 	text-decoration: none;
-	padding: 0 10rem;
+	padding: 6rem 10rem;
 	background: #3195F4;
 	color: #fff;
 	border-radius: 3rem;
+	text-align: center;
 	&:hover {
 		background: #5fb1ff;
 		color: #fff;
 		text-decoration: none;
 	}
 
+	@include breakpointMax(xl) {
+		font-size: 12rem;
+	}
+
+}
+
+.join__item-widget {
+	img {
+		display: block;
+		width: 100%;
+	}
 }
 
 
@@ -156,6 +208,7 @@
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
+		transition: 0.7s;
 	}
 }
 

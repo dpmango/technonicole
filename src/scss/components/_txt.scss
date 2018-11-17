@@ -20,16 +20,39 @@
 			padding: 0 32rem;
 		}
 	}
+
+	@include breakpointMax(xl) {
+		.row {
+			margin: 0 -15rem;
+			& > [class^="col-"] {
+				padding: 0 15rem;
+			}
+		}
+	}
 }
 
 .txt__heading {
 	display: block;
 	font-size: 57rem;
-	line-height: 67rem;
+	line-height: 1.175;
 	font-weight: 300;
 	margin: 0 0 64rem;
 	color: #000;
 	text-transform: uppercase;
+
+	@include breakpointMax(xl) {
+		font-size: 50rem;
+	}
+	@include breakpointMax(lg) {
+		font-size: 43rem;
+		margin: 0 0 30rem;
+	}
+	@include breakpointMax(md) {
+		font-size: 36rem;
+	}
+	@include breakpointMax(sm) {
+		font-size: 30rem;
+	}
 }
 
 .txt__image {
@@ -37,6 +60,12 @@
 	img {
 		display: block;
 		width: 100%;
+	}
+	@include breakpointMax(lg) {
+		margin: 0 0 30rem;
+	}
+	@include breakpointMax(sm) {
+		margin: 0 -20rem 30rem;
 	}
 }
 
@@ -46,15 +75,25 @@
 	margin: 0 24rem 24rem 0;
 	&--line {
 		padding: 0 0 0 172rem;
+		padding: 0 0 0 30%;
 		&:after {
 			content: '';
 			display: block;
 			position: absolute;
 			top: 12rem;
 			left: 0;
-			width: 118rem;
+			width: 22%;
 			height: 1px;
 			background: #E30613;
+		}
+	}
+
+	@include breakpointMax(md) {
+		&--line {
+			padding: 0;
+			&:after {
+				display: none;
+			}
 		}
 	}
 }

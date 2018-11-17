@@ -9,15 +9,20 @@
 
 .news__sorting {
 	position: relative;
-	padding: 0 90rem;
-	margin: 0 0 40rem;
+	margin: 0 0 20rem;
+	display: inline-block;
+	vertical-align: top;
+	width: 100%;
 }
 
 
 .news__themes {
-	position: absolute;
-	top: 0;
-	left: 0;
+	position: relative;
+	margin: 0 90rem 20rem 0;
+	float: left;
+	@include breakpointMax(lg) {
+		float: none;	
+	}
 }
 
 
@@ -85,10 +90,15 @@
 // -----
 
 .news__tags {
+	overflow: hidden;
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: center;
 	margin: 0 0 -9rem;
+	padding: 0 0 20rem;
+
+	@include breakpointMax(lg) {
+
+	}
 }
 
 
@@ -103,7 +113,7 @@
 	border: 1px solid #B7B7B7;
 	color: #B7B7B7;
 	text-transform: uppercase;
-	margin: 0 4.5rem 9rem;
+	margin: 0 9rem 9rem 0;
 	&:hover {
 		border-color: #E30613;
 		color: #E30613;
@@ -117,9 +127,28 @@
 .news__grid {
 	margin: 0 0 60rem;
 	.row {
-		margin: 0 -20px -80px;
+		margin: 0 -20rem -80rem;
 		& > [class^="col-"] {
-			padding: 0 20px 80px;
+			padding: 0 20rem 80rem;
+		}
+	}
+
+	@include breakpointMax(xl) {
+		.row {
+			margin: 0 -15rem -40rem;
+			& > [class^="col-"] {
+				padding: 0 15rem 40rem;
+			}
+		}
+	}
+
+	@include breakpointMax(md) {
+		margin: 0 -20rem 60rem;
+		.row {
+			margin: 0 -10rem -20rem;
+			& > [class^="col-"] {
+				padding: 0 10rem 20rem;
+			}
 		}
 	}
 }
@@ -131,18 +160,25 @@
 	text-decoration: none;
 	color: #000;
 	min-height: 100%;
+	transition: 0.25s;
+	backface-visibility: hidden;
+
+	&:before {
+		content: '';
+		float: left;
+		padding: 100% 0 0;
+	}
 	&:hover {
 		text-decoration: none;
 		color: #000;
+		box-shadow: 0 5rem 25rem rgba(0,0,0,0.2);
+		.news__item-image img {
+			transform: scale(1.1);
+		}
+
 	}
 
-	&--300 {
-		height: 300rem;
-	}
-
-	&--650 {
-		height: 650rem;
-	}
+	
 
 	&--bg {
 
@@ -175,6 +211,8 @@
 			line-height: 1;
 			font-weight: 300;
 			margin: 0 0 20rem;
+
+
 		}
 
 		.news__item-info {
@@ -182,6 +220,27 @@
 		}
 
 	}
+
+
+	@include breakpointMax(xl) {
+		&--bg {
+			.news__item-title {
+				font-size: 30rem;
+			}
+		}
+	}
+
+	@include breakpointMax(lg) {
+		&--bg {
+			.news__item-title {
+				font-size: 24rem;
+				margin: 0 0 10rem;
+				max-width: 90%;
+			}
+		}
+	}
+
+	
 }
 
 
@@ -216,6 +275,7 @@
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
+		transition: 0.7s;
 	}
 
 }

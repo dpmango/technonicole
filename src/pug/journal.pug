@@ -1,8 +1,8 @@
 ---
 title: Журнал - Technonicol
-bodyClass: page-journal
+bodyClass: page-inner
 ---
-extends includes/_app-journal
+extends includes/_app-inner
 
 block main
 
@@ -58,7 +58,7 @@ block main
 
 				.banners__item
 					.row
-						.col-lg-6
+						.col-6
 
 							a(href="#").news__item.news__item--bg.news__item--650
 								figure.news__item-image
@@ -72,7 +72,7 @@ block main
 										li
 											+sprite('icon-comments')
 											| 97
-						.col-lg-6
+						.col-6
 
 							a(href="#").news__item.news__item--bg.news__item--650
 								figure.news__item-image
@@ -96,21 +96,21 @@ block main
 	.txt
 		.container-fluid
 			.row.align-items-center
-				.col-lg-7
+				.col-md-6.col-lg-7
 
 					h2.txt__heading Всё начинается <br> с дома
 					
-				.col-lg-5
+				.col-md-6.col-lg-5
 
 					figure.txt__image
 						img(src="images/img-01.jpg", alt="")
 
 			.row
-				.col-lg-7
+				.col-md-6.col-lg-7
 
 					p.txt__text.txt__text--line Теперь у всех преверженцев марки ТЕХНОНИКОЛЬ появился новый источник для вдохновения и получения свежей информации, лайфхаков, полезных инструкций по монтажу — журнал о кровлях и фасадах.
 
-				.col-lg-5
+				.col-md-6.col-lg-5
 
 					p.txt__text Здесь вы без труда сможете найти ответы на все интересующие вас вопросы связанные с монтажом, строительными материалами и средствами защиты вашего жилья от непредсказуемых погодных условий.
 
@@ -139,7 +139,7 @@ block main
 
 			.news__grid
 				.row
-					.col-lg-6
+					.col-sm-6.col-lg-4.col-xl-6
 
 						a(href="#").news__item.news__item--bg
 							figure.news__item-image
@@ -154,7 +154,7 @@ block main
 										+sprite('icon-comments')
 										| 97
 
-					.col-lg-3
+					.col-sm-6.col-lg-4.col-xl-3
 
 						a(href="#").news__item
 							figure.news__item-image
@@ -170,7 +170,7 @@ block main
 										+sprite('icon-comments')
 										| 32
 
-					.col-lg-3
+					.col-sm-6.col-lg-4.col-xl-3
 
 						a(href="#").news__item
 							figure.news__item-image
@@ -186,7 +186,7 @@ block main
 										+sprite('icon-comments')
 										| 15
 
-					.col-lg-3
+					.col-sm-6.col-lg-4.col-xl-3
 
 						a(href="#").news__item
 							figure.news__item-image
@@ -202,7 +202,7 @@ block main
 										+sprite('icon-comments')
 										| 24
 
-					.col-lg-3
+					.col-sm-6.col-lg-4.col-xl-3
 
 						a(href="#").news__item
 							figure.news__item-image
@@ -218,7 +218,7 @@ block main
 										+sprite('icon-comments')
 										| 42
 
-					.col-lg-6
+					.col-sm-6.col-lg-4.col-xl-6
 
 						a(href="#").news__item.news__item--bg
 							figure.news__item-image
@@ -233,7 +233,7 @@ block main
 										+sprite('icon-comments')
 										| 97
 
-					.col-lg-3
+					.col-sm-6.col-lg-4.col-xl-3
 
 						a(href="#").news__item
 							figure.news__item-image
@@ -249,13 +249,13 @@ block main
 										+sprite('icon-comments')
 										| 32
 
-					.col-lg-6
+					.col-sm-6.col-lg-4.col-xl-6
 
 						a(href="#").news__item.news__item--bg
 							figure.news__item-image
 								img(src="images/img-news-08.jpg", alt="")
 							.news__item-desc
-								h3.news__item-title Фасадная плитка HAUBERK.К лицу любого дома
+								h3.news__item-title Фасадная плитка HAUBERK. К лицу любого дома
 								ul.news__item-info
 									li
 										+sprite('icon-views')
@@ -264,7 +264,7 @@ block main
 										+sprite('icon-comments')
 										| 19
 
-					.col-lg-3
+					.col-sm-6.col-lg-4.col-xl-3
 
 						a(href="#").news__item
 							figure.news__item-image
@@ -298,7 +298,7 @@ block main
 				
 			.join__grid
 				.row.js-isotope
-					.col-lg-4
+					.col-sm-6.col-lg-4
 
 						.join__item.join__item--widget
 							.join__item-acc
@@ -311,7 +311,7 @@ block main
 							.join__item-widget
 								img(src="images/img-widget-01.jpg", alt="")
 
-					.col-lg-4
+					.col-sm-6.col-lg-4
 
 						.join__item
 							.join__item-acc
@@ -337,7 +337,7 @@ block main
 										+sprite('icon-join-share')
 										| 15
 
-					.col-lg-4
+					.col-sm-6.col-lg-4
 
 						.join__item
 							.join__item-acc
@@ -374,7 +374,7 @@ block main
 
 					
 
-					.col-lg-4
+					.col-sm-6.col-lg-4
 
 						.join__item.join__item--widget
 							.join__item-acc
@@ -388,7 +388,7 @@ block main
 								img(src="images/img-widget-02.jpg", alt="")
 
 
-					.col-lg-4
+					.col-sm-6.col-lg-4
 
 						.join__item.join__item--widget
 							.join__item-acc
@@ -401,7 +401,7 @@ block main
 							.join__item-widget
 								img(src="images/img-widget-03.jpg", alt="")
 
-					.col-lg-4
+					.col-sm-6.col-lg-4
 
 						.join__item
 							.join__item-acc
