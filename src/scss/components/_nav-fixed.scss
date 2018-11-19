@@ -1,0 +1,150 @@
+// --------------------------------------------------------------------------
+// Nav-fixed
+// --------------------------------------------------------------------------
+
+.is-nav-fixed-open {
+	.nav-fixed__trigger {
+		&:after,&:before {
+			transform: rotate(225deg);
+		}
+	}
+
+	.nav-fixed__menu {
+		transform: translate(0,0);
+	}
+}
+
+.nav-fixed {
+	position: fixed;
+	top: 50%;
+	right: 0;
+	transform: translate(0,-50%);
+	z-index: 1000;
+}
+
+.nav-fixed__trigger {
+	display: none;
+	width: 56rem;
+	height: 50rem;
+	border: none;
+	background: #e80000;
+	position: relative;
+	margin: 0 0 1rem;
+	border-radius: 3px 0 0 3px;
+	cursor: pointer;
+	transition: 0.25s;
+	opacity: 0.7;
+
+	backface-visibility: hidden;
+	&:after, &:before {
+		transition: 0.25s;
+		content: '';
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		background: #fff;
+	}
+	&:after {
+		width: 22rem;
+		height: 2rem;
+		margin: -1rem 0 0 -11rem;
+	}
+	&:before {
+		width: 2rem;
+		height: 22rem;
+		margin: -11rem 0 0 -2rem;
+	}
+	&:hover {
+		opacity: 1;
+	}
+
+	@include breakpointMax(lg) {
+		display: block;
+	}
+}
+
+
+.nav-fixed__menu {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	& > li {
+		padding: 1px 0;
+	}
+
+	@include breakpointMax(lg) {
+		transition: 0.3s;
+		transform: translate(100%,0);
+	}
+}
+
+
+.nav-fixed__link {
+
+	transition: 0.25s;
+	position: relative;
+	display: block;
+	width: 56rem;
+	height: 50rem;
+	
+	white-space: nowrap;
+
+	background: rgba(65,64,66,0.8);
+    border-radius: 3px 0 0 3px;
+	
+
+	color: #fff;
+
+	opacity: 0.7;
+
+	&--hightlight {
+		background: #F6C448;
+		.nav-fixed__link-text {
+			background: #414042;
+		}
+	}
+
+	&:hover {
+		opacity: 1;
+		border-radius: 0;
+		color: #fff;
+		.nav-fixed__link-text {
+			width: 220rem;
+			padding: 0 15rem;
+		}
+	}
+
+}
+
+
+.nav-fixed__link-icon {
+	display: block;
+	margin: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+}
+
+
+.nav-fixed__link-text {
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 100%;
+
+	font-size: 12rem;
+	line-height: 50rem;
+	font-weight: 700;
+	letter-spacing: 0.1rem;
+	text-transform: uppercase;
+	text-align: center;
+
+	overflow: hidden;
+	width: 0;
+	background: #e31e36;
+
+	transition: 0.3s;
+}

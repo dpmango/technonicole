@@ -10,7 +10,7 @@
 
 
 .header__panel {
-	position: relative;
+	// position: relative;
 	&--top {
 		background: #414042;
 		height: 40px;
@@ -20,6 +20,7 @@
 		}
 	}
 	&--middle {
+		position: relative;
 		border-bottom: 1px solid #EBEBEB;
 		padding: 20rem 0;
 
@@ -937,6 +938,7 @@
 		right: 0;
 		height: 100%;
 		border: none;
+		padding: 0;
 		background: none;
 		font: 600 13rem/30rem $fontBase;
 		text-transform: uppercase;
@@ -1127,7 +1129,8 @@
 	@include breakpointMax(lg) {
 		position: absolute;
 		top: 0;
-		right: 20rem;
+		// right: 20rem;
+		right: 16rem;
 		height: 100%;
 		width: auto;
 	}

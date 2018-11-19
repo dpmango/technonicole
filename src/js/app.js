@@ -106,6 +106,37 @@ $(function() {
 
 
 
+	$('.news__themes').on('click', '.news__themes-trigger', function(event) {
+		event.preventDefault();
+		
+		if( $('html').is('.is-themes-open') ) {
+			$('html').removeClass('is-themes-open');
+		} else {
+			$('html').addClass('is-themes-open');
+		}
+	});
+
+	$(document).on( 'click', function(event) {
+
+		if($(event.target).closest('.news__themes').length==0) {
+			$('html').removeClass('is-themes-open');
+		}
+
+	});
+
+
+
+	$('.nav-fixed').on('click', '.nav-fixed__trigger', function(event) {
+		event.preventDefault();
+		
+		if( $('html').is('.is-nav-fixed-open') ) {
+			$('html').removeClass('is-nav-fixed-open');
+		} else {
+			$('html').addClass('is-nav-fixed-open');
+		}
+	});
+
+
 	// --------------------------------------------------------------------------
 	// Footer
 	// --------------------------------------------------------------------------
@@ -127,18 +158,35 @@ $(function() {
 	var slickPrev = '<button class="slick-arrow slick-prev"><svg class="icon-prev"><use xlink:href="sprites/sprite.svg#icon-prev"></use></svg></button>',
       	slickNext = '<button class="slick-arrow slick-next"><svg class="icon-next"><use xlink:href="sprites/sprite.svg#icon-next"></use></svg></button>';
 
+
+    $('.js-slick-hero').on('init beforeChange', function(event, slick, currentSlide, nextSlide){
+    	
+    	var index = nextSlide || 0;
+
+    	// Reset
+		$('.slick-dot__progress').stop(true, true).css({ width: 0 });
+
+		// Start
+		$('.js-slick-hero').find('.slick-dot').eq(index).find('.slick-dot__progress').animate({'width': '100%'}, 5000, function(){
+			$('.js-slick-hero').slick('slickNext');
+		});
+
+	});
+
 	$('.js-slick-hero').slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		arrows: false,
 		dots: true,
-		fade: false,
+		fade: true,
 		infinite: true,
 		nextArrow: slickNext,
 	   	prevArrow: slickPrev,
-	   	autoplay: true,
-	   	autoplaySpeed: 5000,
-	   	pauseOnHover: true,
+	   	autoplay: false,
+	   	autoplaySpeed: 3000,
+	   	pauseOnHover: false,
+	   	pauseOnFocus: false,
+	   	speed: 2000,
 	   	responsive: [
 	   		{
 	   			breakpoint: 992,
@@ -147,9 +195,14 @@ $(function() {
 	   				arrows: false
 	   			}
 	   		}
-	   	]
+	   	],
+	   	customPaging : function(slider, i) {
+	        return '<button class="slick-dot"><span class="slick-dot__progress"></span></button>';
+	    },
 	});
 
+
+	// -----
 
 
 	$('.js-slick-catalog').slick({

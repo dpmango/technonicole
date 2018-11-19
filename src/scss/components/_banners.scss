@@ -4,6 +4,9 @@
 
 .banners {
 	padding: 30rem 0;
+	@include breakpointMax(hd) {
+		padding: 30rem 10%;
+	}
 	@include breakpointMax(md) {
 		padding: 0;
 	}

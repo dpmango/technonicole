@@ -6,12 +6,44 @@
     <meta name="theme-color" content="#000">
     <meta name="format-detection" content="telephone=no">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="robots" content="noindex, nofollow">
     <title>Журнал - Technonicol</title>
     <link rel="shortcut icon" href="images/favicon.ico">
     <link rel="stylesheet" href="css/app.min.css">
   </head>
   <body class="page-inner">
     <div class="app">
+      <!-- Nav Fixed :: Start-->
+      <nav class="nav-fixed js-nav-fixed">
+        <button class="nav-fixed__trigger"></button>
+        <ul class="nav-fixed__menu">
+          <li><a class="nav-fixed__link nav-fixed__link--hightlight" href="#"><span class="nav-fixed__link-icon">
+                <svg class="icon-nav-01">
+                  <use xlink:href="sprites/sprite.svg#icon-nav-01"></use>
+                </svg></span><span class="nav-fixed__link-text">Подбор черепицы</span></a></li>
+          <li><a class="nav-fixed__link" href="#"><span class="nav-fixed__link-icon">
+                <svg class="icon-nav-02">
+                  <use xlink:href="sprites/sprite.svg#icon-nav-02"></use>
+                </svg></span><span class="nav-fixed__link-text">...</span></a></li>
+          <li><a class="nav-fixed__link" href="#"><span class="nav-fixed__link-icon">
+                <svg class="icon-nav-03">
+                  <use xlink:href="sprites/sprite.svg#icon-nav-03"></use>
+                </svg></span><span class="nav-fixed__link-text">...</span></a></li>
+          <li><a class="nav-fixed__link" href="#"><span class="nav-fixed__link-icon">
+                <svg class="icon-nav-04">
+                  <use xlink:href="sprites/sprite.svg#icon-nav-04"></use>
+                </svg></span><span class="nav-fixed__link-text">...</span></a></li>
+          <li><a class="nav-fixed__link" href="#"><span class="nav-fixed__link-icon">
+                <svg class="icon-nav-05">
+                  <use xlink:href="sprites/sprite.svg#icon-nav-05"></use>
+                </svg></span><span class="nav-fixed__link-text">...</span></a></li>
+          <li><a class="nav-fixed__link" href="#"><span class="nav-fixed__link-icon">
+                <svg class="icon-nav-06">
+                  <use xlink:href="sprites/sprite.svg#icon-nav-06"></use>
+                </svg></span><span class="nav-fixed__link-text">...</span></a></li>
+        </ul>
+      </nav>
+      <!-- Nav :: Fixed :: End-->
       <!-- Header :: Start-->
       <header class="header">
         <div class="header__panel header__panel--middle">
@@ -191,8 +223,17 @@
           <div class="container-fluid">
             <div class="news__sorting">
               <div class="news__themes">
-                <button class="news__themes-btn"><span class="news__themes-icon"></span>темы</button>
-                <div class="news__themes-dropdown"></div>
+                <button class="news__themes-trigger"><span class="news__themes-icon"></span>темы</button>
+                <div class="news__themes-dropdown">
+                  <ul class="news__themes-menu">
+                    <li><a class="news__themes-link" href="#">ПРОЕКТИРОВАНИЕ</a></li>
+                    <li><a class="news__themes-link" href="#">СДЕЛАЙ САМ</a></li>
+                    <li><a class="news__themes-link" href="#">360°</a></li>
+                    <li><a class="news__themes-link" href="#">ДИЗАЙН</a></li>
+                    <li><a class="news__themes-link" href="#">РЕАЛЬНЫЕ ИСТОРИИ</a></li>
+                    <li><a class="news__themes-link" href="#">О ПРОЕКТЕ</a></li>
+                  </ul>
+                </div>
               </div>
               <nav class="news__tags"><a class="news__tags-btn" href="#">#shinglas</a><a class="news__tags-btn" href="#">#гибкая черепица</a><a class="news__tags-btn" href="#">#водосточная система</a><a class="news__tags-btn" href="#">#вентиляция</a><a class="news__tags-btn" href="#">#hauberk</a><a class="news__tags-btn" href="#">#фасаднаяплитка</a></nav>
             </div>
@@ -521,7 +562,7 @@
               </div>
               <div class="col-xl-auto order-xl-3">
                 <nav class="footer__info">
-                  <div class="footer__info-group"><a class="footer__info-btn" href="#">Официальный сайт Корпорации ТЕХНОНИКОЛЬ</a><a class="footer__info-btn" href="#">Интернет-магазин ТЕХНОНИКОЛЬ</a></div>
+                  <div class="footer__info-group"><a class="footer__info-btn" href="#"><span>Официальный</span> сайт Корпорации ТЕХНОНИКОЛЬ</a><a class="footer__info-btn" href="#">Интернет-магазин ТЕХНОНИКОЛЬ</a></div>
                   <div class="footer__info-group"><a class="footer__info-link" href="#">Правила использования сайта </a><a class="footer__info-link" href="#">Политика персональных данных</a><a class="footer__info-link" href="#">Политика конфиденциальности</a></div>
                 </nav>
               </div>

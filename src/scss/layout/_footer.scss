@@ -2,13 +2,47 @@
 // Footer
 // --------------------------------------------------------------------------
 
+
+.page-inner {
+	
+}
+
 .footer {
+	position: relative;
 	background: #414042;
 	color: #fff;
 
 	font-size: 13rem;
 	line-height: 20rem;
 	font-weight: 300;
+
+	.row {
+		& > [class^="col-"] {
+			position: initial;
+		}
+	}
+
+
+	@include breakpointMax(xl) {
+		
+		padding: 54rem 0 0;
+
+		.footer__logo {
+			position: absolute;
+			top: 20rem;
+			left: 20rem;
+			right: 20rem;
+			text-align: center;
+		}
+
+	}
+
+	@include breakpointMax(sm) {
+		.footer__logo {
+			margin: 0;
+			text-align: left;
+		}
+	}
 	
 }
 
@@ -323,6 +357,10 @@
 		left: 42rem;
 		text-align: left;
 	}
+
+	@include breakpointMax(xl) {
+		
+	}
 }
 
 // -----
@@ -368,6 +406,10 @@
 		margin: 0 auto;
 		width: 630rem;
 	}
+
+	@include breakpointMax(xl) {
+		padding: 0;
+	}
 }
 
 .footer__info-group {
@@ -397,6 +439,13 @@
 	margin: 0 0 20rem;
 	width: 100%;
 
+	&:first-letter {
+		text-transform: uppercase;
+	}
+
+	span {
+		display: none;
+	}
 	
 
 	&:hover {
@@ -409,6 +458,9 @@
 	@include breakpoint(md) {
 		width: auto;
 		margin: 0 10rem 10rem 0;
+		span {
+			display: inline;
+		}
 		&:last-child {
 			margin-right: 0;
 		}

@@ -64,7 +64,8 @@
 	margin: 0 0 10rem;
 
 	@include breakpointMax(md) {
-		margin: 0 -20rem 10rem;
+		// margin: 0 -20rem 10rem;
+		margin: 0 0 10rem;
 		.row {
 			margin: 0 -10rem -20rem;
 			& > [class^="col-"] {
@@ -277,6 +278,7 @@
 .join__control {
 	text-align: center;
 	.btn {
-		min-width: 305rem;
+		width: 100%;
+		max-width: 305rem;
 	}
 }

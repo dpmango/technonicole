@@ -29,6 +29,10 @@
 			}
 		}
 	}
+
+	@include breakpointMax(md) {
+		padding: 45rem 0 15rem;
+	}
 }
 
 .txt__heading {

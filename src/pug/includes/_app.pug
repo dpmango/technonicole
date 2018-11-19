@@ -9,6 +9,8 @@ html(lang="ru")
         meta(name="format-detection" content="telephone=no")
         meta(http-equiv="X-UA-Compatible" content="IE=Edge")
 
+        meta(name="robots" content="noindex, nofollow")
+
         title= title || 'Page name'
 
         link(rel="shortcut icon" href="images/favicon.ico")
@@ -21,6 +23,42 @@ html(lang="ru")
     body(class=bodyClass)
 
         .app
+
+            // Nav Fixed :: Start
+            nav.nav-fixed.js-nav-fixed
+                button.nav-fixed__trigger
+                ul.nav-fixed__menu
+                    li
+                        a(href="#").nav-fixed__link.nav-fixed__link--hightlight
+                            span.nav-fixed__link-icon
+                                +sprite('icon-nav-01')
+                            span.nav-fixed__link-text Подбор черепицы
+                    li
+                        a(href="#").nav-fixed__link
+                            span.nav-fixed__link-icon
+                                +sprite('icon-nav-02')
+                            span.nav-fixed__link-text ...
+                    li
+                        a(href="#").nav-fixed__link
+                            span.nav-fixed__link-icon
+                                +sprite('icon-nav-03')
+                            span.nav-fixed__link-text ...
+                    li
+                        a(href="#").nav-fixed__link
+                            span.nav-fixed__link-icon
+                                +sprite('icon-nav-04')
+                            span.nav-fixed__link-text ...
+                    li
+                        a(href="#").nav-fixed__link
+                            span.nav-fixed__link-icon
+                                +sprite('icon-nav-05')
+                            span.nav-fixed__link-text ...
+                    li
+                        a(href="#").nav-fixed__link
+                            span.nav-fixed__link-icon
+                                +sprite('icon-nav-06')
+                            span.nav-fixed__link-text ...
+            // Nav :: Fixed :: End
 
             // Header :: Start
             header.header
