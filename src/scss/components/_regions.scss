@@ -1,0 +1,67 @@
+// --------------------------------------------------------------------------
+// Regions
+// --------------------------------------------------------------------------
+
+
+.regions {
+	padding: 45rem 0;
+}
+
+.regions__heading {
+	display: block;
+	font-size: 24rem;
+	line-height: 1;
+	font-weight: 700;
+	text-transform: uppercase;
+	margin: 0 0 20rem;
+	color: #000;
+}
+
+
+.regions__list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	& > li {
+		padding: 37rem 0 35rem;
+		border-bottom: 1px solid #E5E5E5;
+	}
+}
+
+
+.regions__item {
+
+	font-size: 16rem;
+	line-height: 27rem;
+	font-weight: 400;
+	font-style: normal;
+
+	b {
+		font-weight: 700;
+	}
+	mark {
+		color: #e30613;
+	}
+
+	.row {
+		margin: 0 -20rem;
+		& > [class^="col-"] {
+			padding: 0 20rem;
+		}
+	}
+}
+
+
+.regions__item-title {
+	display: block;
+	font-size: 20rem;
+	line-height: 1;
+	font-weight: 700;
+	margin: 0 0 27rem;
+}
+
+.regions__item-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}

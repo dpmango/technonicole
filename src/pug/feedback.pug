@@ -1,0 +1,348 @@
+---
+title: Обратная связь - Technonicol
+bodyClass: page-inner
+---
+extends includes/_app
+
+block main
+
+	// Feedback :: Start
+	.feedback
+		.container-fluid
+
+			.feedback__head
+				figure.feedback__head-image
+					img(src="images/bg-feedback.jpg", alt="")
+				.feedback__head-desc
+					h1.feedback__head-title Обратная связь
+					a(href="#").btn.btn--49.btn--red-empty
+						+sprite('icon-call')
+						| Позвонить бесплатно с сайта
+					p.feedback__head-text из любой страны мира
+
+			.feedback__body
+				
+				.row
+					.col-lg-6.push-lg-6
+						
+						// Regions :: Start
+						.regions
+							h2.regions__heading Региональные представители
+							ul.regions__list
+								li
+									address.regions__item
+										h3.regions__item-title Москва
+										ul.regions__item-list
+											li
+												b Олег Кошевой
+											li
+												| +7 (916) 206-86-19
+											li
+												mark koshevoy@tn.ru
+								li
+									address.regions__item
+										h3.regions__item-title Россия — Центральный Федеральный округ
+										ul.regions__item-list
+											li
+												b Алексей Поднебесный
+											li
+												| +7 (916) 876-88-49  /  +7 (495) 921-46-11
+											li
+												mark podnebesniy@tn.ru
+								li
+									address.regions__item
+										h3.regions__item-title Россия — Сибирский Федеральный округ
+										ul.regions__item-list
+											li
+												b Галина Кузьмина
+											li
+												| +7 (983) 132-02-19
+											li
+												mark kuzmina.g@tn.ru
+								li
+									address.regions__item
+										h3.regions__item-title Россия — Южный Федеральный округ
+										.row
+											.col-auto
+												ul.regions__item-list
+													li
+														b Виктор Каржанов
+													li
+														| +7 (988) 471-15-49
+													li
+														mark karzhanov@tn.ru
+											.col-auto
+												ul.regions__item-list
+													li
+														b Валентина Гридасова 
+													li
+														| +7 (988) 243-00-90
+													li
+														mark gridasova@tn.ru
+								li
+									address.regions__item
+										h3.regions__item-title Россия — Северо-Западный Федеральный округ
+										ul.regions__item-list
+											li
+												b Наталья Бородулина
+											li
+												| +7 (981) 772-35-15
+											li
+												mark borodulina@tn.ru
+								li
+									address.regions__item
+										h3.regions__item-title Россия — Дальне-Восточный Федеральный округ
+										ul.regions__item-list
+											li
+												b Александра Сидоренко
+											li
+												| +7 (914) 910-09-21
+											li
+												mark sidorenko.a@tn.ru
+								li
+									address.regions__item
+										h3.regions__item-title Россия — Уральский Федеральный округ
+										ul.regions__item-list
+											li
+												b Сергей Беляев
+											li
+												| +7 (917) 480-20-73
+											li
+												mark belyaev@tn.ru
+								li
+									address.regions__item
+										h3.regions__item-title Россия — Приволжский Федеральный округ
+										ul.regions__item-list
+											li
+												b Артём Бочаров 
+											li
+												| +7 (917) 390-14-55
+											li
+												mark bocharov@tn.ru
+								li
+									address.regions__item
+										h3.regions__item-title Республика Беларусь
+										ul.regions__item-list
+											li
+												b Дмитрий Симончик
+											li
+												| +375 (29) 120-18-88
+											li
+												mark simonchik@tn.ru
+								li
+									address.regions__item
+										h3.regions__item-title Казахстан, Киргизия, Узбекистан
+										ul.regions__item-list
+											li
+												b Александр Нисканин
+											li
+												| +7 (701) 220-59-32
+											li
+												mark niskanin@tn.ru
+								li
+									address.regions__item
+										h3.regions__item-title Украина
+										.row
+											.col-auto
+												ul.regions__item-list
+													li
+														b Александр Коваль
+													li
+														| +38 (067) 650-99-10
+													li
+														mark a.koval@sweetondale.cz
+											.col-auto
+												p.regions__item-hotline
+													small горячая линия
+													| 0 800 50-06-07
+								li
+									address.regions__item
+										h3.regions__item-title Молдова, Армения, Грузия, Азербайджан
+										ul.regions__item-list
+											li
+												b Евгений Ковалёв 
+											li
+												| +38 (067) 625-01-20
+											li
+												mark kovalev@sweetondale.cz
+								li
+									address.regions__item
+										h3.regions__item-title Монголия
+										ul.regions__item-list
+											li
+												b Александра Сидоренко 
+											li
+												| +7 (914) 91-00-921
+											li
+												mark sidorenko.a@tn.ru
+
+						// Regions :: End
+
+					.col-lg-6.pull-lg-6
+						
+
+						// Support :: Start
+						.support.support--grey
+							h2.support__heading Поддержка в интернете
+							ul.support__list
+								li
+									.support__item
+										h3.support__item-title
+											+sprite('icon-support-email')
+											| Электронная почта
+										p.support__item-text Ответим на вопросы в течение 24 часов
+										a(href="#").support__item-btn
+											+sprite('icon-support-btn')
+											| написать письмо
+								li
+									.support__item
+										h3.support__item-title
+											+sprite('icon-support-fb')
+											| Facebook
+										p.support__item-text Задавайте вопросы и получайте ответы прямо в Facebook
+										a(href="#").support__item-btn
+											+sprite('icon-support-btn')
+											| задать вопрос
+								li
+									.support__item
+										h3.support__item-title
+											+sprite('icon-support-vk')
+											| ВКонтакте
+										p.support__item-text Задавайте вопросы и получайте ответы прямо в ВКонтакте
+										a(href="#").support__item-btn
+											+sprite('icon-support-btn')
+											| задать вопрос
+								li
+									.support__item
+										h3.support__item-title
+											+sprite('icon-support-instagram')
+											| Instagram
+										p.support__item-text Задавайте вопросы и получайте ответы прямо в Instagram
+										a(href="#").support__item-btn
+											+sprite('icon-support-btn')
+											| задать вопрос
+								li
+									.support__item
+										h3.support__item-title
+											+sprite('icon-support-viber')
+											| Viber
+										p.support__item-text Подключайтесь к нашему чату и получайте ответы на свои вопросы
+										a(href="#").support__item-btn
+											+sprite('icon-support-btn')
+											| начать чат
+								li
+									.support__item
+										h3.support__item-title
+											+sprite('icon-support-whatsapp')
+											| WhatsApp
+										p.support__item-text Подключайтесь к нашему чату и получайте ответы на свои вопросы
+										a(href="#").support__item-btn
+											+sprite('icon-support-btn')
+											| начать чат
+								li
+									.support__item
+										h3.support__item-title
+											+sprite('icon-support-forumhouse')
+											| FORUMHOUSE
+										p.support__item-text Получите консультацию от самого популярного портала о строительстве
+										a(href="#").support__item-btn
+											+sprite('icon-support-btn')
+											| Получить консультацию
+
+						// Support :: End
+
+
+						// Extra :: Start
+						.extra
+							.row
+								.col-md-6.col-lg-12
+
+									a(href="#").extra__item
+										img(src="images/img-extra-01.jpg", alt="")
+								
+								.col-md-6.col-lg-12
+
+									a(href="#").extra__item
+										img(src="images/img-extra-02.jpg", alt="")
+
+						// Extra :: End
+
+
+						// Support :: Start
+						.support.support--white
+							h2.support__heading Техническая поддержка
+							ul.support__list
+								li
+									.support__item
+										h3.support__item-title Служба качества
+										a(href="#").support__item-btn
+											+sprite('icon-support-btn')
+											| узнать больше
+								li
+									.support__item
+										h3.support__item-title Техническая консультация
+										a(href="#").support__item-btn
+											+sprite('icon-support-btn')
+											| узнать больше
+								li
+									.support__item
+										h3.support__item-title Заявить претензию
+										a(href="#").support__item-btn
+											+sprite('icon-support-btn')
+											| узнать больше
+								li
+									.support__item
+										h3.support__item-title Оформить гарантию
+										a(href="#").support__item-btn
+											+sprite('icon-support-btn')
+											| узнать больше
+								li
+									.support__item
+										h3.support__item-title Техническое сопровождение
+										a(href="#").support__item-btn
+											+sprite('icon-support-btn')
+											| узнать больше
+
+
+						// Support :: End
+
+
+						// Support :: Start
+						.support.support--grey
+							h2.support__heading СЕРВИСЫ
+							ul.support__services
+								li
+									a(href="#").support__services-link
+										+sprite('icon-services-learn')
+										u Обучение
+								li
+									a(href="#").support__services-link
+										+sprite('icon-services-expl')
+										u Поддержка при эксплуатации
+								li
+									a(href="#").support__services-link
+										+sprite('icon-services-montage')
+										u Поддержка при монтаже
+								li
+									a(href="#").support__services-link
+										+sprite('icon-services-planning')
+										u Проектирование
+								li
+									a(href="#").support__services-link
+										+sprite('icon-services-calc')
+										u Выполнение расчётов
+								li
+									a(href="#").support__services-link
+										+sprite('icon-services-video')
+										u Видеоинструкции
+
+						// Support :: End
+					
+
+	// Feedback :: End
+
+
+
+	
+
+	

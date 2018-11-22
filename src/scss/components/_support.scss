@@ -1,0 +1,169 @@
+// --------------------------------------------------------------------------
+// Support
+// --------------------------------------------------------------------------
+
+.support {
+	padding: 45rem 50rem;
+	margin: 0 0 80rem;
+	&--grey {
+		background: #F7F7F7;
+	}
+	&--white {
+		margin: 0 0 30rem;
+	}
+}
+
+.support__heading {
+	display: block;
+	font-size: 24rem;
+	line-height: 1;
+	font-weight: 700;
+	text-transform: uppercase;
+	margin: 0 0 12rem;
+	color: #000;
+}
+
+
+.support__list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	& > li {
+		padding: 27rem 0;
+		border-bottom: 1px solid #DEDEDE;
+		&:last-child {
+			border: none;
+			padding-bottom: 0;
+		}
+	}
+}
+
+
+.support__item {
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+
+	padding: 0 168rem 0 0;
+
+	min-height: 54rem;
+	
+	[class^="icon-"] {
+		margin: 0 10rem 0 0;
+		color: #E30613;
+		top: -1rem;
+	}
+	
+}
+
+.support__item-title {
+	display: block;
+	font-size: 18rem;
+	line-height: 1;
+	font-weight: 700;
+	margin: 0;
+	width: 100%;
+}
+
+.support__item-text {
+	display: block;
+	padding: 10rem 0 0;
+	margin: 0;
+	font-size: 14rem;
+	line-height: 17rem;
+	color: #707070;
+	width: 100%;
+}
+
+
+.support__item-btn {
+	display: block;
+	width: 158rem;
+	position: absolute;
+	top: 50%;
+	right: 0;
+
+	margin: -25rem 0 0;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid #000;
+
+	font-size: 11rem;
+	line-height: 13rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #000;
+
+	text-align: center;
+	padding: 10rem 20rem;
+
+	height: 49rem;
+
+	[class^="icon-"] {
+		display: none;
+	}
+
+	&:hover {
+		text-decoration: none;
+		border-color: #E30613;
+		color: #E30613;
+	}
+}
+
+
+
+// ------
+
+
+.support__services {
+	margin: 0;
+	padding: 15rem 0;
+	list-style: none;
+
+	font-size: 16rem;
+	line-height: 1;
+	font-weight: 400;
+
+	& > li {
+		padding: 15rem 0;
+		// margin: 0 0 30rem;
+		&:last-child {
+			margin: 0;
+		}
+	}
+}
+
+
+.support__services-link {
+	display: block;
+	position: relative;
+	color: #000;
+	text-decoration: none;
+	padding: 5rem 0 5rem 70rem;
+	display: flex;
+	align-items: center;
+	min-height: 30rem;
+	transition: 0.25s;
+	u {
+		text-decoration: none;
+		border-bottom: 1px solid #B9B9B9;
+	}
+	[class^="icon-"] {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		transform: translate(0,-50%);
+	}
+
+	&:hover {
+		text-decoration: none;
+		color: #E30613;
+		u {
+			border-color: #E30613;
+		}
+	}
+}

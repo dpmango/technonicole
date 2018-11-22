@@ -9,4 +9,10 @@ PageList:
   ready: 0
 - file: journal.html
   ready: 100
+- file: feedback.html
+  ready: 100
+- file: use.html
+  ready: 0
+- file: water.html
+  ready: 0
 
