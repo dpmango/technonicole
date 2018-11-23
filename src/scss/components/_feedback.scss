@@ -20,9 +20,35 @@
 	display: flex;
 	align-items: center;
 
-	.btn {
-		margin: 0 0 20rem;
+
+	&:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 50%;
+		width: 100vw;
+		margin: 0 0 0 -50vw;
+		z-index: -2;
+		background: #F8F8FA;
+		background-size: cover;
 	}
+
+	.btn {
+		margin: 0 0 18rem;
+		width: 296rem;
+		letter-spacing: 0.4rem;
+		max-width: 100%;
+	}
+
+	@include breakpointMax(lg) {
+		text-align: center;
+		min-height: 335rem;
+	}
+}
+
+.feedback__head-valign {
+	width: 100%;
 }
 
 .feedback__head-image {
@@ -43,6 +69,16 @@
 	}
 }
 
+.feedback__head-desc {
+	max-width: 1000rem;
+	width: 100%;
+	margin: 0 auto;
+
+	@include breakpointMax(lg) {
+
+	}
+}
+
 
 .feedback__head-title {
 	display: block;
@@ -50,8 +86,21 @@
 	line-height: 1;
 	font-weight: 700;
 	text-transform: uppercase;
+	letter-spacing: -1rem;
 	margin: 0 0 28rem;
 	color: #000000;
+
+	@include breakpointMax(lg) {
+		font-size: 36rem;
+		
+	}
+	@include breakpointMax(md) {
+		font-size: 24rem;
+	}
+
+	@include breakpointMax(sm) {
+		margin: 0 0 160rem;
+	}
 }
 
 
@@ -64,10 +113,17 @@
 
 
 .feedback__body {
-	& > .row {
-		margin: 0 -25rem;
-		& > [class^="col-"] {
-			padding: 0 25rem;
+
+	@include breakpoint(lg) {
+		& > .row {
+			margin: 0 -25rem;
+			& > [class^="col-"] {
+				padding: 0 25rem;
+				display: flex;
+				flex-wrap: wrap;
+				flex-direction: column;
+			}
 		}
+
 	}
 }

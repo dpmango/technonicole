@@ -651,6 +651,28 @@ $(function() {
 	});
 
 
+
+	$('.use__item').on('click', '.use__item-control .btn', function(event) {
+		event.preventDefault();
+
+		if ( $(this).closest('.use__item').is('.is-open') ) {
+
+			$(this).closest('.use__item').find('.use__item-control .btn').text('Подробнее')
+			$(this).closest('.use__item').removeClass('is-open').find('.use__item-content').slideUp('fast');
+
+		} else {
+
+			$('.use__item-control .btn').text('Подробнее');
+			$('.use__item').removeClass('is-open').find('.use__item-content').slideUp('fast');
+
+			$(this).closest('.use__item').find('.use__item-control .btn').text('Скрыть');
+			$(this).closest('.use__item').addClass('is-open').find('.use__item-content').slideDown('fast');
+
+		}
+
+	});
+
+
 	// --------------------------------------------------------------------------
 	// Autocomplete
 	// --------------------------------------------------------------------------

@@ -5,14 +5,14 @@ PageList:
   ready: 100
 - file: collection.html
   ready: 100
-- file: styleguide.html
-  ready: 0
 - file: journal.html
   ready: 100
 - file: feedback.html
-  ready: 100
+  ready: 90
 - file: use.html
-  ready: 0
-- file: water.html
+  ready: 90
+- file: guide.html
+  ready: 90
+- file: styleguide.html
   ready: 0
 

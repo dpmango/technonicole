@@ -69,7 +69,7 @@
 .btn--49 {
 	font-size: 12rem;
 	line-height: 27rem;
-	padding: 10rem 30rem;
+	padding: 10rem 20rem;
 
 	[class^="icon-call"] {
 		width: 10rem;
@@ -113,6 +113,24 @@
 	
 }
 
+
+.btn--63 {
+	font-size: 14rem;
+	line-height: 41rem;
+	font-weight: 600;
+	padding: 9rem 32rem;
+	border-radius: 3rem;
+	border-width: 2rem;
+	white-space: nowrap;
+
+	// @include breakpointMax(lg) {
+	// 	font-size: 13rem;
+	// 	line-height: 16rem;
+	// 	padding: 16rem 30rem;
+	// }
+	
+}
+
 .btn--dark-empty {
 	border-color: #000;
 	color: #000;
@@ -129,6 +147,22 @@
 	&:hover {
 		background: #e30613;
 		color: #fff;
+		// border-color: #b7000b;
+		// color: #b7000b;
+	}
+}
+
+
+.btn--white-empty {
+	border-color: #fff;
+	color: #000;
+
+	[class^="icon-"] {
+		color: #000;
+	}
+	&:hover {
+		background: #fff;
+		color: #000;
 		// border-color: #b7000b;
 		// color: #b7000b;
 	}

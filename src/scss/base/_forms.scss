@@ -34,7 +34,7 @@
 .ui-field {
     display: block;
     position: relative;
-    margin: 0 0 20rem;
+    margin: 0 0 10rem;
     .ui-input {
         margin: 0;
     }
@@ -71,21 +71,21 @@
 .ui-input {
     transition: .25s;
     width: 100%;
-    background: #EEF2F7;
-    border: 1px solid #EEF2F7;
-    font: 400 17rem/24rem $fontBase;
-    padding: 20rem 18rem;
-    color: #4c4c4c;
+    background: #FFFFFF;
+    border: 1px solid #E1E1E1;
+    font: 400 14rem/18rem $fontBase;
+    padding: 15rem 20rem;
+    color: #000;
     border-radius: 0;
     -webkit-appearance: none;
-    margin: 0 0 20rem;
-    height: 66rem;
+    margin: 0 0 10rem;
+    height: 50rem;
     backface-visibility: hidden;
     &::-webkit-input-placeholder {
-        color: #57595f;
+        color: #959595;
     }
     &:focus {
-        background: #fff;
+        border-color: #414042;
     }
     &:disabled {
         border-color: #e4ebf1;
@@ -96,14 +96,26 @@
 
 .ui-textarea {
     @extend .ui-input;
-    min-height: 102rem;
-    height: 102px;
+    min-height: 170rem;
+    height: 170rem;
     min-width: 100%;
     max-width: 100%;
     display: block;
     overflow: hidden;
 }
 
+.ui-caption {
+    text-align: center;
+    font-size: 14rem;
+    line-height: 20rem;
+    color: #000;
+    a {
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
 
 .ui-select {
     display: inline-block;
@@ -360,13 +372,13 @@
     display: inline-block;
     vertical-align: top;
     position: relative;
-    padding: 0 0 0 30rem;
+    padding: 0 0 0 28rem;
     margin: 0 0 15rem;
-    font-size: 15rem;
-    line-height: 1;
+    font-size: 12rem;
+    line-height: 20rem;
     cursor: pointer;
     backface-visibility: hidden;
-    color: #4c4c4c;
+    color: #959595;
     transition: 0.25s;
 
     display: flex;
@@ -401,55 +413,7 @@
         color: #57595f;
     }
 
-    &--btn {
-        width: 100%;
-        padding: 0;
-        display: block;
-    }
-
-    &--30 {
-        font-size: 14rem;
-        line-height: 15rem;
-        padding: 0 0 0 46rem;
-        margin: 0 0 20rem;
-        min-height: 30rem;
-        .ui-check__checkbox, .ui-check__radio {
-            width: 30rem;
-            height: 30rem;
-            top: 50%;
-            margin: -15rem 0 0;
-            [class^=icon-] {
-                width: 16rem;
-                height: 13rem;
-                margin: -7rem 0 0 -8rem;
-            }
-        }
-
-    }
-
-    &--24 {
-        font-size: 17rem;
-        line-height: 1;
-        padding: 0 0 0 36rem;
-        margin: 0 0 20rem;
-        min-height: 24rem;
-        .ui-check__checkbox, .ui-check__radio {
-            width: 24rem;
-            height: 24rem;
-            top: 50%;
-            margin: -13rem 0 0;
-            [class^=icon-] {
-                width: 16rem;
-                height: 13rem;
-                margin: -7rem 0 0 -8rem;
-            }
-        }
-
-        @include breakpointMax(md) {
-            font-size: 13rem;
-        }
-
-    }
+  
 }
 
 .ui-check__input {
@@ -459,11 +423,11 @@
     visibility: hidden;
     &:checked ~ .ui-check__radio {
         border-width: 5px;
-        border-color: #12A28F;
+        border-color: #E30613;
     }
     &:checked ~ .ui-check__checkbox {
-        background: #12A28F;
-        border-color: #12A28F;
+        background: #E30613;
+        border-color: #E30613;
         color: #fff;
         [class^="icon-"] {
             opacity: 1;
@@ -472,7 +436,7 @@
     }
     &:checked ~ .ui-check__btn {
         background: #fff;
-        border-color: #12A28F;
+        border-color: #E30613;
         img {
             opacity: 1;
             filter: grayscale(0%);
@@ -497,11 +461,10 @@
 .ui-check__checkbox {
     display: inline-block;
     vertical-align: middle;
-    width: 16rem;
-    height: 16rem;
-    border: 1px solid #CECECE;
+    width: 20rem;
+    height: 20rem;
+    border: 1px solid #E1E1E1;
     background: #fff;
-    border-radius: 2px;
     transition: 0.25s;
     [class^="icon-"] {
         position: absolute;

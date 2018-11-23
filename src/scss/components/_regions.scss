@@ -4,7 +4,12 @@
 
 
 .regions {
-	padding: 45rem 0;
+	padding: 45rem 0 0;
+	margin: 0 0 80rem;
+	@include breakpointMax(lg) {
+		margin: 0 0 50rem;
+		padding: 0;
+	}
 }
 
 .regions__heading {
@@ -12,9 +17,14 @@
 	font-size: 24rem;
 	line-height: 1;
 	font-weight: 700;
+	letter-spacing: -0.2rem;
 	text-transform: uppercase;
 	margin: 0 0 20rem;
 	color: #000;
+
+	@include breakpointMax(lg) {
+		font-size: 20rem;
+	}
 }
 
 
@@ -23,8 +33,14 @@
 	padding: 0;
 	list-style: none;
 	& > li {
-		padding: 37rem 0 35rem;
+		padding: 34rem 0;
 		border-bottom: 1px solid #E5E5E5;
+	}
+
+	@include breakpointMax(lg) {
+		& > li {
+			padding: 24rem 0;
+		}
 	}
 }
 
@@ -32,9 +48,11 @@
 .regions__item {
 
 	font-size: 16rem;
-	line-height: 27rem;
+	line-height: 30rem;
 	font-weight: 400;
 	font-style: normal;
+
+
 
 	b {
 		font-weight: 700;
@@ -49,6 +67,11 @@
 			padding: 0 20rem;
 		}
 	}
+
+	@include breakpointMax(lg) {
+		font-size: 15rem;
+		line-height: 22rem;
+	}
 }
 
 
@@ -58,10 +81,32 @@
 	line-height: 1;
 	font-weight: 700;
 	margin: 0 0 27rem;
+
+	@include breakpointMax(lg) {
+		font-size: 18rem;
+		margin: 0 0 20rem;
+	}
 }
 
 .regions__item-list {
 	margin: 0;
 	padding: 0;
 	list-style: none;
+	letter-spacing: 0.4rem;
+}
+
+.regions__item-hotline {
+	font-size: 24rem;
+	line-height: 1;
+	color: #000;
+	font-weight: 700;
+	margin: 0;
+	display: block;
+	padding: 8rem 0;
+	small {
+		margin: 0 0 8rem;
+		display: block;
+		font-size: 14rem;
+		font-weight: 400;
+	}
 }

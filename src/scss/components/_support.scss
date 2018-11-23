@@ -3,13 +3,20 @@
 // --------------------------------------------------------------------------
 
 .support {
-	padding: 45rem 50rem;
+	padding: 45rem 50rem 40rem;
 	margin: 0 0 80rem;
+	flex: 1;
 	&--grey {
 		background: #F7F7F7;
 	}
-	&--white {
-		margin: 0 0 30rem;
+
+	@include breakpointMax(lg) {
+		padding-left: 20rem;
+		padding-right: 20rem;
+		margin: 0 0 50rem;
+	}
+	@include breakpointMax(md) {
+		margin: 0 -20rem 50rem;
 	}
 }
 
@@ -19,8 +26,12 @@
 	line-height: 1;
 	font-weight: 700;
 	text-transform: uppercase;
-	margin: 0 0 12rem;
+	margin: 0 0 14rem;
 	color: #000;
+
+	@include breakpointMax(lg) {
+		font-size: 20rem;
+	}
 }
 
 
@@ -53,6 +64,10 @@
 		margin: 0 10rem 0 0;
 		color: #E30613;
 		top: -1rem;
+	}
+
+	@include breakpointMax(xl) {
+		padding: 0 60rem 0 0;
 	}
 	
 }
@@ -94,6 +109,7 @@
 	font-size: 11rem;
 	line-height: 13rem;
 	font-weight: 600;
+	letter-spacing: 0.4rem;
 	text-transform: uppercase;
 	text-decoration: none;
 	color: #000;
@@ -112,6 +128,24 @@
 		border-color: #E30613;
 		color: #E30613;
 	}
+
+	@include breakpointMax(xl) {
+		width: 50rem;
+		height: 50rem;
+		text-indent: -9999px;
+		border-color: #E30613;
+		color: transparent;
+		font-size: 0;
+		overflow: hidden;
+		[class^="icon-"] {
+			display: block;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			color: #E30613;
+		}
+	}
 }
 
 
@@ -125,7 +159,7 @@
 	list-style: none;
 
 	font-size: 16rem;
-	line-height: 1;
+	line-height: 20rem;
 	font-weight: 400;
 
 	& > li {
@@ -144,9 +178,6 @@
 	color: #000;
 	text-decoration: none;
 	padding: 5rem 0 5rem 70rem;
-	display: flex;
-	align-items: center;
-	min-height: 30rem;
 	transition: 0.25s;
 	u {
 		text-decoration: none;

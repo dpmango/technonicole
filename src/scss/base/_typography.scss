@@ -3,20 +3,6 @@
 //- --------------------------------------------------------------------------
 
 
-.ui-typography {
-    table {
-        @extend .ui-table;
-    }
-
-    ul {
-        @extend .ui-ul;
-    }
-
-    ol {
-        @extend .ui-ol;
-    }
-}
-
 body {
     font: 400 14rem/23rem $fontBase;
     color: $baseColor;

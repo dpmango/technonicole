@@ -4,6 +4,9 @@
 
 .extra {
 	margin: 0 0 -30rem;
+	@include breakpointMax(lg) {
+		margin: 0 0 30rem;
+	}
 }
 
 
@@ -13,5 +16,8 @@
 	img {
 		display: block;
 		width: 100%;
+	}
+	@include breakpointMax(lg) {
+		margin: 0 0 20rem;
 	}
 }
