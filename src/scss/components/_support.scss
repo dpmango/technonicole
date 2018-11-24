@@ -16,8 +16,9 @@
 		margin: 0 0 50rem;
 	}
 	@include breakpointMax(md) {
-		margin: 0 -20rem 50rem;
+		margin: 0 -20rem 20rem;
 	}
+
 }
 
 .support__heading {

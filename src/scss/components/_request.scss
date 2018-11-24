@@ -19,6 +19,10 @@
 		margin: 0 0 0 -50vw;
 		z-index: -1;
 	}
+
+	@include breakpointMax(lg) {
+		padding: 45rem 0;
+	}
 }
 
 
@@ -30,12 +34,24 @@
 	margin: 0 0 45rem;
 	text-align: center;
 	text-transform: uppercase;
+
+	@include breakpointMax(lg) {
+		font-size: 24rem;
+		margin: 0 0 25rem;
+	}
 }
 
 
 .request__form {
 	max-width: 1000rem;
 	margin: 0 auto;
+
+	.row {
+		margin: 0 -10rem;
+		& > [class^="col-"] {
+			padding: 0 10rem;
+		}
+	}
 	.btn {
 		width: 100%;
 		max-width: 490rem;

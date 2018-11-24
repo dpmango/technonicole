@@ -13,7 +13,8 @@
 	z-index: 1;
 	display: flex;
 	align-items: center;
-	padding: 100rem 0 70rem;
+	padding: 104rem 0 72rem;
+	margin: 0 0 8rem;
 
 	&:after {
 		content: '';
@@ -67,13 +68,15 @@
 	display: block;
 	font-size: 70rem;
 	line-height: 1;
+	letter-spacing: -1rem;
 	font-weight: 600;
 	text-transform: uppercase;
-	margin: 0 0 28rem;
+	margin: 0 0 26rem;
 	small {
 		display: block;
 		font-size: 18rem;
-		margin: 0 0 45rem;
+		letter-spacing: 1.8rem;
+		margin: 0 0 48rem;
 	}
 
 	@include breakpointMax(xl) {
@@ -101,6 +104,7 @@
 	font-size: 30rem;
 	line-height: 1;
 	font-weight: 700;
+	letter-spacing: 0.4rem;
 	margin: 0 0 30rem;
 	text-transform: uppercase;
 
@@ -115,7 +119,9 @@
 
 
 .guide__head-buttons {
+	padding: 46rem 0 0;
 	.btn {
+		text-align: left;
 		min-width: 260rem;
 		margin: 0 40rem 20rem 0;
 		[class^="icon-"] {
@@ -171,9 +177,14 @@
 	display: block;
 	font-size: 30rem;
 	line-height: 1;
+	letter-spacing: 0.7rem;
 	font-weight: 700;
 	text-transform: uppercase;
-	margin: 0 0 32rem;
+	margin: 0 0 36rem;
+
+	& + .guide__subheading {
+		margin: 0 0 40rem;
+	}
 
 	@include breakpointMax(lg) {
 		font-size: 20rem;
@@ -187,9 +198,10 @@
 	font-size: 20rem;
 	line-height: 40rem;
 	font-weight: 700;
+	// margin: 0 0 40rem;
 	margin: 0 0 40rem;
 	position: relative;
-	padding: 0 0 0 128rem;
+	padding: 0 0 0 124rem;
 	min-height: 40rem;
 	display: flex;
 	align-items: center;
@@ -198,7 +210,7 @@
 		vertical-align: top;
 		color: #fff;
 		background: #E30613;
-		padding: 0 20rem;
+		padding: 0 10rem;
 		margin: 0 20rem 0 0;
 		text-align: center;
 		width: 104rem;
@@ -208,6 +220,7 @@
 		margin: -20rem 0 0;
 
 		line-height: 40rem;
+		white-space: nowrap;
 	}
 
 	@include breakpointMax(lg) {
@@ -224,7 +237,7 @@
 // ------
 
 .guide__panel {
-	padding: 75rem 0 50rem;
+	padding: 76rem 0 50rem; 
 	position: relative;
 	z-index: 1;
 	&:after {
@@ -252,6 +265,7 @@
 
 
 	@include breakpoint(xl) {
+		
 		.row {
 			margin: 0 -40rem;
 			
@@ -259,6 +273,14 @@
 				padding: 0 40rem;
 			}
 		}
+
+		.row-offset-0 {
+			margin: 0;
+			& > [class^="col-"] {
+				padding: 0;
+			}
+		}
+
 	}
 }
 
@@ -284,6 +306,7 @@
 	padding: 0 0 30rem;
 	.row {
 		align-items: center;
+		margin-bottom: 30rem;
 	}
 }
 
@@ -304,8 +327,9 @@
 .guide__item-desc {
 	font-size: 18rem;
 	line-height: 30rem;
-	letter-spacing: 0.4rem;
+	letter-spacing: 0.3rem;
 	color: #000;
+	padding: 0 20rem 0 0;
 	mark {
 		display: inline-block;
 		vertical-align: top;
@@ -323,7 +347,7 @@
 	}
 
 	p {
-		margin: 20rem 0 30rem;
+		margin: 24rem 0 30rem;
 		&:last-child {
 			margin-bottom: 0;
 		}
@@ -392,6 +416,8 @@
 	top: 50%;
 	left: 50%;
 	z-index: 100;
+
+	margin: -12.5rem 0 0 -12.5rem;
 
 	line-height: 1;
 

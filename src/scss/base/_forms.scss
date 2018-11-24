@@ -31,6 +31,14 @@
 }
 
 
+.ui-validate {
+    font-size: 12rem;
+    line-height: 20rem;
+    font-weight: 400;
+    color: #E30613;
+}
+
+
 .ui-field {
     display: block;
     position: relative;
@@ -102,6 +110,11 @@
     max-width: 100%;
     display: block;
     overflow: hidden;
+
+    @include breakpointMax(md) {
+        height: 110rem;
+        min-height: 110rem;
+    }
 }
 
 .ui-caption {
@@ -381,13 +394,6 @@
     color: #959595;
     transition: 0.25s;
 
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-
-    .icon-error, .icon-valid {
-        display: none;
-    }
 
     &.is-error {
         .ui-check__radio, .ui-check__checkbox {
@@ -396,11 +402,9 @@
        
     }
 
-    * {
-        backface-visibility: hidden;
-    }
-
     a {
+        display: inline-block;
+        vertical-align: top;
         text-decoration: none;
     }
 
@@ -429,6 +433,9 @@
         background: #E30613;
         border-color: #E30613;
         color: #fff;
+        &:after {
+            opacity: 1;
+        }
         [class^="icon-"] {
             opacity: 1;
             transform: scale(1);
@@ -466,6 +473,19 @@
     border: 1px solid #E1E1E1;
     background: #fff;
     transition: 0.25s;
+    &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        border-right: 2rem solid #fff;
+        border-bottom: 2rem solid #fff;
+        width: 6rem;
+        height: 10rem;
+        margin: -6rem 0 0 -3rem;
+        transform: rotate(40deg);
+    }
     [class^="icon-"] {
         position: absolute;
         top: 50%;

@@ -8,11 +8,11 @@ PageList:
 - file: journal.html
   ready: 100
 - file: feedback.html
-  ready: 90
+  ready: 100
 - file: use.html
-  ready: 90
+  ready: 100
 - file: guide.html
-  ready: 90
+  ready: 100
 - file: styleguide.html
   ready: 0
 

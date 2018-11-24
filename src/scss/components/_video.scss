@@ -4,6 +4,10 @@
 
 
 .video {
+	display: inline-block;
+	vertical-align: top;
+	width: 100%;
+	height: auto;
 	padding: 20rem 0 45rem;
 	@include breakpoint(lg) {
 		padding: 20rem 0 100rem;

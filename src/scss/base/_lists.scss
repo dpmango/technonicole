@@ -39,6 +39,12 @@
             height: 8rem;
         }
     }
+
+    @include breakpointMax(md) {
+        & > li {
+            padding: 0 0 0 22rem;
+        }
+    }
 }
 
 .ui-list-ol {

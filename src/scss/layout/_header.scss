@@ -401,6 +401,10 @@
 		opacity: 1;
 		visibility: visible;
 	}
+
+	.nav-fixed {
+		transform: translate(100%,-50%);
+	}
 }
 
 

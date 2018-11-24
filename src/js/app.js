@@ -673,6 +673,15 @@ $(function() {
 	});
 
 
+
+	$('.use__item-equal').matchHeight({
+		byRow: true,
+	    property: 'min-height',
+	    target: null,
+	    remove: false
+	});
+
+
 	// --------------------------------------------------------------------------
 	// Autocomplete
 	// --------------------------------------------------------------------------
@@ -715,21 +724,21 @@ $(function() {
 	});
 
 	var validateErrorPlacement = function(error, element) {
-		error.addClass('ui-error');
+		error.addClass('ui-validate');
 		error.appendTo(element.closest('.ui-field'));
 	}
 
 	var validateHighlight = function(element) {
 		$(element)
 			.parent().addClass("is-error").removeClass('is-success')
-			.append('<svg class="icon-error"><use xlink:href="sprites/sprite.svg#icon-error"></use></svg>')
-			.find('.icon-valid').remove();
+			// .append('<svg class="icon-error"><use xlink:href="sprites/sprite.svg#icon-error"></use></svg>')
+			// .find('.icon-valid').remove();
 	}
 	var validateUnhighlight = function(element) {
 		$(element)
 			.parent().addClass('is-valid').removeClass("is-error")
-			.append('<svg class="icon-valid"><use xlink:href="sprites/sprite.svg#icon-valid"></use></svg>')
-			.find('.icon-error').remove();
+			// .append('<svg class="icon-valid"><use xlink:href="sprites/sprite.svg#icon-valid"></use></svg>')
+			// .find('.icon-error').remove();
 	}
 
 
@@ -742,7 +751,7 @@ $(function() {
 			highlight: validateHighlight,
     		unhighlight: validateUnhighlight,
 			rules: {
-				fullname: "required",
+				firstname: "required",
 				tel: {
 	                required: true,
 	                regexp: true
@@ -760,23 +769,20 @@ $(function() {
 			    	required: true,
 			    	equalTo: "#password"
 			    },
-			    accept: "required"
+			    confirm: "required"
 
 			},
 			messages: {
-				fullname: 'Вы не ввели ФИО',
+				firstname: 'Вы не ввели имя',
 				tel: 'Вы не ввели номер телефона',
 				email: 'Введите email',
-				city: 'Введите город',
-				index: 'Введите индекс',
-				address: 'Введите адрес',
 				message: 'Введите сообщение',
 				password: 'Введите пароль',
 				passwordconfirm: {
 					required: 'Повторите пароль',
 					equalTo: 'Пароли не совпадают'
 				},
-				accept: 'Подтвердите условия'
+				confirm: 'Подтвердите условия'
 			},
 			errorPlacement: validateErrorPlacement,
 			submitHandler: function(form) {

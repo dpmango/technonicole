@@ -13,6 +13,9 @@
     -ms-touch-action: pan-y;
     touch-action: pan-y;
     -webkit-tap-highlight-color: transparent;
+
+    max-height: none;
+    
     &.slick-initialized {
         overflow: visible;
     }

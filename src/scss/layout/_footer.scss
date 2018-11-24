@@ -42,7 +42,8 @@
 	@include breakpointMax(sm) {
 		.footer__logo {
 			margin: 0;
-			text-align: left;
+			max-width: none;
+			// text-align: left;
 		}
 	}
 	

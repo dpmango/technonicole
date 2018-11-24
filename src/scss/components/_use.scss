@@ -9,7 +9,7 @@
 .use__head {
 	position: relative;
 	z-index: 1;
-	padding: 30rem 0;
+	padding: 30rem 0 82rem;
 	min-height: 255rem;
 	display: flex;
 	align-items: center;
@@ -29,6 +29,10 @@
 
 		background: #F8F8FA;
 		background-size: cover;
+	}
+
+	@include breakpointMax(sm) {
+
 	}
 }
 
@@ -63,10 +67,13 @@
 	background: #fff;
 	position: relative;
 	z-index: 1;
-	padding: 0 20rem 60rem;
+	padding: 0 25rem 60rem;
+	max-width: 1050rem;
+	margin: 0 auto;
 
 	@include breakpointMax(lg) {
 		margin: 0 -20rem;
+		padding: 0 20rem 60rem;
 	}
 	// &:after {
 	// 	content: '';
@@ -106,13 +113,7 @@
 
 
 .use__item {
-	padding: 30rem 0 0 0;
-
-	display: flex;
-	flex-direction: column;
-
-	min-height: 100%;
-
+	padding: 35rem 0 0 0;
 	&.is-open {
 		.use__item-control {
 			.btn {
@@ -123,6 +124,11 @@
 	}
 }
 
+.use__item-equal {
+	display: flex;
+	flex-direction: column;
+}
+
 .use__item-title {
 	display: block;
 	font-size: 16rem;
@@ -130,6 +136,13 @@
 	font-weight: 700;
 	padding: 0 20rem 0 0;
 	margin: 0 0 20rem;
+
+	@include breakpointMax(md) {
+		border-bottom: 1px solid #CCCCCC;
+		padding: 0 0 15rem;
+		font-size: 18rem;
+		margin: 0 0 15rem;
+	}
 }
 
 .use__item-text {
@@ -149,16 +162,25 @@
 	align-items: center;
 	justify-content: center;
 	height: 300rem;
-	margin: 0 0 20rem;
+	margin: 0 0 24rem;
+
+	@include breakpointMax(md) {
+		height: auto;
+		margin: 0 0 30rem;
+	}
 }
 
 .use__item-control {
-	margin: 0 0 50rem;
+	margin: auto 0 46rem;
 	text-align: center;
 	.btn {
 		min-width: 210rem;
 		font-weight: 400;
 		font-family: $fontThird;
+	}
+
+	@include breakpointMax(md) {
+		margin: 0 auto 30rem;
 	}
 
 	@include breakpointMax(sm) {
@@ -175,6 +197,10 @@
 
 	font-size: 13rem;
 	line-height: 20rem;
+
+	.row {
+		margin-bottom: 20rem;
+	}
 	
 	h3 {
 		font-size: 14rem;
@@ -199,9 +225,13 @@
 // -----
 
 .use__panel {
+
+	display: inline-block;
+	vertical-align: top;
+	min-width: 100%;
 	border: 2rem solid #E50000;
-	margin: 0 0 30rem;
-	padding: 20rem 40rem 32rem;
+	margin: 5rem 0 30rem;
+	padding: 22rem 40rem 32rem;
 	
 	
 	font-size: 14rem;
@@ -211,6 +241,7 @@
 
 	.row {
 		align-items: center;
+		margin-bottom: 5rem;
 	}
 
 	@include breakpointMax(lg) {
@@ -221,7 +252,7 @@
 .use__panel-title {
 	text-transform: uppercase;
 	display: block;
-	margin: -20rem -40rem 32rem;
+	margin: -22rem -40rem 34rem;
 	padding: 5rem 40rem;
 	border-bottom: 2rem solid #E50000;
 
@@ -256,11 +287,20 @@
 	font-size: 13rem;
 	line-height: 24rem;
 	font-weight: 700;
-	margin: 0 0 12rem;
+	margin: 0 0 18rem;
 }
 
 .use__panel-list {
 	@extend .ui-list-ul;
-	@extend .ui-list-arrow;
+
+	font-size: 13rem;
+	line-height: 18rem;
+
+	&--arrow {
+		@extend .ui-list-arrow;
+		font-size: 14rem;
+		line-height: 24rem;
+	}
+	
 	
 }
