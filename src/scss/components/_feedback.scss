@@ -78,10 +78,6 @@
 	max-width: 1000rem;
 	width: 100%;
 	margin: 0 auto;
-
-	@include breakpointMax(lg) {
-
-	}
 }
 
 
@@ -97,15 +93,17 @@
 
 	@include breakpointMax(lg) {
 		font-size: 36rem;
+		margin: 0 0 160rem;
 		
 	}
 	@include breakpointMax(md) {
 		font-size: 24rem;
+
 	}
 
-	@include breakpointMax(sm) {
-		margin: 0 0 160rem;
-	}
+	// @include breakpointMax(sm) {
+	// 	margin: 0 0 160rem;
+	// }
 }
 
 

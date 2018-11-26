@@ -76,6 +76,7 @@
    
 }
 
+form input.ui-input,
 .ui-input {
     transition: .25s;
     width: 100%;
@@ -102,6 +103,7 @@
 
 }
 
+form textarea.ui-textarea,
 .ui-textarea {
     @extend .ui-input;
     min-height: 170rem;

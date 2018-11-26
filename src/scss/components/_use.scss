@@ -31,8 +31,10 @@
 		background-size: cover;
 	}
 
-	@include breakpointMax(sm) {
-
+	@include breakpointMax(md) {
+		margin: 0;
+		padding: 70rem 0 40rem;
+		min-height: 132rem;
 	}
 }
 
@@ -60,6 +62,10 @@
 	font-size: 48rem;
 	line-height: 1;
 	font-weight: 300;
+
+	@include breakpointMax(md) {
+		font-size: 30rem;
+	}
 }
 
 
@@ -75,6 +81,7 @@
 		margin: 0 -20rem;
 		padding: 0 20rem 60rem;
 	}
+
 	// &:after {
 	// 	content: '';
 	// 	display: block;
@@ -91,7 +98,7 @@
 
 .use__grid {
 	margin: 0 0 30rem;
-	@include breakpoint(lg) {
+	@include breakpoint(md) {
 		& > .row {
 			margin: 0;
 			& > [class^="col-"] {
@@ -109,6 +116,8 @@
 		}
 
 	}
+
+
 }
 
 
@@ -121,6 +130,10 @@
 				color: #fff;
 			}
 		}
+	}
+
+	@include breakpointMax(md) {
+		padding: 20rem 0 0;
 	}
 }
 
@@ -184,8 +197,10 @@
 	}
 
 	@include breakpointMax(sm) {
+		margin: 0 0 30rem;
 		.btn {
 			width: 100%;
+			max-width: 380px;
 		}
 	}
 }

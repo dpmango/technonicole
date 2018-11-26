@@ -52,8 +52,15 @@
 	font-weight: 400;
 	font-style: normal;
 
-
-
+	
+	a[href^="tel:"] {
+		text-decoration: none;
+		color: #000;
+	}
+	a[href^="mailto:"] {
+		text-decoration: none;
+		color: #e30613;
+	}
 	b {
 		font-weight: 700;
 	}

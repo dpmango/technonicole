@@ -652,6 +652,22 @@ $(function() {
 
 
 
+	function firstUseItem() {
+
+		var $useItem = $('.use__grid > .row > [class^="col-"]:first-of-type').find('.use__item');
+
+
+		if (window.matchMedia("(min-width:768px)").matches) {
+			$useItem.addClass('is-open')
+			$useItem.find('.use__item-control .btn').text('Скрыть');
+			$useItem.find('.use__item-content').slideDown('fast');
+		}
+
+	}
+
+	firstUseItem();
+
+
 	$('.use__item').on('click', '.use__item-control .btn', function(event) {
 		event.preventDefault();
 
