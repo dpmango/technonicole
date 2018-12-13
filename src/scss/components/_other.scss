@@ -1,0 +1,96 @@
+// --------------------------------------------------------------------------
+// Other
+// --------------------------------------------------------------------------
+
+.other {
+	padding: 50rem 0 100rem;
+}
+
+
+.other__heading {
+	display: block;
+	font-size: 24rem;
+	line-height: 36rem;
+	font-weight: 400;
+	text-align: center;
+	max-width: 860rem;
+	margin: 0 auto 80rem;
+
+	@include breakpointMax(sm) {
+		font-size: 18rem;
+		line-height: 20rem;
+		margin: 0 auto 30rem;
+	}
+	
+}
+
+
+.other__slides {
+	margin: 0 -30rem;
+	.slick-slide {
+		margin: 0 10rem;
+	}
+
+	@include breakpoint(md) {
+		margin: 0 -15rem;
+		.slick-slide {
+			margin: 0 15rem;
+		}
+	}
+}
+
+.other__item {
+	display: block;
+	text-decoration: none;
+	background: #fff;
+	color: #000;
+	transition: 0.25s;
+	height: 100%;
+	position: relative;
+	text-align: center;
+	&:hover {
+		text-decoration: none;
+		color: #E30613;
+		box-shadow: 0 5rem 25rem rgba(0,0,0,0.2);
+		.other__item-image img {
+			transform: scale(1.1);
+		}
+	}
+
+}
+
+.other__item-image {
+	margin: 0;
+	position: relative;
+	overflow: hidden;
+	max-height: 300rem;
+	backface-visibility: hidden;
+	&:before {
+		content: '';
+		float: left;
+		padding: 78.9% 0 0;
+	}
+	img {
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		transition: 0.7s;
+	}
+
+}
+
+.other__item-desc {
+	padding: 24rem 40rem;
+}
+
+.other__item-title {
+	display: block;
+	font-size: 18rem;
+	line-height: 24rem;
+	font-weight: 400;
+	margin: 0;
+}

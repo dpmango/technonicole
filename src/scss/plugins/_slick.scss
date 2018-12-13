@@ -186,29 +186,35 @@
 
 
 .slick-dots {
+    position: relative;
+    bottom: auto;
     width: 100%;
     text-align: center;
     margin: 0 0 -5rem;
-    padding: 20rem 0 0;
+    padding: 30rem 0 0;
     list-style: none;
     line-height: 1;
     & > li {
         display: inline-block;
         vertical-align: top;
         margin: 0 5rem 5rem;
+        button {
+            display: block;
+            text-indent: -9999px;
+            border: none;
+            width: 40rem;
+            height: 3rem;
+            padding: 0;
+            cursor: pointer;
+            background: #D2D2D2;
+            transition: 0.25s;
+            border-radius: 0;
+        }
+        &.slick-active button {
+            background: #E30613;
+            width: 40rem;
+            height: 3rem;
+        }
     }
-    button {
-        display: block;
-        text-indent: -9999px;
-        border: none;
-        width: 40rem;
-        height: 3rem;
-        padding: 0;
-        cursor: pointer;
-        background: #D2D2D2;
-        transition: 0.25s;
-    }
-    .slick-active button {
-        background: #E30613;
-    }
+    
 }
