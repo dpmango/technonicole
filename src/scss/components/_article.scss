@@ -274,7 +274,7 @@
 	margin: 0;
 	display: inline-block;
 	vertical-align: top;
-	width: 100%;
+	min-width: 100%;
 	img {
 		display: block;
 		width: 100%;
@@ -295,6 +295,7 @@
 	}
 
 	&--50vw {
+		width: 100%;
 		margin: 0;
 		img {
 			min-width: 50vw;
@@ -303,6 +304,10 @@
 
 	@include breakpointMax(sm) {
 		margin: 0 -20rem;
+		&--50vw {
+			width: auto;
+			margin: 0 -20rem;
+		}
 
 	}
 }
@@ -405,10 +410,16 @@
 	left: 50%;
 	width: 100vw;
 	transform: translate(-50%,0);
+	.article__section-image {
+		img {
+			min-height: 100%;
+		}
+	}
 	@include breakpointMax(sm) {
 		flex-wrap: wrap;
 		.article__section-image {
 			margin: 0;
+			
 		}
 	}
 }
