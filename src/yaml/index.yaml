@@ -14,11 +14,11 @@ PageList:
 - file: guide.html
   ready: 100
 - file: besshumnost.html
-  ready: 66
+  ready: 100
 - file: mnogosloynost.html
-  ready: 66
+  ready: 100
 - file: nadejnost.html
-  ready: 66
+  ready: 100
 - file: styleguide.html
   ready: 0
 

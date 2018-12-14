@@ -537,6 +537,31 @@ $(function() {
 	   	]
 	});
 
+
+	$('.js-slick-fromto').slick({
+		slidesToShow: 2,
+		slidesToScroll: 1,
+		arrows: false,
+		dots: true,
+		fade: false,
+		infinite: true,
+		nextArrow: slickNext,
+	   	prevArrow: slickPrev,
+	   	autoplay: false,
+	   	autoplaySpeed: 5000,
+	   	pauseOnHover: true,
+	   	responsive: [
+	   		{
+	   			breakpoint: 576,
+	   			settings: {
+	   				slidesToShow: 1,
+	   				dots: true,
+	   				arrows: false
+	   			}
+	   		}
+	   	]
+	});
+
 	// --------------------------------------------------------------------------
 	// Fancybox
 	// --------------------------------------------------------------------------
