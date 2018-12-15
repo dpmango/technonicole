@@ -20,5 +20,5 @@ PageList:
 - file: nadejnost.html
   ready: 100
 - file: styleguide.html
-  ready: 0
+  ready: 100
 

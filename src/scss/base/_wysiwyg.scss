@@ -3,5 +3,13 @@
 // --------------------------------------------------------------------------
 
 .ui-wysiwyg {
-
+	ul {
+		@extend .ui-list-ul;
+	}
+	ol {
+		@extend .ui-list-ol;
+	}
+	table {
+		@extend .ui-table;
+	}
 }

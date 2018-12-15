@@ -6,7 +6,7 @@
 
 
 .ui-list-ul {
-    margin: 0 0 20rem;
+    margin: 0 0 30rem;
     padding: 0;
     list-style: none;
 
@@ -48,7 +48,7 @@
 }
 
 .ui-list-ol {
-    margin: 0 0 20rem;
+    margin: 0 0 30rem;
     padding: 0;
     list-style: none;
     counter-reset: point;
@@ -62,7 +62,7 @@
             position: absolute;
             top: 0;
             left: 0;
-            // color: #E50000;
+            color: #E50000;
         }
     }
 }

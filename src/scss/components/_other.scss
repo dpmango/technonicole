@@ -30,6 +30,12 @@
 
 .other__slides {
 	margin: 0 -30rem;
+	&.slick-initialized {
+		overflow: hidden;
+	}
+	.slick-list {
+		overflow: visible;
+	}
 	.slick-slide {
 		margin: 0 10rem;
 	}

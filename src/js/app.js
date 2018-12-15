@@ -811,7 +811,7 @@ $(function() {
 	}
 	var validateUnhighlight = function(element) {
 		$(element)
-			.parent().addClass('is-valid').removeClass("is-error")
+			.parent().addClass('is-success').removeClass("is-error")
 			// .append('<svg class="icon-valid"><use xlink:href="sprites/sprite.svg#icon-valid"></use></svg>')
 			// .find('.icon-error').remove();
 	}
