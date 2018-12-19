@@ -4,7 +4,7 @@
 
 
 .page-inner {
-	
+
 }
 
 .footer {
@@ -24,7 +24,7 @@
 
 
 	@include breakpointMax(xl) {
-		
+
 		// padding: 54rem 0 0;
 
 		padding: 74rem 0 0;
@@ -46,7 +46,7 @@
 			// text-align: left;
 		}
 	}
-	
+
 }
 
 
@@ -110,7 +110,7 @@
 }
 
 .footer__partners-dropdown {
-	
+
 	flex-wrap: wrap;
 	align-items: center;
 	padding: 16rem 0 0;
@@ -267,7 +267,7 @@
 			}
 		}
 	}
-	
+
 }
 
 .footer__nav-link {
@@ -350,7 +350,7 @@
 	line-height: 20rem;
 	font-weight: 300;
 	color: #c7c9cb;
-	white-space: nowrap;
+	// white-space: nowrap;
 	position: relative;
 	display: block;
 	margin: 0 0 20rem;
@@ -358,11 +358,12 @@
 
 	@include breakpoint(xl) {
 		left: 42rem;
+		margin-bottom: 0;
 		text-align: left;
 	}
 
 	@include breakpointMax(xl) {
-		
+
 	}
 }
 
@@ -449,7 +450,7 @@
 	span {
 		display: none;
 	}
-	
+
 
 	&:hover {
 		border-color: #fff;
@@ -483,7 +484,7 @@
 		color: #fff;
 		text-decoration: underline;
 	}
-	
+
 
 	@include breakpoint(md) {
 		width: auto;
