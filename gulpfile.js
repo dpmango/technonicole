@@ -28,12 +28,12 @@ var gulp         = require('gulp'),
 	minify_css   = require('gulp-minify-css'),
 	cleanCSS     = require('gulp-clean-css'),
 
-	
+
 	uglify 		 = require('gulp-uglify'),
 
 	streamify    = require('gulp-streamify'),
-	
-	
+
+
 	spritesmith  = require('gulp.spritesmith'),
 	cheerio 	 = require('gulp-cheerio'),
 	svgmin       = require('gulp-svgmin'),
@@ -72,6 +72,7 @@ var gulp         = require('gulp'),
 // Settings
 // --------------------------------------------------------------------------
 
+var errorHandler = notify.onError("Error: <%= error.message %>")
 
 var src = {
 	pagelist: 'src/yaml/index.yaml',
@@ -80,9 +81,7 @@ var src = {
 	scss: 'src/scss/**/*.scss',
 	js: 'src/js/**/*.js',
 	images: 'src/images/**/*',
-
 	json: 'src/json/**/*',
-	
 	spriteImages: 'src/sprites/_images/',
 	spriteSvg: 'src/sprites/_svg/*.svg'
 };
@@ -94,9 +93,7 @@ var dist = {
 	css: 'dist/css',
 	js: 'dist/js',
 	images: 'dist/images/',
-
 	json: 'dist/json/',
-
 	spriteImages: 'dist/sprites/',
 	spriteSvg: 'dist/sprites/'
 };
@@ -135,7 +132,7 @@ gulp.task('zip', function () {
 gulp.task('spriteImages', function () {
 	var spriteData = gulp.src(src.spriteImages + '*.png')
 	.pipe(plumber({
-		errorHandler: notify.onError("Error: <%= error.message %>")
+		errorHandler: errorHandler
 	}))
 	.pipe(spritesmith({
 
@@ -207,7 +204,7 @@ gulp.task('spriteSvg', function () {
 					}
 				}
 			}
-			
+
         }))
         .pipe(gulp.dest('dist/sprites/'));
 });
@@ -220,7 +217,7 @@ gulp.task('spriteSvg', function () {
 
 
 gulp.task('critical', function () {
-	
+
 	critical.generate({
 	    inline: false,
 	    base: 'dist/',
@@ -236,7 +233,7 @@ gulp.task('critical', function () {
 		gulp.src('dist/*.html')
 			.pipe(inject.after('<!-- Critical CSS -->', '\n<style>\n' + criticalCss + '\n</style>'))
     		.pipe(gulp.dest('dist'))
-		
+
 	});
 
 
@@ -249,9 +246,9 @@ gulp.task('critical', function () {
 gulp.task('html', function() {
 
 	return gulp.src(src.html)
-			
+
 		.pipe(plumber({
-			errorHandler: notify.onError("Error: <%= error.message %>")
+			errorHandler: errorHandler
 		}))
 		.pipe(frontMatter({ property: 'data' }))
 		.pipe(pug({
@@ -321,9 +318,9 @@ gulp.task('json', function() {
 gulp.task('scss', function() {
 
 	return gulp.src(src.scss)
-		
+
 		.pipe(plumber({
-			errorHandler: notify.onError("Error: <%= error.message %>")
+			errorHandler: errorHandler
 		}))
 		.pipe(sass())
 		.pipe(autoprefixer({
@@ -347,7 +344,6 @@ gulp.task('scss', function() {
 
 gulp.task('js:plugins', function() {
   return gulp.src([
-
 		path.resolve('node_modules', 'svg4everybody/dist/svg4everybody.js'),
 		path.resolve('node_modules', 'jquery/dist/jquery.js'),
 		path.resolve('node_modules', 'match-media/matchMedia.js'),
@@ -358,20 +354,11 @@ gulp.task('js:plugins', function() {
 		path.resolve('node_modules', 'jquery-match-height/dist/jquery.matchHeight.js'),
 		path.resolve('node_modules', 'easy-autocomplete/dist/jquery.easy-autocomplete.js'),
 		path.resolve('node_modules', 'isotope-layout/dist/isotope.pkgd.js'),
-
 		path.resolve('node_modules', 'jquery-match-height/jquery.matchHeight.js'),
-
-
-
-
-		path.resolve('src/js/plugins', 'jquery.formstyler.js'),
-
-		
-
-      
-     ])
+		path.resolve('src/js/plugins', 'jquery.formstyler.js')
+    ])
     .pipe(plumber({
-		errorHandler: notify.onError("Error: <%= error.message %>")
+		errorHandler: errorHandler
 	}))
     .pipe(concat('plugins.min.js'))
     .pipe(uglify())
@@ -379,23 +366,32 @@ gulp.task('js:plugins', function() {
 	.pipe(browserSync.reload({ stream: true }))
 });
 
+// gulp.task('js:app', function() {
+		// browserify({
+		//     entries: 'src/js/app.js',
+		//     debug: true
+		// })
+// 	  .transform(babelify.configure({
+// 	    sourceMapRelative: dist.js
+// 	  }))
+// 		.bundle()
+		// .pipe(plumber({
+		// 	errorHandler: errorHandler
+		// }))
+// 	  .pipe(source('app.min.js'))
+// 	  // .pipe(streamify(uglify()))
+// 	  .pipe(gulp.dest(dist.js))
+// 	  .pipe(browserSync.reload({ stream: true }))
+// });
+
 gulp.task('js:app', function() {
-	browserify({
-	    entries: 'src/js/app.js',
-	    debug: true
-	})
-    .transform(babelify.configure({
-      sourceMapRelative: dist.js 
-    }))
-	.bundle()
-	.pipe(plumber({
-		errorHandler: notify.onError("Error: <%= error.message %>")
-	}))
-    .pipe(source('app.min.js'))
-    // .pipe(streamify(uglify()))
+  return gulp.src('src/js/app.js')
+    .pipe(plumber({ errorHandler: errorHandler }))
+    .pipe(concat('app.min.js'))
     .pipe(gulp.dest(dist.js))
-    .pipe(browserSync.reload({ stream: true }))
+		.pipe(browserSync.reload({ stream: true }))
 });
+
 
 gulp.task('js', [
   'js:plugins',
@@ -433,7 +429,7 @@ gulp.task('clean', function() {
 
 
 gulp.task('watch', function() {
-	
+
 	gulp.watch(src.spriteImages + '*.png', ['spriteImages']);
 	gulp.watch(src.spriteSvg, ['spriteSvg']);
 	gulp.watch(src.pagelist, ['pages']);
@@ -453,7 +449,7 @@ gulp.task('watch', function() {
 		open: true,
     	notify: false
 	});
-	
+
 });
 
 
@@ -464,6 +460,3 @@ gulp.task('default', function() {
 	runSequence('clean', 'spriteImages', 'spriteSvg', 'js', 'scss', 'html', 'critical', 'fonts', 'images', 'json', 'pages', 'watch')
 
 });
-
-
-
