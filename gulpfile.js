@@ -327,7 +327,7 @@ gulp.task('scss', function() {
 		    browsers: ['last 2 versions', '> 1%', 'ie 9'],
 		    cascade: false
 		}))
-		.pipe(concat('app.min.css'))
+		// .pipe(concat('app.min.css'))
 		// .pipe(minify_css())
 		// .pipe(cleanCSS({compatibility: 'ie8'}))
 		.pipe(gulp.dest(dist.css))
