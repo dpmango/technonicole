@@ -109,13 +109,13 @@
 	display: block;
 	position: relative;
 	padding: 0 54rem;
-	
+
 	p {
 		display: block;
 		position: relative;
 		margin: 0 0 42rem;
 		&:before {
-			content: '«';
+			content: '\00AB';
 			display: block;
 			font-size: 60rem;
 			line-height: 1;
@@ -127,7 +127,7 @@
 			height: 60rem;
 		}
 		&:after {
-			content: '»';
+			content: '\00BB';
 			display: block;
 			font-size: 60rem;
 			line-height: 1;

@@ -13,8 +13,6 @@ var gulp         = require('gulp'),
 	plumber 	 = require('gulp-plumber'),
 	include      = require("gulp-include"),
 
-	critical     = require('critical'),
-
 	sourcemaps   = require('gulp-sourcemaps'),
 
 	pug          = require('gulp-pug'),
@@ -216,28 +214,28 @@ gulp.task('spriteSvg', function () {
 
 
 
-gulp.task('critical', function () {
+// gulp.task('critical', function () {
+//
+// 	critical.generate({
+// 	    inline: false,
+// 	    base: 'dist/',
+// 	    src: 'critical.html',
+// 	    dest: 'css/critical.min.css',
+// 	    minify: true,
+// 	   	width: 1920,
+//     	height: 4000,
+// 	    include: ['.irs, .irs-bar, .irs-slider, .is-load, .app, .btn, .mfp, .page-thank, .is-sticky, .hero'],
+//
+// 	}, function (err, criticalCss) {
+//
+// 		gulp.src('dist/*.html')
+// 			.pipe(inject.after('<!-- Critical CSS -->', '\n<style>\n' + criticalCss + '\n</style>'))
+//     		.pipe(gulp.dest('dist'))
+//
+// 	});
+//
 
-	critical.generate({
-	    inline: false,
-	    base: 'dist/',
-	    src: 'critical.html',
-	    dest: 'css/critical.min.css',
-	    minify: true,
-	   	width: 1920,
-    	height: 4000,
-	    include: ['.irs, .irs-bar, .irs-slider, .is-load, .app, .btn, .mfp, .page-thank, .is-sticky, .hero'],
-
-	}, function (err, criticalCss) {
-
-		gulp.src('dist/*.html')
-			.pipe(inject.after('<!-- Critical CSS -->', '\n<style>\n' + criticalCss + '\n</style>'))
-    		.pipe(gulp.dest('dist'))
-
-	});
-
-
-});
+// });
 
 // --------------------------------------------------------------------------
 // Html or Pug
@@ -457,6 +455,6 @@ gulp.task('watch', function() {
 
 gulp.task('default', function() {
 
-	runSequence('clean', 'spriteImages', 'spriteSvg', 'js', 'scss', 'html', 'critical', 'fonts', 'images', 'json', 'pages', 'watch')
+	runSequence('clean', 'spriteImages', 'spriteSvg', 'js', 'scss', 'html', 'fonts', 'images', 'json', 'pages', 'watch')
 
 });

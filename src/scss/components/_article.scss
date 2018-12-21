@@ -59,7 +59,7 @@
 				font-size: 30rem;
 			}
 
-	
+
 		}
 	}
 
@@ -95,7 +95,7 @@
 			}
 		}
 	}
-	
+
 	@include breakpointMax(xl) {
 		padding: 50rem 0;
 	}
@@ -198,14 +198,14 @@
 			padding: 0 40rem;
 		}
 	}
-	
+
 	.btn {
 		padding-left: 35rem;
 		padding-right: 35rem;
 		letter-spacing: 0.5rem;
 	}
 
-	
+
 
 	&.article__section--white {
 		margin: 0 0 10rem;
@@ -225,7 +225,7 @@
 	&.article__section--100 {
 		padding: 100rem 0;
 	}
-	
+
 
 	&.article__section--collage {
 		text-align: center;
@@ -234,11 +234,11 @@
 			vertical-align: top;
 		}
 	}
-	
+
 
 
 	@include breakpointMax(xl) {
-	
+
 		.row {
 			margin: 0 -15rem;
 			& > [class^="col-"]  {
@@ -291,7 +291,7 @@
 		img {
 			float: left;
 		}
-		
+
 	}
 
 	&--50vw {
@@ -430,7 +430,7 @@
 		.article__section-image {
 			margin: 0;
 			width: 100%;
-			
+
 		}
 	}
 }
@@ -448,7 +448,7 @@
 		position: relative;
 		padding: 35rem 0;
 		&:before {
-			content: '«';
+			content: '\00AB';
 			display: block;
 			position: absolute;
 			top: 0;
@@ -472,9 +472,9 @@
 				left: 0;
 				position: relative;
 				margin: -125rem 0 0;
-				
+
 			}
-			
+
 		}
 	}
 }
@@ -647,7 +647,7 @@
 			padding: 40rem 0 0;
 			margin: 0 -50rem 0 0;
 		}
-		
+
 	}
 
 
@@ -687,7 +687,7 @@
 			text-align: center;
 		}
 		.row {
-			
+
 			& > [class^="col-"]:last-child {
 				display: none;
 			}
