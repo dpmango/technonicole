@@ -6,7 +6,7 @@
 body {
     font: 400 14rem/23rem $fontBase;
     color: $baseColor;
-}   
+}
 
 
 * {
@@ -48,7 +48,7 @@ h3 {
     @include breakpoint(md) {
         font-size: 22rem;
     }
-    
+
 }
 
 h4 {
@@ -121,8 +121,7 @@ b, strong {
     font-weight: 700;
 }
 
-
-a {
+[class*="ui-"] a {
     transition: color 0.25s;
     text-decoration: underline;
     color: #E30613;
@@ -132,9 +131,8 @@ a {
     }
 }
 
+
 mark {
     background: none;
     color: #FFAD18;
 }
-
-
