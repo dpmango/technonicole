@@ -12,7 +12,8 @@ block main
 
 			.article__head.article__head--right
 
-				figure.article__head-image
+				picture.article__head-image
+					source(srcset="images/img-m-hero-320.jpg" media="(max-width: 576px)")
 					img(src="images/img-m-hero.jpg", alt="")
 
 				.row
@@ -33,7 +34,9 @@ block main
 								p Производители современных строительных материалов активно используют многослойные решения для достижения дополнительной надёжности готовой продукции. Многослойные покрытия уже завоевали рынок отделочных и кровельных материалов. Компания ТЕХНОНИКОЛЬ с высоким вниманием относится к современным трендам в архитектуре и дизайне. Так, коллекцией 2018 года стала новая коллекция трехслойной черепицы «АТЛАНТИКА». 
 								a(href="#").btn.btn--50.btn--red подробнее о коллекции «атлантика»
 						.col-sm-6.pull-sm-6
-							figure.article__section-image.article__section-image--left
+
+							picture.article__section-image.article__section-image--left
+								source(srcset="images/img-m-01-320.jpg" media="(max-width: 576px)")
 								img(src="images/img-m-01.jpg", alt="")
 
 				section.article__section.article__section--blockquote.article__section--white

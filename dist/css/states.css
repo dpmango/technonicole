@@ -1,0 +1,44 @@
+/* ==========================================================================
+   Utilites
+   ========================================================================== */
+.is-hidden {
+  display: none; }
+
+.nowrap {
+  white-space: nowrap; }
+
+.row-offset-10 {
+  margin: 0 -5px; }
+  .row-offset-10 > [class^="col-"] {
+    padding: 0 5px; }
+
+.is-hidden {
+  display: none; }
+
+@media (max-width: 575px) {
+  .is-sm-visible {
+    display: block; } }
+
+@media (max-width: 767px) {
+  .is-md-visible {
+    display: none; } }
+
+@media (max-width: 991px) {
+  .is-lg-visible {
+    display: none; } }
+
+@media (max-width: 1199px) {
+  .is-xl-visible {
+    display: none; } }
+
+@media (min-width: 768px) {
+  .is-md-hidden {
+    display: none; } }
+
+@media (min-width: 992px) {
+  .is-lg-hidden {
+    display: none; } }
+
+@media (min-width: 1200px) {
+  .is-xl-hidden {
+    display: none; } }

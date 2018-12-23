@@ -11,7 +11,7 @@ yarn-error.log*
 
 # Files
 
-dist
+# dist
 
 # Runtime data
 pids

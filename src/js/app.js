@@ -137,6 +137,24 @@ $(function() {
 	});
 
 
+
+	// -------
+
+	$('.js-video').on('click', function(event) {
+		event.preventDefault();
+		var icon  =  $(this).find('[class^="icon-"]'),
+			img   =  $(this).find('img'),
+			videoWidth = img.width(),
+			videoHeight = img.height(),
+			video = '<iframe width="' + videoWidth + '" height="' + videoHeight + '" src="'+ $(this).attr('data-video') +'" frameborder="0"></iframe>';
+
+
+        img.replaceWith(video);
+        icon.hide();
+
+	});
+
+
 	// --------------------------------------------------------------------------
 	// Footer
 	// --------------------------------------------------------------------------

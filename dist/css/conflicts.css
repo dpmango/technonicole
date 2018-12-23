@@ -1,0 +1,24 @@
+.cart-container * {
+  box-sizing: content-box; }
+
+.cart-container .row {
+  display: block;
+  margin-left: 0;
+  margin-right: 0;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap; }
+
+table {
+  clear: none; }
+  table .collection__table {
+    clear: both; }
+
+.feature-togglers * {
+  box-sizing: content-box; }
+
+.gallery__item {
+  font-size: 0; }
+  .gallery__item::before {
+    display: none; }
+  .gallery__item img {
+    position: static; }

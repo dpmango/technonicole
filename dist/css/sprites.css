@@ -1,0 +1,501 @@
+.icon-grid {
+  background-image: url("../sprites/sprite.png");
+  background-position: 0px 0px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  width: 10px;
+  height: 10px; }
+  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+    .icon-grid {
+      background-size: 30px 10px;
+      background-image: url("../sprites/sprite@2x.png"); } }
+
+.icon-list {
+  background-image: url("../sprites/sprite.png");
+  background-position: -20px 0px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  width: 10px;
+  height: 10px; }
+  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+    .icon-list {
+      background-size: 30px 10px;
+      background-image: url("../sprites/sprite@2x.png"); } }
+
+.icon-add {
+  display: inline-block;
+  vertical-align: middle;
+  width: 23rem;
+  height: 21rem; }
+
+.icon-arrow-down {
+  display: inline-block;
+  vertical-align: middle;
+  width: 10rem;
+  height: 7rem; }
+
+.icon-arrow-right {
+  display: inline-block;
+  vertical-align: middle;
+  width: 7rem;
+  height: 10rem; }
+
+.icon-back {
+  display: inline-block;
+  vertical-align: middle;
+  width: 7.343rem;
+  height: 11.344rem; }
+
+.icon-basket {
+  display: inline-block;
+  vertical-align: middle;
+  width: 64rem;
+  height: 51rem; }
+
+.icon-call {
+  display: inline-block;
+  vertical-align: middle;
+  width: 10.06rem;
+  height: 25.04rem; }
+
+.icon-close {
+  display: inline-block;
+  vertical-align: middle;
+  width: 15rem;
+  height: 15rem; }
+
+.icon-colors-check {
+  display: inline-block;
+  vertical-align: middle;
+  width: 39rem;
+  height: 39rem; }
+
+.icon-comments {
+  display: inline-block;
+  vertical-align: middle;
+  width: 225rem;
+  height: 207rem; }
+
+.icon-feedback-call {
+  display: inline-block;
+  vertical-align: middle;
+  width: 10.06rem;
+  height: 25.04rem; }
+
+.icon-info-01 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 118.15rem;
+  height: 109.63rem; }
+
+.icon-info-02 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 150.67rem;
+  height: 110.84rem; }
+
+.icon-info-03 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 126.51rem;
+  height: 110.83rem; }
+
+.icon-info-arrow {
+  display: inline-block;
+  vertical-align: middle;
+  width: 15rem;
+  height: 26rem; }
+
+.icon-join-comments {
+  display: inline-block;
+  vertical-align: middle;
+  width: 12rem;
+  height: 12rem; }
+
+.icon-join-likes {
+  display: inline-block;
+  vertical-align: middle;
+  width: 13rem;
+  height: 13rem; }
+
+.icon-join-share {
+  display: inline-block;
+  vertical-align: middle;
+  width: 13rem;
+  height: 11rem; }
+
+.icon-language-bgr {
+  display: inline-block;
+  vertical-align: middle;
+  width: 16rem;
+  height: 11rem; }
+
+.icon-language-cze {
+  display: inline-block;
+  vertical-align: middle;
+  width: 16rem;
+  height: 11rem; }
+
+.icon-language-deu {
+  display: inline-block;
+  vertical-align: middle;
+  width: 16rem;
+  height: 11rem; }
+
+.icon-language-eng {
+  display: inline-block;
+  vertical-align: middle;
+  width: 16rem;
+  height: 11rem; }
+
+.icon-language-est {
+  display: inline-block;
+  vertical-align: middle;
+  width: 16rem;
+  height: 11rem; }
+
+.icon-language-hun {
+  display: inline-block;
+  vertical-align: middle;
+  width: 16rem;
+  height: 11rem; }
+
+.icon-language-ita {
+  display: inline-block;
+  vertical-align: middle;
+  width: 16rem;
+  height: 11rem; }
+
+.icon-language-kz {
+  display: inline-block;
+  vertical-align: middle;
+  width: 16rem;
+  height: 11rem; }
+
+.icon-language-ltu {
+  display: inline-block;
+  vertical-align: middle;
+  width: 16rem;
+  height: 11rem; }
+
+.icon-language-lva {
+  display: inline-block;
+  vertical-align: middle;
+  width: 16rem;
+  height: 11rem; }
+
+.icon-language-pol {
+  display: inline-block;
+  vertical-align: middle;
+  width: 16rem;
+  height: 11rem; }
+
+.icon-language-rou {
+  display: inline-block;
+  vertical-align: middle;
+  width: 16rem;
+  height: 11rem; }
+
+.icon-language-ru {
+  display: inline-block;
+  vertical-align: middle;
+  width: 16rem;
+  height: 11rem; }
+
+.icon-language-svn {
+  display: inline-block;
+  vertical-align: middle;
+  width: 16rem;
+  height: 11rem; }
+
+.icon-language-tur {
+  display: inline-block;
+  vertical-align: middle;
+  width: 16rem;
+  height: 11rem; }
+
+.icon-language-ua {
+  display: inline-block;
+  vertical-align: middle;
+  width: 16rem;
+  height: 11rem; }
+
+.icon-layering {
+  display: inline-block;
+  vertical-align: middle;
+  width: 46.37rem;
+  height: 44.18rem; }
+
+.icon-location {
+  display: inline-block;
+  vertical-align: middle;
+  width: 45.78rem;
+  height: 64.66rem; }
+
+.icon-nav-01 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 64rem;
+  height: 61rem; }
+
+.icon-nav-02 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 67.12rem;
+  height: 67.12rem; }
+
+.icon-nav-03 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 58.85rem;
+  height: 52.64rem; }
+
+.icon-nav-04 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 64.5rem;
+  height: 44.25rem; }
+
+.icon-nav-05 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 64rem;
+  height: 76.13rem; }
+
+.icon-nav-06 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 45.78rem;
+  height: 64.66rem; }
+
+.icon-nav-arrow {
+  display: inline-block;
+  vertical-align: middle;
+  width: 7rem;
+  height: 11rem; }
+
+.icon-partners-01 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 30rem;
+  height: 30rem; }
+
+.icon-partners-02 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 30rem;
+  height: 30rem; }
+
+.icon-partners-03 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 30rem;
+  height: 30rem; }
+
+.icon-pdf {
+  display: inline-block;
+  vertical-align: middle;
+  width: 30.5rem;
+  height: 30.34rem; }
+
+.icon-points {
+  display: inline-block;
+  vertical-align: middle;
+  width: 45.78rem;
+  height: 64.66rem; }
+
+.icon-print {
+  display: inline-block;
+  vertical-align: middle;
+  width: 29rem;
+  height: 29rem; }
+
+.icon-search {
+  display: inline-block;
+  vertical-align: middle;
+  width: 21.5rem;
+  height: 21.5rem; }
+
+.icon-security {
+  display: inline-block;
+  vertical-align: middle;
+  width: 39.53rem;
+  height: 39.53rem; }
+
+.icon-services-01 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 74.92rem;
+  height: 68.17rem; }
+
+.icon-services-02 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 40.83rem;
+  height: 57.07rem; }
+
+.icon-services-03 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 33.95rem;
+  height: 55.82rem; }
+
+.icon-services-04 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 94.21rem;
+  height: 57.23rem; }
+
+.icon-services-calc {
+  display: inline-block;
+  vertical-align: middle;
+  width: 29rem;
+  height: 35rem; }
+
+.icon-services-expl {
+  display: inline-block;
+  vertical-align: middle;
+  width: 31rem;
+  height: 32rem; }
+
+.icon-services-learn {
+  display: inline-block;
+  vertical-align: middle;
+  width: 34rem;
+  height: 29rem; }
+
+.icon-services-montage {
+  display: inline-block;
+  vertical-align: middle;
+  width: 40rem;
+  height: 34rem; }
+
+.icon-services-planning {
+  display: inline-block;
+  vertical-align: middle;
+  width: 34rem;
+  height: 29rem; }
+
+.icon-services-video {
+  display: inline-block;
+  vertical-align: middle;
+  width: 38rem;
+  height: 29rem; }
+
+.icon-shop {
+  display: inline-block;
+  vertical-align: middle;
+  width: 225rem;
+  height: 193rem; }
+
+.icon-social-fb {
+  display: inline-block;
+  vertical-align: middle;
+  width: 9.66rem;
+  height: 18.6rem; }
+
+.icon-social-im {
+  display: inline-block;
+  vertical-align: middle;
+  width: 18.82rem;
+  height: 18.82rem; }
+
+.icon-social-od {
+  display: inline-block;
+  vertical-align: middle;
+  width: 10.67rem;
+  height: 18.41rem; }
+
+.icon-social-vk {
+  display: inline-block;
+  vertical-align: middle;
+  width: 21.78rem;
+  height: 12.94rem; }
+
+.icon-social-yt {
+  display: inline-block;
+  vertical-align: middle;
+  width: 24rem;
+  height: 16.86rem; }
+
+.icon-sound-off {
+  display: inline-block;
+  vertical-align: middle;
+  width: 48.96rem;
+  height: 44.16rem; }
+
+.icon-subnav-arrow {
+  display: inline-block;
+  vertical-align: middle;
+  width: 8rem;
+  height: 7rem; }
+
+.icon-support-btn {
+  display: inline-block;
+  vertical-align: middle;
+  width: 14rem;
+  height: 15rem; }
+
+.icon-support-email {
+  display: inline-block;
+  vertical-align: middle;
+  width: 163.03rem;
+  height: 156.42rem; }
+
+.icon-support-fb {
+  display: inline-block;
+  vertical-align: middle;
+  width: 9.66rem;
+  height: 18.6rem; }
+
+.icon-support-forumhouse {
+  display: inline-block;
+  vertical-align: middle;
+  width: 37.83rem;
+  height: 37.83rem; }
+
+.icon-support-instagram {
+  display: inline-block;
+  vertical-align: middle;
+  width: 18.82rem;
+  height: 18.82rem; }
+
+.icon-support-viber {
+  display: inline-block;
+  vertical-align: middle;
+  width: 365rem;
+  height: 394.03rem; }
+
+.icon-support-vk {
+  display: inline-block;
+  vertical-align: middle;
+  width: 21.78rem;
+  height: 12.94rem; }
+
+.icon-support-whatsapp {
+  display: inline-block;
+  vertical-align: middle;
+  width: 178.35rem;
+  height: 179.74rem; }
+
+.icon-video {
+  display: inline-block;
+  vertical-align: middle;
+  width: 64rem;
+  height: 48rem; }
+
+.icon-views {
+  display: inline-block;
+  vertical-align: middle;
+  width: 512rem;
+  height: 342rem; }
+
+.icon-zoom {
+  display: inline-block;
+  vertical-align: middle;
+  width: 41rem;
+  height: 41rem; }

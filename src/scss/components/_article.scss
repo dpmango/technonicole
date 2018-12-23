@@ -256,11 +256,25 @@
 			padding: 50rem 0;
 		}
 		&.article__section--blockquote {
-			margin: 0 0 -30rem;
+			margin: -30rem 0;
+			padding: 30rem 0;
 		}
 
 		&.article__section--collage {
 			margin: 0 -20rem;
+		}
+
+		&.article__section--reviews {
+			.article__section-image {
+				position: relative;
+				z-index: 1;
+				margin: -25% 0 0;
+				display: block;
+				img {
+					width: 100%;
+				}
+			}
+			
 		}
 	}
 }
@@ -303,6 +317,7 @@
 	}
 
 	@include breakpointMax(sm) {
+		display: block;
 		margin: 0 -20rem;
 		&--50vw {
 			width: auto;
@@ -317,6 +332,8 @@
 	line-height: 30rem;
 	font-weight: 400;
 	color: #707070;
+	position: relative;
+	z-index: 2;
 	h2 {
 		display: block;
 		font-size: 24rem;
@@ -390,10 +407,12 @@
 	// padding: 0 0 60rem;
 	// padding: 50rem 0;
 	text-align: center;
-	img {
+	img, iframe {
 		display: inline-block;
 		vertical-align: top;
+		background: #ccc;
 	}
+	
 
 	.icon-video {
 		position: absolute;
@@ -401,6 +420,12 @@
 		left: 50%;
 		z-index: 2;
 		transform: translate(-50%,-50%);
+		cursor: pointer;
+		transition: 0.25s;
+		&:hover {
+			color: #E31E36;
+			transform: scale(1.1) translate(-50%,-50%);
+		}
 	}
 
 	@include breakpointMax(sm) {

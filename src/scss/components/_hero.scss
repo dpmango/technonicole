@@ -22,6 +22,11 @@
 		}
 	}
 
+	// Coorecttion ?
+	.slick-slide img:first-child {
+		height: 100%;
+	}
+
 	.slick-dots {
 		.slick-dot {
 			position: relative;

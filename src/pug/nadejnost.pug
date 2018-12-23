@@ -12,7 +12,8 @@ block main
 
 			.article__head.article__head--white
 
-				figure.article__head-image
+				picture.article__head-image
+					source(srcset="images/img-n-hero-320.jpg" media="(max-width: 576px)")
 					img(src="images/img-n-hero.jpg", alt="")
 
 				h1.article__head-title
@@ -56,7 +57,7 @@ block main
 								p В основе гибкой и многослойно черепицы ТЕХНОНИКОЛЬ SHINGLAS лежит стеклохолст (температура плавления стекла от 7600°С), а поверхность черепицы покрыта натуральной базальтовой посыпкой (температура плавления не менее 1100°C). Теплостойкость черепицы ТЕХНОНИКОЛЬ SHINGLAS составляет не менее 110°C), а сам материал обладает самозатухающими свойствами, то есть не поддерживает активное горение.
 
 				section.article__section
-					figure.article__section-video
+					figure.article__section-video.js-video(data-video="https://www.youtube.com/embed/nJP_1p0Q494?autoplay=1")
 						img(src="images/img-n-04.jpg", alt="")
 						+sprite('icon-video')
 

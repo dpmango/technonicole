@@ -12,7 +12,8 @@ block main
 
 			.article__head
 
-				figure.article__head-image
+				picture.article__head-image
+					source(srcset="images/img-b-hero-320.jpg" media="(max-width: 576px)")
 					img(src="images/img-b-hero.jpg", alt="")
 
 				h1.article__head-title Тихая кровля — здоровый сон
@@ -41,9 +42,9 @@ block main
 
 				section.article__section
 					figure.article__section-video
-						img(src="images/img-b-03.jpg", alt="")
+						<iframe width="100%" height="560" src="https://www.youtube.com/embed/nJP_1p0Q494" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-				section.article__section.article__section--white
+				section.article__section.article__section--white.article__section--reviews
 					.row
 						.col-sm-6.push-sm-6.align-self-center
 							.article__section-desc
@@ -52,12 +53,14 @@ block main
 								cite
 									| Любовь Мокасеева
 									small Домовладелец
-						.col-sm-6.pull-sm-6.align-self-center
-							figure.article__section-image
+						.col-sm-6.pull-sm-6.align-self-end
+
+							picture.article__section-image
+								source(srcset="images/img-b-04-320.jpg" media="(max-width: 576px)")
 								img(src="images/img-b-04.jpg", alt="")
 
 
-				section.article__section.article__section--100.article__section--white
+				section.article__section.article__section--100.article__section--white.article__section--reviews
 					.row
 						.col-sm-6.align-self-center
 							.article__section-desc
@@ -68,8 +71,9 @@ block main
 								cite
 									| Лейла Смирнова
 									small Домовладелец
-						.col-sm-6.align-self-center
-							figure.article__section-image
+						.col-sm-6.align-self-end
+							picture.article__section-image
+								source(srcset="images/img-b-05-320.jpg" media="(max-width: 576px)")
 								img(src="images/img-b-05.jpg", alt="")
 
 	// Article :: End
