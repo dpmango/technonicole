@@ -343,6 +343,7 @@ gulp.task('scss', function() {
 gulp.task('js:plugins', function() {
   return gulp.src([
 		path.resolve('node_modules', 'svg4everybody/dist/svg4everybody.js'),
+		path.resolve('node_modules', 'picturefill/dist/picturefill.min.js'),
 		path.resolve('node_modules', 'jquery/dist/jquery.js'),
 		path.resolve('node_modules', 'match-media/matchMedia.js'),
 		path.resolve('node_modules', 'slick-carousel/slick/slick.js'),

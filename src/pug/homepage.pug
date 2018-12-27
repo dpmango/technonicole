@@ -6,255 +6,301 @@ extends includes/_app
 
 block main
 
-	// Hero :: Start
-	.hero
+  // Hero :: Start
+  .hero
 
-		.hero__slides.js-slick-hero
-
-			.hero__item
-				.container-fluid
-					figure.hero__item-image
-						img(src="images/img-hero-01.jpg", alt="")
-					.hero__item-desc
+    .hero__slides.js-slick-hero
+      // scaled by image size
+      .hero__item
+        picture.hero__item-image
+          // 992 and above
+          source(
+          media="(min-width: 992px)" 
+          srcset="http://s2.123123.ru/upload/iblock/141/20191.jpg")
+          // less 768px
+          source(
+          media="(min-width: 0px)" 
+          srcset="http://www.shinglas.ru/upload/iblock/9c0/banners3_840.jpg")
+          // fallback
+          img(src="http://s2.123123.ru/upload/iblock/141/20191.jpg", alt="")
+              
+			// slide with text
+      .hero__item
+        picture.hero__item-image
+          // 992 and above
+          source(
+          media="(min-width: 992px)" 
+          srcset="http://s2.123123.ru/upload/iblock/0db/20192.jpg")
+          // less 768px
+          source(
+          media="(min-width: 0px)" 
+          srcset="http://www.shinglas.ru/upload/iblock/9c0/banners3_840.jpg")
+          // fallback
+          img(src="http://s2.123123.ru/upload/iblock/0db/20192.jpg", alt="")
+          
+				.hero__item-desc
+					.container-fluid
 						strong.hero__item-title 25% скидка <br>на коллекцию <br>атлантика
 						a(href="#").hero__item-btn подробнее
+							
+      .hero__item
+        picture.hero__item-image
+          // 992 and above
+          source(
+          media="(min-width: 992px)" 
+          srcset="http://s2.123123.ru/upload/iblock/928/20193.jpg")
+          // less 768px
+          source(
+          media="(min-width: 0px)" 
+          srcset="http://www.shinglas.ru/upload/iblock/9c0/banners3_840.jpg")
+          // fallback
+          img(src="http://s2.123123.ru/upload/iblock/928/20193.jpg", alt="")
+              
+              
+      //- .hero__item
+      //- 	.container-fluid
+      //- 		figure.hero__item-image
+      //- 			img(src="images/img-hero-01.jpg", alt="")
+      //- 		.hero__item-desc
+      //- 			strong.hero__item-title 25% скидка <br>на коллекцию <br>атлантика
+      //- 			a(href="#").hero__item-btn подробнее
+      //- 
+      //- .hero__item
+      //- 	.container-fluid
+      //- 		figure.hero__item-image
+      //- 			img(src="images/img-hero-02.jpg", alt="")
+      //- 		.hero__item-desc
+      //- 			strong.hero__item-title Атлантика
+      //- 			p.hero__item-text Коллекция трёхслойной черепицы.<br>Новинка 2018 года.
+      //- 			a(href="#").hero__item-btn Узнать подробности
 
-			.hero__item
-				.container-fluid
-					figure.hero__item-image
-						img(src="images/img-hero-02.jpg", alt="")
-					.hero__item-desc
-						strong.hero__item-title Атлантика
-						p.hero__item-text Коллекция трёхслойной черепицы.<br>Новинка 2018 года.
-						a(href="#").hero__item-btn Узнать подробности
-
-	// Hero :: End 
-
-
-	// Catalog :: Start
-	.catalog
-		.container-fluid
-
-			h2.catalog__heading материалы для коттеджного строительства
-
-			.catalog__slides.js-slick-catalog
-								
-				.catalog__slides-item
-
-					a(href="#").catalog__item
-						figure.catalog__item-image
-							img(src="images/img-catalog-01.jpg" alt="")
-						.catalog__item-desc
-							h3.catalog__item-title многослойная черепица shinglas
-							p.catalog__item-text новый стандарт кровли
-				
-				.catalog__slides-item
-
-					a(href="#").catalog__item
-						figure.catalog__item-image
-							img(src="images/img-catalog-02.jpg" alt="")
-						.catalog__item-desc
-							h3.catalog__item-title фасадная плитка hauberk
-							p.catalog__item-text новый фасад за 3 дня
-				
-				.catalog__slides-item
-
-					a(href="#").catalog__item
-						figure.catalog__item-image
-							img(src="images/img-catalog-03.jpg" alt="")
-						.catalog__item-desc
-							h3.catalog__item-title композитная черепица Luxard
-							p.catalog__item-text трёхмерный цвет и фактура
-				
-				.catalog__slides-item
-
-					a(href="#").catalog__item
-						figure.catalog__item-image
-							img(src="images/img-catalog-04.jpg" alt="")
-						.catalog__item-desc
-							h3.catalog__item-title водосточная система
-							p.catalog__item-text инновации доступные каждому
-				
-				.catalog__slides-item
-
-					a(href="#").catalog__item
-						figure.catalog__item-image
-							img(src="images/img-catalog-05.jpg" alt="")
-						.catalog__item-desc
-							h3.catalog__item-title подкладочные ковры anderep
-							p.catalog__item-text надёжная гидроизоляция
-				
-				.catalog__slides-item
-
-					a(href="#").catalog__item
-						figure.catalog__item-image
-							img(src="images/img-catalog-06.jpg" alt="")
-						.catalog__item-desc
-							h3.catalog__item-title Подкровельная вентиляция vilpe
-							p.catalog__item-text надёжная вентиляция для кровли
-
-	// Catalog :: End
+  // Hero :: End 
 
 
-	// Products :: Start
-	.products
-		.container-fluid
+  // Catalog :: Start
+  .catalog
+    .container-fluid
 
-			h2.products__heading новинки сезона
+      h2.catalog__heading материалы для коттеджного строительства
 
-			.products__slides.js-slick-products
+      .catalog__slides.js-slick-catalog
+                
+        .catalog__slides-item
 
-				.products__slides-item
+          a(href="#").catalog__item
+            figure.catalog__item-image
+              img(src="images/img-catalog-01.jpg" alt="")
+            .catalog__item-desc
+              h3.catalog__item-title многослойная черепица shinglas
+              p.catalog__item-text новый стандарт кровли
+        
+        .catalog__slides-item
 
-					.products__item
-						figure.products__item-image
-							a(href="#")
-								img(src="images/img-products-01.jpg" alt="")
-						.products__item-desc
-							h3.products__item-title Коллекция многослойной черепицы «атлантика»
-							.products__item-control
-								a(href="#").btn.btn--dark-empty узнать больше
-								a(href="#").btn.btn--red-empty купить онлайн
-				
-				.products__slides-item
+          a(href="#").catalog__item
+            figure.catalog__item-image
+              img(src="images/img-catalog-02.jpg" alt="")
+            .catalog__item-desc
+              h3.catalog__item-title фасадная плитка hauberk
+              p.catalog__item-text новый фасад за 3 дня
+        
+        .catalog__slides-item
 
-					.products__item
-						figure.products__item-image
-							a(href="#")
-								img(src="images/img-products-02.jpg" alt="")
-						.products__item-desc
-							h3.products__item-title Подкладочные ковры ANDEREP GL PLUS и PROF PLUS
-							.products__item-control
-								a(href="#").btn.btn--dark-empty узнать больше
-								a(href="#").btn.btn--red-empty купить онлайн
-				
-				.products__slides-item
-					
-					.products__item
-						figure.products__item-image
-							a(href="#")
-								img(src="images/img-products-03.jpg" alt="")
-						.products__item-desc
-							h3.products__item-title Античептики для кровли и древесины
-							.products__item-control
-								a(href="#").btn.btn--dark-empty узнать больше
-								a(href="#").btn.btn--red-empty купить онлайн
+          a(href="#").catalog__item
+            figure.catalog__item-image
+              img(src="images/img-catalog-03.jpg" alt="")
+            .catalog__item-desc
+              h3.catalog__item-title композитная черепица Luxard
+              p.catalog__item-text трёхмерный цвет и фактура
+        
+        .catalog__slides-item
 
-	// Products :: End
+          a(href="#").catalog__item
+            figure.catalog__item-image
+              img(src="images/img-catalog-04.jpg" alt="")
+            .catalog__item-desc
+              h3.catalog__item-title водосточная система
+              p.catalog__item-text инновации доступные каждому
+        
+        .catalog__slides-item
 
+          a(href="#").catalog__item
+            figure.catalog__item-image
+              img(src="images/img-catalog-05.jpg" alt="")
+            .catalog__item-desc
+              h3.catalog__item-title подкладочные ковры anderep
+              p.catalog__item-text надёжная гидроизоляция
+        
+        .catalog__slides-item
 
-	// Info :: Start
-	.info
-		.container-fluid
+          a(href="#").catalog__item
+            figure.catalog__item-image
+              img(src="images/img-catalog-06.jpg" alt="")
+            .catalog__item-desc
+              h3.catalog__item-title Подкровельная вентиляция vilpe
+              p.catalog__item-text надёжная вентиляция для кровли
 
-			.info__slides.js-slick-info
-			
-				.info__slides-item
-					a(href="#").info__item
-						figure.info__item-icon
-							+sprite('icon-info-01')
-						h3.info__item-title найти <br>подрядчика
-						p.info__item-text На нашем сайте Вы можете найти кровельную бригаду или строительную компанию
-						+sprite('icon-info-arrow')
-				
-				.info__slides-item
-					a(href="#").info__item
-						figure.info__item-icon
-							+sprite('icon-info-02')
-						h3.info__item-title где купить
-						p.info__item-text Здесь Вы без труда сможете найти ближайший к вам магазин с продукцией ТЕХНОНИКОЛЬ
-						+sprite('icon-info-arrow')
-				
-				.info__slides-item
-					a(href="#").info__item
-						figure.info__item-icon
-							+sprite('icon-info-03')
-						h3.info__item-title Как стать партнёром технониколь
-						p.info__item-text Чтобы стать нашим бизнес-партнёром, необходимо заполнить анкету
-						+sprite('icon-info-arrow')
-	// Info :: End
+  // Catalog :: End
 
 
-	// Media :: Start
-	.media
-		.container-fluid
+  // Products :: Start
+  .products
+    .container-fluid
 
-			h2.media__heading
-				span.media__heading-image
-					img(src="images/logo-small.svg" alt="")
-				span.media__heading-text журнал
+      h2.products__heading новинки сезона
 
-			nav.media__nav
+      .products__slides.js-slick-products
 
-				ul.media__nav-menu
-					li
-						button(data-type-btn="*").media__nav-link.is-active все
-					li
-						button(data-type-btn="articles").media__nav-link Статьи  
-					li
-						button(data-type-btn="news").media__nav-link Новости
-					li
-						button(data-type-btn="videos").media__nav-link Видео
+        .products__slides-item
 
-				a(href="#").media__nav-link
-					| перейти в журнал
-					+sprite('icon-arrow-right')
+          .products__item
+            figure.products__item-image
+              a(href="#")
+                img(src="images/img-products-01.jpg" alt="")
+            .products__item-desc
+              h3.products__item-title Коллекция многослойной черепицы «атлантика»
+              .products__item-control
+                a(href="#").btn.btn--dark-empty узнать больше
+                a(href="#").btn.btn--red-empty купить онлайн
+        
+        .products__slides-item
 
-			.media__grid
-				.row
-					.col-sm-6.col-lg-4(data-type="articles")
+          .products__item
+            figure.products__item-image
+              a(href="#")
+                img(src="images/img-products-02.jpg" alt="")
+            .products__item-desc
+              h3.products__item-title Подкладочные ковры ANDEREP GL PLUS и PROF PLUS
+              .products__item-control
+                a(href="#").btn.btn--dark-empty узнать больше
+                a(href="#").btn.btn--red-empty купить онлайн
+        
+        .products__slides-item
+          
+          .products__item
+            figure.products__item-image
+              a(href="#")
+                img(src="images/img-products-03.jpg" alt="")
+            .products__item-desc
+              h3.products__item-title Античептики для кровли и древесины
+              .products__item-control
+                a(href="#").btn.btn--dark-empty узнать больше
+                a(href="#").btn.btn--red-empty купить онлайн
 
-						a(href="#").media__item
-							figure.media__item-image
-								img(src="images/img-media-01.jpg", alt="")
-							.media__item-desc
-								h3.media__item-title Реальные истории: авторский проект частного дома «Четвертьхаус» (1/4 купола)
-								span.media__item-date 03.08.2018
-
-					.col-sm-6.col-lg-4(data-type="videos")
-
-						a(href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" data-fancybox).media__item
-							figure.media__item-image
-								img(src="images/img-media-02.jpg", alt="")
-								+sprite('icon-video')
-							.media__item-desc
-								h3.media__item-title Реальные истории: Масштабная перепланировка мансарды с новой крышей. Отзыв героев программы «Дачный ответ».
-								span.media__item-date 25.07.2018
-
-					.col-sm-6.col-lg-4(data-type="news")
-
-						a(href="#").media__item
-							figure.media__item-image
-								img(src="images/img-media-03.jpg", alt="")
-							.media__item-desc
-								h3.media__item-title ТЕХНОНИКОЛЬ провела в Челябинске Турнир мастеров
-								span.media__item-date 13.07.2018
+  // Products :: End
 
 
-					.col-sm-6.col-lg-8(data-type="news")
+  // Info :: Start
+  .info
+    .container-fluid
 
-						a(href="#").media__item.media__item--large
-							figure.media__item-image
-								img(src="images/img-media-04.jpg", alt="")
-							.media__item-desc
-								h3.media__item-title Реальные истории: Настоящий рок-клуб и уютная спальня на большой мансарде. Отзыв героев программы «Дачный ответ». 
-								span.media__item-date 03.08.2018
+      .info__slides.js-slick-info
+      
+        .info__slides-item
+          a(href="#").info__item
+            figure.info__item-icon
+              +sprite('icon-info-01')
+            h3.info__item-title найти <br>подрядчика
+            p.info__item-text На нашем сайте Вы можете найти кровельную бригаду или строительную компанию
+            +sprite('icon-info-arrow')
+        
+        .info__slides-item
+          a(href="#").info__item
+            figure.info__item-icon
+              +sprite('icon-info-02')
+            h3.info__item-title где купить
+            p.info__item-text Здесь Вы без труда сможете найти ближайший к вам магазин с продукцией ТЕХНОНИКОЛЬ
+            +sprite('icon-info-arrow')
+        
+        .info__slides-item
+          a(href="#").info__item
+            figure.info__item-icon
+              +sprite('icon-info-03')
+            h3.info__item-title Как стать партнёром технониколь
+            p.info__item-text Чтобы стать нашим бизнес-партнёром, необходимо заполнить анкету
+            +sprite('icon-info-arrow')
+  // Info :: End
 
-					.col-sm-6.col-lg-4(data-type="articles")
 
-						a(href="#").media__item
-							figure.media__item-image
-								img(src="images/img-media-05.jpg", alt="")
-							.media__item-desc
-								h3.media__item-title Профессионалы строительных маркетов
-								span.media__item-date 25.07.2018
-			
-			.media__control
-				a(href="#").btn.btn--62.btn--red-empty.is-md-hidden смотреть ещё
-				a(href="#").btn.btn--62.btn--red-empty подробнее о материалах технониколь
+  // Media :: Start
+  .media
+    .container-fluid
 
-	// Media :: End
+      h2.media__heading
+        span.media__heading-image
+          img(src="images/logo-small.svg" alt="")
+        span.media__heading-text журнал
 
-	
+      nav.media__nav
 
-	
+        ul.media__nav-menu
+          li
+            button(data-type-btn="*").media__nav-link.is-active все
+          li
+            button(data-type-btn="articles").media__nav-link Статьи  
+          li
+            button(data-type-btn="news").media__nav-link Новости
+          li
+            button(data-type-btn="videos").media__nav-link Видео
+
+        a(href="#").media__nav-link
+          | перейти в журнал
+          +sprite('icon-arrow-right')
+
+      .media__grid
+        .row
+          .col-sm-6.col-lg-4(data-type="articles")
+
+            a(href="#").media__item
+              figure.media__item-image
+                img(src="images/img-media-01.jpg", alt="")
+              .media__item-desc
+                h3.media__item-title Реальные истории: авторский проект частного дома «Четвертьхаус» (1/4 купола)
+                span.media__item-date 03.08.2018
+
+          .col-sm-6.col-lg-4(data-type="videos")
+
+            a(href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" data-fancybox).media__item
+              figure.media__item-image
+                img(src="images/img-media-02.jpg", alt="")
+                +sprite('icon-video')
+              .media__item-desc
+                h3.media__item-title Реальные истории: Масштабная перепланировка мансарды с новой крышей. Отзыв героев программы «Дачный ответ».
+                span.media__item-date 25.07.2018
+
+          .col-sm-6.col-lg-4(data-type="news")
+
+            a(href="#").media__item
+              figure.media__item-image
+                img(src="images/img-media-03.jpg", alt="")
+              .media__item-desc
+                h3.media__item-title ТЕХНОНИКОЛЬ провела в Челябинске Турнир мастеров
+                span.media__item-date 13.07.2018
+
+
+          .col-sm-6.col-lg-8(data-type="news")
+
+            a(href="#").media__item.media__item--large
+              figure.media__item-image
+                img(src="images/img-media-04.jpg", alt="")
+              .media__item-desc
+                h3.media__item-title Реальные истории: Настоящий рок-клуб и уютная спальня на большой мансарде. Отзыв героев программы «Дачный ответ». 
+                span.media__item-date 03.08.2018
+
+          .col-sm-6.col-lg-4(data-type="articles")
+
+            a(href="#").media__item
+              figure.media__item-image
+                img(src="images/img-media-05.jpg", alt="")
+              .media__item-desc
+                h3.media__item-title Профессионалы строительных маркетов
+                span.media__item-date 25.07.2018
+      
+      .media__control
+        a(href="#").btn.btn--62.btn--red-empty.is-md-hidden смотреть ещё
+        a(href="#").btn.btn--62.btn--red-empty подробнее о материалах технониколь
+
+  // Media :: End
+
+  
+
+  

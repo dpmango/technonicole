@@ -30,3 +30,28 @@ table {
     position: static;
   }
 }
+
+/*  #330143 */
+.catalog-section-page .section-product-part .item{
+  flex-wrap: wrap;
+}
+.catalog-section-page .section-product-part .item .detail-item-part{
+  flex: 1 1 auto;
+}
+.catalog-section-page .section-product-part .item .detail-item-part .price-item-part{
+  box-sizing: content-box;
+}
+.catalog-section-page .section-product-part .newbanner *{
+  box-sizing: content-box;
+}
+.catalog-section-page .section-product-part .newbanner{
+  width: 100%;
+}
+
+.features * {
+  box-sizing: content-box;
+}
+
+.projects-page .variants .item{
+  width: 95px !important;
+}

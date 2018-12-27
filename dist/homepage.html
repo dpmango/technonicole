@@ -432,19 +432,36 @@
         <!-- Hero :: Start-->
         <div class="hero">
           <div class="hero__slides js-slick-hero">
+            <!-- scaled by image size-->
             <div class="hero__item">
-              <div class="container-fluid">
-                <figure class="hero__item-image"><img src="images/img-hero-01.jpg" alt=""></figure>
-                <div class="hero__item-desc"><strong class="hero__item-title">25% скидка <br>на коллекцию <br>атлантика</strong><a class="hero__item-btn" href="#">подробнее</a></div>
+              <picture class="hero__item-image">
+                <!-- 992 and above-->
+                <source media="(min-width: 992px)" srcset="http://s2.123123.ru/upload/iblock/141/20191.jpg">
+                <!-- less 768px-->
+                <source media="(min-width: 0px)" srcset="http://www.shinglas.ru/upload/iblock/9c0/banners3_840.jpg">
+                <!-- fallback--><img src="http://s2.123123.ru/upload/iblock/141/20191.jpg" alt="">
+              </picture>
+              <div class="hero__item-desc">
+                <div class="container-fluid"><strong class="hero__item-title">25% скидка <br>на коллекцию <br>атлантика</strong><a class="hero__item-btn" href="#">подробнее</a></div>
               </div>
             </div>
             <div class="hero__item">
-              <div class="container-fluid">
-                <figure class="hero__item-image"><img src="images/img-hero-02.jpg" alt=""></figure>
-                <div class="hero__item-desc"><strong class="hero__item-title">Атлантика</strong>
-                  <p class="hero__item-text">Коллекция трёхслойной черепицы.<br>Новинка 2018 года.</p><a class="hero__item-btn" href="#">Узнать подробности</a>
-                </div>
-              </div>
+              <picture class="hero__item-image">
+                <!-- 992 and above-->
+                <source media="(min-width: 992px)" srcset="http://s2.123123.ru/upload/iblock/0db/20192.jpg">
+                <!-- less 768px-->
+                <source media="(min-width: 0px)" srcset="http://www.shinglas.ru/upload/iblock/9c0/banners3_840.jpg">
+                <!-- fallback--><img src="http://s2.123123.ru/upload/iblock/0db/20192.jpg" alt="">
+              </picture>
+            </div>
+            <div class="hero__item">
+              <picture class="hero__item-image">
+                <!-- 992 and above-->
+                <source media="(min-width: 992px)" srcset="http://s2.123123.ru/upload/iblock/928/20193.jpg">
+                <!-- less 768px-->
+                <source media="(min-width: 0px)" srcset="http://www.shinglas.ru/upload/iblock/9c0/banners3_840.jpg">
+                <!-- fallback--><img src="http://s2.123123.ru/upload/iblock/928/20193.jpg" alt="">
+              </picture>
             </div>
           </div>
         </div>

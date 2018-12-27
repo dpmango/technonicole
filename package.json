@@ -70,6 +70,7 @@
     "jquery-match-height": "^0.7.2",
     "jquery-validation": "^1.17.0",
     "match-media": "^0.2.0",
+    "picturefill": "^3.0.3",
     "slick-carousel": "^1.8.1",
     "svg4everybody": "^2.0.0"
   }
